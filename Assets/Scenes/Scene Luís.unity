@@ -1537,5 +1537,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player1
       objectReference: {fileID: 0}
+    - target: {fileID: 6279948799033416965, guid: 36fa30edf24ff5844b5f6df3c3866a85,
+        type: 3}
+      propertyPath: m_GravityScale
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6279948799033416969, guid: 36fa30edf24ff5844b5f6df3c3866a85,
+        type: 3}
+      propertyPath: dashSpeed
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6279948799033416969, guid: 36fa30edf24ff5844b5f6df3c3866a85,
+        type: 3}
+      propertyPath: dashTime
+      value: 0.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 36fa30edf24ff5844b5f6df3c3866a85, type: 3}
