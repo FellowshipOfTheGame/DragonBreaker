@@ -5,13 +5,11 @@ public class CharacterController2D : MonoBehaviour
 {
     [SerializeField] private float jumpForce = 825f;                            // Amount of force added when the player jumps.
 
-    [SerializeField] private int qtdDash;                                       // Velocity when the player dashes.
-    [SerializeField] private float dashSpeed;                                   // Velocity when the player dashes.
-    [SerializeField] private float dashCooldown;                                // Velocity when the player dashes.
-    [SerializeField] private bool restoreDashOnLand = true;                     // Should dashes be restored when landed?
+    [SerializeField] private int qtdDash = 1;                                       // Velocity when the player dashes.
+    [SerializeField] private float dashSpeed = 25;                                   // Velocity when the player dashes.
 
     [Range(0, .3f)] [SerializeField] private float movementSmoothing = .05f;  // How much to smooth out the movement
-    [SerializeField] private bool airControl = false;                         // Whether or not a player can steer while jumping;
+    [SerializeField] private bool airControl = true;                         // Whether or not a player can steer while jumping;
 
     [SerializeField] private LayerMask whatIsGround;                          // A mask determining what is ground to the character
     [SerializeField] private Transform groundCheck;                           // A position marking where to check if the player is grounded.
@@ -59,17 +57,11 @@ public class CharacterController2D : MonoBehaviour
 
     private void FixedUpdate()
     {
-        // While there is time for dashing
-        dashTimeLeft -= Time.fixedDeltaTime;
-        // If dashTimeLeft is negativa and less than dashCoolDown, restores one dash and resets it
-        if (remainingDashes < qtdDash && Mathf.Abs(dashTimeLeft) > dashCooldown)
-        {
-            dashTimeLeft += dashCooldown;
-            remainingDashes++;
-        }
         // If the player is dashing
         if (dashDirection != 0)
         {
+        // While there is time for dashing
+        dashTimeLeft -= Time.fixedDeltaTime;
             // Dashes
             if (dashDirection == 1) rigidbody2D.velocity = (Vector2.right + Vector2.up) * dashSpeed * Mathf.Sqrt(2) / 2;
             else if (dashDirection == 2) rigidbody2D.velocity = (Vector2.right + Vector2.down) * dashSpeed * Mathf.Sqrt(2) / 2;
@@ -102,14 +94,14 @@ public class CharacterController2D : MonoBehaviour
                 if (!wasGrounded)
                 {
                     // If it is supposed to restore dashes when landed;
-                    if (restoreDashOnLand) remainingDashes = qtdDash;
+                    remainingDashes = qtdDash;
                     OnLandEvent.Invoke();
                 }
             }
         }
     }
 
-    public void Move(float move, bool jump)
+    public void Move(float move)
     {
         //only control the player if grounded or airControl is turned on
         if (dashDirection == 0 && (grounded || airControl))
@@ -132,8 +124,12 @@ public class CharacterController2D : MonoBehaviour
                 Flip();
             }
         }
+    }
+
+    public void Jump()
+    {
         // If the player should jump...
-        if (grounded && jump)
+        if (grounded)
         {
             // Add a vertical force to the player.
             grounded = false;
