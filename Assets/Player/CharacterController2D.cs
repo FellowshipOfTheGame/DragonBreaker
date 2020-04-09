@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -10,6 +11,7 @@ public class CharacterController2D : MonoBehaviour
     [SerializeField] private float dashSpeed = 25;                                   // Velocity when the player dashes.
 
     [Range(0, .3f)] [SerializeField] private float movementSmoothing = .05f;  // How much to smooth out the movement
+
     [SerializeField] private bool airControl = true;                         // Whether or not a player can steer while jumping;
 
     [SerializeField] private LayerMask whatIsGround;                          // A mask determining what is ground to the character
@@ -144,6 +146,7 @@ public class CharacterController2D : MonoBehaviour
         // Invokes a dashStart
         OnDashStartEvent.Invoke();
     }
+
     private void Flip()
     {
         // Switch the way the player is labelled as facing.

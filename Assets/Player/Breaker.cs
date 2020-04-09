@@ -4,29 +4,30 @@ using UnityEngine;
 
 public class Breaker : MonoBehaviour
 {
-    [SerializeField] private Transform _attack_point = null;
+
     [SerializeField] private LayerMask _attack_layer;
 
-    public float attackRange = 1f;
-    public float attackPower = 1f;
+    [Header("Attack Properties")]
+    [SerializeField] private float range = 1f;
+    [SerializeField] public float power = 1f;
 
-    public void OnHit()
+    public void Attack(Vector2 movementInput)
     {
-        Debug.Log("attacking");
-        Collider2D[] collisions = Physics2D.OverlapCircleAll(_attack_point.position, attackRange, _attack_layer);
+        const float minimum_input = 0.4f;
+        Vector2 attack_position = new Vector2(movementInput.x + transform.position.x, movementInput.y + transform.position.y);
+        if (movementInput.y > minimum_input)
+            attack_position = transform.position + Vector3.up;
+        else if (movementInput.y < -minimum_input)
+            attack_position = transform.position + Vector3.down;
+        else if (movementInput.x > minimum_input)
+            attack_position = transform.position + Vector3.right;
+        else if (movementInput.x < -minimum_input)
+            attack_position = transform.position + Vector3.left;
+
+        Collider2D[] collisions = Physics2D.OverlapCircleAll(attack_position, range, _attack_layer);
         foreach (Collider2D entity in collisions)
         {
-            entity.GetComponent<IDamagable>()?.hit(attackPower);
+            entity.GetComponent<IDamagable>()?.hit(power);
         }
-    }
-
-    //Draw Attack Range gizmo
-    void OnDrawGizmosSelected()
-    {
-        if (_attack_point == null)
-        {
-            return;
-        }
-        Gizmos.DrawWireSphere(_attack_point.position, attackRange);
     }
 }

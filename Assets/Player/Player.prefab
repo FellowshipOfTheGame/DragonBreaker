@@ -81,12 +81,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfa77c3b3c160ef4abf6e8fed221663b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _attack_point: {fileID: 3475714211163350198}
   _attack_layer:
     serializedVersion: 2
-    m_Bits: 1024
-  attackRange: 0.3
-  attackPower: 1
+    m_Bits: 1536
+  range: 0.4
+  power: 3
 --- !u!114 &6279948799033416968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -100,6 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 6279948799033416969}
+  breaker: {fileID: 2036298677449281043}
   runSpeed: 40
 --- !u!114 &6279948799033416969
 MonoBehaviour:
@@ -116,7 +116,7 @@ MonoBehaviour:
   jumpForce: 825
   qtdDash: 2
   dashTime: 0.1
-  dashSpeed: 25
+  dashSpeed: 50
   movementSmoothing: 0.03
   airControl: 1
   whatIsGround:
