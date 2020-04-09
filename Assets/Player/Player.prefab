@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6279948798424692579}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,13 +39,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6279948799033416962}
+  - component: {fileID: 2036298677449281043}
   - component: {fileID: 6279948799033416968}
   - component: {fileID: 6279948799033416969}
   - component: {fileID: 6279948799033416966}
   - component: {fileID: 6279948799033416967}
   - component: {fileID: 6279948799033416964}
   - component: {fileID: 6279948799033416965}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64,9 +65,28 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6279948798424692579}
+  - {fileID: 3475714211163350198}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2036298677449281043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6279948799033416963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfa77c3b3c160ef4abf6e8fed221663b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _attack_point: {fileID: 3475714211163350198}
+  _attack_layer:
+    serializedVersion: 2
+    m_Bits: 1024
+  attackRange: 0.3
+  attackPower: 1
 --- !u!114 &6279948799033416968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81,7 +101,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 6279948799033416969}
   runSpeed: 40
-  dashTime: 0.1
 --- !u!114 &6279948799033416969
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96,6 +115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpForce: 825
   qtdDash: 2
+  dashTime: 0.1
   dashSpeed: 25
   movementSmoothing: 0.03
   airControl: 1
@@ -107,6 +127,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   OnDashStartEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDashEndEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!212 &6279948799033416966
@@ -222,3 +245,33 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!1 &8201062522788686465
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3475714211163350198}
+  m_Layer: 9
+  m_Name: AttackPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3475714211163350198
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8201062522788686465}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.43, y: -0.174, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6279948799033416962}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
