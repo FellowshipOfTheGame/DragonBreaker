@@ -1,8 +1,9 @@
 ﻿using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
-    PlayerInputActions inputAction;
+    InputActionAsset inputAction;
     Vector2 movementInput;
 
     [SerializeField] CharacterController2D controller;      // Reference to a controller2D
@@ -11,16 +12,17 @@ public class PlayerMovement : MonoBehaviour
 
     private void Awake()
     {
-        inputAction = new PlayerInputActions();
+        inputAction = GetComponent<PlayerInput>().actions;
+
         // If arrows are pressed, sets the direction of movement;
-        inputAction.PlayerControls.Move.performed += ctx => movementInput = ctx.ReadValue<Vector2>();
-        inputAction.PlayerControls.Attack.performed += ctx => breaker.Attack(movementInput);
-        inputAction.PlayerControls.Jump.started += ctx => controller.Jump();
-        inputAction.PlayerControls.Dash.started += ctx => controller.Dash(movementInput);
+        inputAction["Move"].performed += ctx => movementInput = ctx.ReadValue<Vector2>();
+        inputAction["Attack"].performed += ctx => breaker.Attack(movementInput);
+        inputAction["Jump"].started += ctx => controller.Jump();
+        inputAction["Dash"].started += ctx => controller.Dash(movementInput);
     }
 
     // Moves the player
     private void FixedUpdate() => controller.Move(movementInput.x * runSpeed * Time.fixedDeltaTime);
-    private void OnEnable() => inputAction.Enable();
-    private void OnDisable() => inputAction.Disable();
+    //private void OnEnable() => inputAction.Enable();
+    //private void OnDisable() => inputAction.Disable();
 }
