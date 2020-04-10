@@ -16,9 +16,21 @@ public class PlayerMovement : MonoBehaviour
 
         // If arrows are pressed, sets the direction of movement;
         inputAction["Move"].performed += ctx => movementInput = ctx.ReadValue<Vector2>();
-        inputAction["Attack"].performed += ctx => breaker.Attack(movementInput);
+        inputAction["Attack"].performed += ctx => breaker.Attack(movementInput, controller.facingRight);
         inputAction["Jump"].started += ctx => controller.Jump();
         inputAction["Dash"].started += ctx => controller.Dash(movementInput);
+    }
+
+    private void OnDrawGizmos()
+    {
+        float x_offset = 0;
+        if (movementInput == Vector2.zero)
+        {
+            if (controller.facingRight) x_offset = 1;
+            else x_offset = -1;
+        }
+        else x_offset = movementInput.x;
+        Gizmos.DrawWireSphere(new Vector3(x_offset + transform.position.x, movementInput.y + transform.position.y, 0), breaker.range);
     }
 
     // Moves the player

@@ -26,7 +26,7 @@ public class CharacterController2D : MonoBehaviour
     bool grounded;                      // Whether or not the player is grounded.
 
     Rigidbody2D rigidbody2D;
-    bool facingRight = true;            // For determining which way the player is currently facing.
+    public bool facingRight { get; private set; } = true;            // For determining which way the player is currently facing.
     Vector3 velocity = Vector3.zero;
 
     [Header("Events")]
