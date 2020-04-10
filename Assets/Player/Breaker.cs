@@ -1,15 +1,13 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System;
 using UnityEngine;
 
 public class Breaker : MonoBehaviour
 {
-
+    [SerializeField] private EnergyController energyController;
     [SerializeField] private LayerMask _attack_layer;
 
     [Header("Attack Properties")]
     [SerializeField] public float range = 1f;
-    [SerializeField] public float power = 1f;
 
     public void Attack(Vector2 movementInput, bool facingRight)
     {
@@ -34,7 +32,11 @@ public class Breaker : MonoBehaviour
         Collider2D[] collisions = Physics2D.OverlapCircleAll(attack_position, range, _attack_layer);
         foreach (Collider2D entity in collisions)
         {
-            entity.GetComponent<IDamagable>()?.hit(power);
+            Action<int> callbackFunction;
+            if (entity.gameObject.layer == 9) callbackFunction = _ => energyController.resetLevel();
+            else callbackFunction = experience => energyController.addExperience(experience);
+
+            entity.GetComponent<IDamagable>()?.hit(energyController.level, callbackFunction);
         }
     }
 }

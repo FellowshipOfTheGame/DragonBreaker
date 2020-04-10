@@ -23,14 +23,13 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        float x_offset = 0;
+        float x_offset = movementInput.x, y_offset = movementInput.y;
         if (movementInput == Vector2.zero)
         {
             if (controller.facingRight) x_offset = 1;
             else x_offset = -1;
         }
-        else x_offset = movementInput.x;
-        Gizmos.DrawWireSphere(new Vector3(x_offset + transform.position.x, movementInput.y + transform.position.y, 0), breaker.range);
+        Gizmos.DrawWireSphere(new Vector3(x_offset + transform.position.x, y_offset + transform.position.y, 0), breaker.range);
     }
 
     // Moves the player
