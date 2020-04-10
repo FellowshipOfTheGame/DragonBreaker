@@ -1,29 +1,27 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System;
 using UnityEngine;
 
 public class Breaker : MonoBehaviour
 {
-
+    [SerializeField] private EnergyController energyController;
     [SerializeField] private LayerMask _attack_layer;
 
     [Header("Attack Properties")]
-    [SerializeField] private float range = 1f;
-    [SerializeField] public float power = 1f;
+    [SerializeField] public float range = 1f;
 
-    public void Attack(Vector2 movementInput)
+    public void Attack(Vector2 movementInput, bool facingRight)
     {
-        const float minimum_input = 0.3f;
+        float x_offset = movementInput.x, y_offset = movementInput.y;
+        if (movementInput == Vector2.zero)
+        {
+            if (facingRight) x_offset = 1;
+            else x_offset = -1;
+        }
 
-        Vector2 attack_position;
-
-        //Defaults attack to right
-        if (movementInput != Vector2.zero)
-            attack_position = new Vector2(movementInput.x + transform.position.x, movementInput.y + transform.position.y);
-        else 
-            attack_position = transform.position + Vector3.right;
+        Vector2 attack_position = new Vector2(x_offset + transform.position.x, y_offset + transform.position.y);
 
         //Check 4 directions
+        const float minimum_input = 0.4f;
         if (movementInput.y > minimum_input)
             attack_position = transform.position + Vector3.up;
         else if (movementInput.y < -minimum_input)
@@ -43,9 +41,11 @@ public class Breaker : MonoBehaviour
             //If hitting same twice or itself, continue
             if (entity.gameObject == lastE || entity.gameObject == gameObject) continue;
             lastE = entity.gameObject;
+            Action<int> callbackFunction;
+            if (entity.gameObject.layer == 9) callbackFunction = _ => energyController.resetLevel();
+            else callbackFunction = experience => energyController.addExperience(experience);
 
-            //Applying damage
-            entity.GetComponent<IDamagable>()?.hit(power);
+            entity.GetComponent<IDamagable>()?.hit(energyController.level, callbackFunction);
         }
     }
 }

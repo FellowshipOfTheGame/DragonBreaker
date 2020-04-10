@@ -13,7 +13,7 @@ public class HealthSystem : MonoBehaviour, IDamagable
     [SerializeField] private float MaxHealth = 1f;
     private float health = 0f;
     public float HealthPercent => health / MaxHealth;
-
+     
     private void Awake()
     {
         health = MaxHealth;
@@ -25,7 +25,7 @@ public class HealthSystem : MonoBehaviour, IDamagable
         gameObject.SetActive(false);
     }
 
-    public void hit(float damage)
+    public void hit(float damage, Action<int> callback)
     {
         //Taking damage
         health -= damage;
@@ -37,6 +37,8 @@ public class HealthSystem : MonoBehaviour, IDamagable
         //Invoke onDamage and onHealthChange events
         onDamageTaken?.Invoke();
         onHealthChange?.Invoke(HealthPercent);
+        //Invoke callback
+        callback?.Invoke(0);
     }
 
     private void OnDestroy()

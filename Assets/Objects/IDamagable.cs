@@ -1,4 +1,6 @@
-﻿interface IDamagable
+﻿using System;
+
+interface IDamagable
 {
-    void hit(float energy);
+    void hit(float energy, Action<int> callback = null);
 }
