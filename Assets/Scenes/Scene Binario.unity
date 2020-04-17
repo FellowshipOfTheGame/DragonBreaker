@@ -796,6 +796,7 @@ GameObject:
   - component: {fileID: 736278004}
   - component: {fileID: 736278006}
   - component: {fileID: 736278005}
+  - component: {fileID: 736278007}
   m_Layer: 0
   m_Name: Props
   m_TagString: Untagged
@@ -1013,6 +1014,67 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &736278007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 736278003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17112ea867662fe47bb78b68cf86f1e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tilemap: {fileID: 736278006}
+  objectList:
+  - {fileID: 11400000, guid: 2f61bb5a9c92ffc459bcee76ab29c687, type: 2}
+--- !u!1 &753740987
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 753740989}
+  - component: {fileID: 753740988}
+  m_Layer: 0
+  m_Name: TileSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &753740988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 753740987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17112ea867662fe47bb78b68cf86f1e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tilemap: {fileID: 736278006}
+  objectList:
+  - {fileID: 11400000, guid: 2f61bb5a9c92ffc459bcee76ab29c687, type: 2}
+--- !u!4 &753740989
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 753740987}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.5855154, y: -0.9189974, z: -48.712463}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1651056226
 GameObject:
   m_ObjectHideFlags: 0
@@ -1056,5 +1118,5 @@ Transform:
   - {fileID: 494058394}
   - {fileID: 736278004}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
