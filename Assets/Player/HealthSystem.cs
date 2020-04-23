@@ -11,7 +11,7 @@ public class HealthSystem : MonoBehaviour, IDamagable
 
     [Header("Health Properties")]
     [SerializeField] private float MaxHealth = 1f;
-    private float health = 0f;
+    [SerializeField] private float health = 0f;
     public float HealthPercent => health / MaxHealth;
      
     private void Awake()

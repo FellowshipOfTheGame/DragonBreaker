@@ -10,11 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1883587547889485712}
   - component: {fileID: 1883587547889485713}
-  - component: {fileID: 1883587547889485718}
   - component: {fileID: 6558021535268160312}
-  - component: {fileID: 2252585338050575424}
+  - component: {fileID: 1543242520098972765}
   m_Layer: 10
-  m_Name: propTestPrefab
+  m_Name: propTestPrefab2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73,7 +72,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 2528775488680329482, guid: 91bfa41c1556dfc41b7374d5db3c9108,
+  m_Sprite: {fileID: -8381889746002370156, guid: 91bfa41c1556dfc41b7374d5db3c9108,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -85,18 +84,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1883587547889485718
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1883587547889485719}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69d795a2547e1e942a81f481c28920df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &6558021535268160312
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109,9 +96,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63d36f662f7759e4a8cdedb1aa69c713, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _experience_reward: 10
+  _experience_reward: 100
   _required_level: 0
---- !u!58 &2252585338050575424
+--- !u!58 &1543242520098972765
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

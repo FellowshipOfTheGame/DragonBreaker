@@ -33,5 +33,6 @@ public class EnergyController : MonoBehaviour
     {
         Debug.Log("Reseting level");
         level = 0;
+        currentExperience = 0;
     }
 }

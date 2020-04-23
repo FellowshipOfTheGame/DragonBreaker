@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: refPropTest2
+  m_EditorClassIdentifier: Assembly-CSharp::TileReference
+  title: propTest2
+  objPrefab: {fileID: 1883587547889485719, guid: 05fbd7fa5468965458aab9200fc2cd6e,
+    type: 3}
+  refTile: {fileID: 11400000, guid: 31a923be569e5e940b3025fa6469d6ad, type: 2}
