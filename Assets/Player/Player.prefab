@@ -307,7 +307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67fc2a7d24db4414597220c769d29657, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levels: 00000000010000000a00000064000000e803000010270000
+  levels: 01000000050000000a000000190000003200000064000000
 --- !u!114 &782939466412337242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -321,6 +321,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHealth: 5
+  health: 0
 --- !u!114 &553404391780033246
 MonoBehaviour:
   m_ObjectHideFlags: 0
