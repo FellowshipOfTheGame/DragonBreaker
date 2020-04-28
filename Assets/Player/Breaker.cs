@@ -5,23 +5,26 @@ public class Breaker : MonoBehaviour
 {
     [SerializeField] private EnergyController energyController;
     [SerializeField] private LayerMask _attack_layer;
+    [SerializeField] private Animator animator;
 
     [Header("Attack Properties")]
     [SerializeField] public float range = 1f;
 
     public void Attack(Vector2 movementInput, bool facingRight)
     {
+        const float minimum_input = 0.4f;
+        if (movementInput.x == 0 && movementInput.y > minimum_input) animator.SetTrigger("Upward Attack");
+        else if (movementInput.x == 0 && movementInput.y < 0) animator.SetTrigger("Downward Attack");
         float x_offset = movementInput.x, y_offset = movementInput.y;
         if (movementInput == Vector2.zero)
         {
-            if (facingRight) x_offset = 1;
+            if (!facingRight) x_offset = 1;
             else x_offset = -1;
         }
 
         Vector2 attack_position = new Vector2(x_offset + transform.position.x, y_offset + transform.position.y);
 
         //Check 4 directions
-        const float minimum_input = 0.4f;
         if (movementInput.y > minimum_input)
             attack_position = transform.position + Vector3.up;
         else if (movementInput.y < -minimum_input)

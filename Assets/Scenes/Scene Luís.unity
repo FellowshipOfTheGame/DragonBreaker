@@ -218,7 +218,7 @@ GameObject:
   - component: {fileID: 297573645}
   - component: {fileID: 297573644}
   - component: {fileID: 297573643}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: Props
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2873,7 +2873,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2069284551}
   - component: {fileID: 2069284550}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -26,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
         float x_offset = movementInput.x, y_offset = movementInput.y;
         if (movementInput == Vector2.zero)
         {
-            if (controller.facingRight) x_offset = 1;
+            if (!controller.facingRight) x_offset = 1;
             else x_offset = -1;
         }
         Gizmos.DrawWireSphere(new Vector3(x_offset + transform.position.x, y_offset + transform.position.y, 0), breaker.range);
