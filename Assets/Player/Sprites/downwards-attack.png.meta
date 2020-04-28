@@ -1,0 +1,296 @@
+fileFormatVersion: 2
+guid: f1261de7c666f1e48a7f7ebc408b0b74
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3401535948639081422
+    second: downwards-attack_0
+  - first:
+      213: 2253824585035803993
+    second: downwards-attack_1
+  - first:
+      213: -8405867376504926059
+    second: downwards-attack_2
+  - first:
+      213: -6169608862728896276
+    second: downwards-attack_3
+  - first:
+      213: 4015586234902414857
+    second: downwards-attack_4
+  - first:
+      213: 3723166155820581129
+    second: downwards-attack_5
+  - first:
+      213: -7542223017607618479
+    second: downwards-attack_6
+  - first:
+      213: 8844463890364561449
+    second: downwards-attack_7
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: downwards-attack_0
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 896
+        width: 116
+        height: 108
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23c65aaa3115bc0d0800000000000000
+      internalID: -3401535948639081422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: downwards-attack_1
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 896
+        width: 92
+        height: 104
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5192308}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95de911d481374f10800000000000000
+      internalID: 2253824585035803993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: downwards-attack_2
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 896
+        width: 56
+        height: 188
+      alignment: 9
+      pivot: {x: 0.5, y: 0.28723404}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5901162482c585b80800000000000000
+      internalID: -8405867376504926059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: downwards-attack_3
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 420
+        width: 108
+        height: 252
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5793651}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce041f56d65216aa0800000000000000
+      internalID: -6169608862728896276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: downwards-attack_4
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 388
+        width: 116
+        height: 180
+      alignment: 9
+      pivot: {x: 0.5, y: 0.8111111}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9068e48b76a3ab730800000000000000
+      internalID: 4015586234902414857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: downwards-attack_5
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 396
+        width: 108
+        height: 168
+      alignment: 9
+      pivot: {x: 0.5, y: 0.86904764}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 901417d74e75ba330800000000000000
+      internalID: 3723166155820581129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: downwards-attack_6
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 84
+        width: 84
+        height: 120
+      alignment: 9
+      pivot: {x: 0.5, y: 0.81666666}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15029ba3024a45790800000000000000
+      internalID: -7542223017607618479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: downwards-attack_7
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 128
+        width: 124
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.54}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 928f2fd5c09ddba70800000000000000
+      internalID: 8844463890364561449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
