@@ -1,31 +1,28 @@
 fileFormatVersion: 2
-guid: f1261de7c666f1e48a7f7ebc408b0b74
+guid: b0e7a3bf62084d245b3decd9f1139489
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3401535948639081422
-    second: downwards-attack_0
+      213: -7943369452380659150
+    second: lightning d-j_0
   - first:
-      213: 2253824585035803993
-    second: downwards-attack_1
+      213: -5047666422755920850
+    second: lightning d-j_1
   - first:
-      213: -8405867376504926059
-    second: downwards-attack_2
+      213: -2399419637792541403
+    second: lightning d-j_2
   - first:
-      213: -6169608862728896276
-    second: downwards-attack_3
+      213: -3102930649758507205
+    second: lightning d-j_3
   - first:
-      213: 4015586234902414857
-    second: downwards-attack_4
+      213: 3810344270686390982
+    second: lightning d-j_4
   - first:
-      213: 3723166155820581129
-    second: downwards-attack_5
+      213: -4429370789950761900
+    second: lightning d-j_5
   - first:
-      213: -7542223017607618479
-    second: downwards-attack_6
-  - first:
-      213: 8844463890364561449
-    second: downwards-attack_7
+      213: 6328848759411922319
+    second: lightning d-j_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -111,169 +108,148 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: downwards-attack_0
+      name: lightning d-j_0
       rect:
         serializedVersion: 2
-        x: 136
-        y: 896
+        x: 8
+        y: 256
         width: 116
         height: 108
-      alignment: 9
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 23c65aaa3115bc0d0800000000000000
-      internalID: -3401535948639081422
+      spriteID: 232692f919b73c190800000000000000
+      internalID: -7943369452380659150
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: downwards-attack_1
+      name: lightning d-j_1
       rect:
         serializedVersion: 2
-        x: 396
-        y: 896
+        x: 132
+        y: 256
+        width: 124
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2477f6d12613f9b0800000000000000
+      internalID: -5047666422755920850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning d-j_2
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 260
         width: 92
-        height: 104
-      alignment: 9
-      pivot: {x: 0.5, y: 0.5192308}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 95de911d481374f10800000000000000
-      internalID: 2253824585035803993
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: downwards-attack_2
-      rect:
-        serializedVersion: 2
-        x: 672
-        y: 896
-        width: 56
-        height: 188
-      alignment: 9
-      pivot: {x: 0.5, y: 0.28723404}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5901162482c585b80800000000000000
-      internalID: -8405867376504926059
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: downwards-attack_3
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 420
-        width: 108
-        height: 252
-      alignment: 9
-      pivot: {x: 0.5, y: 0.5793651}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ce041f56d65216aa0800000000000000
-      internalID: -6169608862728896276
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: downwards-attack_4
-      rect:
-        serializedVersion: 2
-        x: 396
-        y: 388
-        width: 116
-        height: 180
-      alignment: 9
-      pivot: {x: 0.5, y: 0.8111111}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9068e48b76a3ab730800000000000000
-      internalID: 4015586234902414857
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: downwards-attack_5
-      rect:
-        serializedVersion: 2
-        x: 656
-        y: 396
-        width: 108
-        height: 168
-      alignment: 9
-      pivot: {x: 0.5, y: 0.86904764}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 901417d74e75ba330800000000000000
-      internalID: 3723166155820581129
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: downwards-attack_6
-      rect:
-        serializedVersion: 2
-        x: 142
-        y: 84
-        width: 84
         height: 120
-      alignment: 9
-      pivot: {x: 0.5, y: 0.81666666}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 15029ba3024a45790800000000000000
-      internalID: -7542223017607618479
+      spriteID: 52577465d8c83bed0800000000000000
+      internalID: -2399419637792541403
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: downwards-attack_7
+      name: lightning d-j_3
       rect:
         serializedVersion: 2
-        x: 385
+        x: 8
+        y: 140
+        width: 116
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3fd87a930d20f4d0800000000000000
+      internalID: -3102930649758507205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning d-j_4
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 140
+        width: 124
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ca05361def01e430800000000000000
+      internalID: 3810344270686390982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning d-j_5
+      rect:
+        serializedVersion: 2
+        x: 260
         y: 128
         width: 124
-        height: 100
-      alignment: 9
-      pivot: {x: 0.5, y: 0.54}
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 928f2fd5c09ddba70800000000000000
-      internalID: 8844463890364561449
+      spriteID: 4545e7efbb6b782c0800000000000000
+      internalID: -4429370789950761900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning d-j_6
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 0
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f855bed3a6694d750800000000000000
+      internalID: 6328848759411922319
       vertices: []
       indices: 
       edges: []

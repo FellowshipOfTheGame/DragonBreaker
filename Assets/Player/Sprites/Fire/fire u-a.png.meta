@@ -1,154 +1,31 @@
 fileFormatVersion: 2
-guid: f420c26ce40adca42840d3fe0a58bd5c
+guid: 17da544c67d5bce4faa9d18f579001c7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4859248532006876352
-    second: upwards-attack_0
+      213: -2854388828239788171
+    second: fire u-a_0
   - first:
-      213: 2005347838364720641
-    second: upwards-attack_1
+      213: -174193665220828943
+    second: fire u-a_1
   - first:
-      213: 3492599917202148975
-    second: upwards-attack_2
+      213: 514281278152230042
+    second: fire u-a_2
   - first:
-      213: 302932731039744059
-    second: upwards-attack_3
+      213: 3066607225881936942
+    second: fire u-a_3
   - first:
-      213: 3520457843885086850
-    second: upwards-attack_4
+      213: 4302126589595401123
+    second: fire u-a_4
   - first:
-      213: 7806452667129753050
-    second: upwards-attack_5
+      213: 4462508901103464428
+    second: fire u-a_5
   - first:
-      213: -6084387765055494126
-    second: upwards-attack_6
+      213: 7209675690024218017
+    second: fire u-a_6
   - first:
-      213: -6812828378323501277
-    second: upwards-attack_7
-  - first:
-      213: -1954688585753732261
-    second: upwards-attack_8
-  - first:
-      213: -2022526279439034410
-    second: upwards-attack_9
-  - first:
-      213: 5760266196538415132
-    second: upwards-attack_10
-  - first:
-      213: 7509136743231775666
-    second: upwards-attack_11
-  - first:
-      213: 1194650575704802695
-    second: upwards-attack_12
-  - first:
-      213: 4902811284506252370
-    second: upwards-attack_13
-  - first:
-      213: 3732442382231858033
-    second: upwards-attack_14
-  - first:
-      213: -3094103466758227856
-    second: upwards-attack_15
-  - first:
-      213: -198341804940052888
-    second: upwards-attack_16
-  - first:
-      213: -27830214505749011
-    second: upwards-attack_17
-  - first:
-      213: -2630116606179465592
-    second: upwards-attack_18
-  - first:
-      213: -5286361754622661599
-    second: upwards-attack_19
-  - first:
-      213: 2332321426805009236
-    second: upwards-attack_20
-  - first:
-      213: -9169545633597914603
-    second: upwards-attack_21
-  - first:
-      213: 3216647654297558714
-    second: upwards-attack_22
-  - first:
-      213: -4948682294839234560
-    second: upwards-attack_23
-  - first:
-      213: 8597345433848857011
-    second: upwards-attack_24
-  - first:
-      213: -3167304400887903073
-    second: upwards-attack_25
-  - first:
-      213: -1075407578155325138
-    second: upwards-attack_26
-  - first:
-      213: -6788791028806369806
-    second: upwards-attack_27
-  - first:
-      213: -3980866079680312097
-    second: upwards-attack_28
-  - first:
-      213: 5773228010995910785
-    second: upwards-attack_29
-  - first:
-      213: 8553534058001080482
-    second: upwards-attack_30
-  - first:
-      213: 4761198446501866625
-    second: upwards-attack_31
-  - first:
-      213: -1102799187802067700
-    second: upwards-attack_32
-  - first:
-      213: -3936457126581170504
-    second: upwards-attack_33
-  - first:
-      213: -3740199291203040545
-    second: upwards-attack_34
-  - first:
-      213: 1420168957063712296
-    second: upwards-attack_35
-  - first:
-      213: -7329066898694586181
-    second: upwards-attack_36
-  - first:
-      213: -409579926460383366
-    second: upwards-attack_37
-  - first:
-      213: 6718585877682208219
-    second: upwards-attack_38
-  - first:
-      213: 6718904358353106072
-    second: upwards-attack_39
-  - first:
-      213: -2353133763475185329
-    second: upwards-attack_40
-  - first:
-      213: 8065879750463455454
-    second: upwards-attack_41
-  - first:
-      213: -2958710145245281788
-    second: upwards-attack_42
-  - first:
-      213: 7722289407398401054
-    second: upwards-attack_43
-  - first:
-      213: 2909118190859442721
-    second: upwards-attack_44
-  - first:
-      213: 4543943989243615403
-    second: upwards-attack_45
-  - first:
-      213: 7327260562521124232
-    second: upwards-attack_46
-  - first:
-      213: 2926168141959494799
-    second: upwards-attack_47
-  - first:
-      213: 5741878417506106154
-    second: upwards-attack_48
+      213: 1313103514650585136
+    second: fire u-a_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -234,7 +111,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: upwards-attack_0
+      name: fire u-a_0
       rect:
         serializedVersion: 2
         x: 136
@@ -248,14 +125,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c4bb916bc48f6340800000000000000
-      internalID: 4859248532006876352
+      spriteID: 5778ce1eb7c2368d0800000000000000
+      internalID: -2854388828239788171
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: upwards-attack_1
+      name: fire u-a_1
       rect:
         serializedVersion: 2
         x: 360
@@ -269,14 +146,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 10e93d4fb3d64db10800000000000000
-      internalID: 2005347838364720641
+      spriteID: 1f0a36ec8c3259df0800000000000000
+      internalID: -174193665220828943
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: upwards-attack_2
+      name: fire u-a_2
       rect:
         serializedVersion: 2
         x: 600
@@ -290,14 +167,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f6e846fbe15387030800000000000000
-      internalID: 3492599917202148975
+      spriteID: a94c5e20918132700800000000000000
+      internalID: 514281278152230042
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: upwards-attack_3
+      name: fire u-a_3
       rect:
         serializedVersion: 2
         x: 92
@@ -311,14 +188,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b308670c6bb343400800000000000000
-      internalID: 302932731039744059
+      spriteID: e24c65c3607ce8a20800000000000000
+      internalID: 3066607225881936942
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: upwards-attack_4
+      name: fire u-a_4
       rect:
         serializedVersion: 2
         x: 400
@@ -332,14 +209,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 288128fb1cd2bd030800000000000000
-      internalID: 3520457843885086850
+      spriteID: 3abb89fe65934bb30800000000000000
+      internalID: 4302126589595401123
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: upwards-attack_5
+      name: fire u-a_5
       rect:
         serializedVersion: 2
         x: 660
@@ -353,14 +230,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: add6b242757165c60800000000000000
-      internalID: 7806452667129753050
+      spriteID: cef6a41c3340eed30800000000000000
+      internalID: 4462508901103464428
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: upwards-attack_6
+      name: fire u-a_6
       rect:
         serializedVersion: 2
         x: 152
@@ -374,14 +251,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 218622c6099ef8ba0800000000000000
-      internalID: -6084387765055494126
+      spriteID: 1ada9a177d9ed0460800000000000000
+      internalID: 7209675690024218017
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: upwards-attack_7
+      name: fire u-a_7
       rect:
         serializedVersion: 2
         x: 364
@@ -395,8 +272,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 32fb3529fa8f371a0800000000000000
-      internalID: -6812828378323501277
+      spriteID: 038a01080b4193210800000000000000
+      internalID: 1313103514650585136
       vertices: []
       indices: 
       edges: []
