@@ -22,7 +22,7 @@ public class CharacterController2D : MonoBehaviour
     float dashTimeLeft;                 // How much time is left for the end of the dash
     int remainingDashes;                // Holds how much dashes the character can do 
 
-    const float groundedRadius = .2f;   // Radius of the overlap circle to determine if grounded
+    const float groundedRadius = .225f;   // Radius of the overlap circle to determine if grounded
     bool grounded;                      // Whether or not the player is grounded.
 
     Animator animator;
@@ -88,10 +88,10 @@ public class CharacterController2D : MonoBehaviour
                     // If it is supposed to restore dashes when landed;
                     remainingDashes = qtdDash;
                     OnLandEvent.Invoke();
-                    animator.SetBool("grounded", true);
                 }
             }
         }
+        animator.SetBool("grounded", grounded);
     }
 
     public void Move(float move)
@@ -126,7 +126,6 @@ public class CharacterController2D : MonoBehaviour
         {
             // Add a vertical force to the player.
             grounded = false;
-            animator.SetBool("grounded", false);
             rigidbody2D.AddForce(new Vector2(0f, jumpForce));
         }
     }
@@ -161,5 +160,10 @@ public class CharacterController2D : MonoBehaviour
         Vector3 theScale = transform.localScale;
         theScale.x *= -1;
         transform.localScale = theScale;
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(groundCheck.transform.position, groundedRadius);
     }
 }
