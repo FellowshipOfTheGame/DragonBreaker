@@ -6,12 +6,15 @@ public class PlayerMovement : MonoBehaviour
     InputActionAsset inputAction;
     Vector2 movementInput;
 
+    Animator animator;
+
     [SerializeField] CharacterController2D controller;      // Reference to a controller2D
     [SerializeField] Breaker breaker;
     [SerializeField] float runSpeed = 40f;                  // Speed of running
 
     private void Awake()
     {
+        animator = GetComponent<Animator>();
         inputAction = GetComponent<PlayerInput>().actions;
 
         // If arrows are pressed, sets the direction of movement;
@@ -33,7 +36,12 @@ public class PlayerMovement : MonoBehaviour
     }
 
     // Moves the player
-    private void FixedUpdate() => controller.Move(movementInput.x * runSpeed * Time.fixedDeltaTime);
+    private void FixedUpdate()
+    {
+        controller.Move(movementInput.x * runSpeed * Time.fixedDeltaTime);
+        if (movementInput.x != 0) animator.SetBool("walking", true);
+        else animator.SetBool("walking", false);
+    }
     //private void OnEnable() => inputAction.Enable();
     //private void OnDisable() => inputAction.Disable();
 }
