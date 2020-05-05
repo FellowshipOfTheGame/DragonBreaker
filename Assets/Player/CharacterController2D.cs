@@ -25,6 +25,8 @@ public class CharacterController2D : MonoBehaviour
     const float groundedRadius = .2f;   // Radius of the overlap circle to determine if grounded
     bool grounded;                      // Whether or not the player is grounded.
 
+    Animator animator;
+
     Rigidbody2D rigidbody2D;
     public bool facingRight { get; private set; } = true;            // For determining which way the player is currently facing.
     Vector3 velocity = Vector3.zero;
@@ -39,6 +41,7 @@ public class CharacterController2D : MonoBehaviour
     private void Awake()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
 
         remainingDashes = qtdDash;
 
@@ -85,6 +88,7 @@ public class CharacterController2D : MonoBehaviour
                     // If it is supposed to restore dashes when landed;
                     remainingDashes = qtdDash;
                     OnLandEvent.Invoke();
+                    animator.SetBool("grounded", true);
                 }
             }
         }
@@ -122,6 +126,7 @@ public class CharacterController2D : MonoBehaviour
         {
             // Add a vertical force to the player.
             grounded = false;
+            animator.SetBool("grounded", false);
             rigidbody2D.AddForce(new Vector2(0f, jumpForce));
         }
     }
