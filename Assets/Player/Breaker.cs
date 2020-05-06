@@ -13,8 +13,10 @@ public class Breaker : MonoBehaviour
     public void Attack(Vector2 movementInput, bool facingRight)
     {
         const float minimum_input = 0.4f;
-        if (movementInput.x == 0 && movementInput.y > minimum_input) animator.SetTrigger("Upward Attack");
-        else if (movementInput.x == 0 && movementInput.y < 0) animator.SetTrigger("Downward Attack");
+        animator.SetFloat("Vertical attack", movementInput.y);
+        animator.SetBool("Side attack", Math.Abs(movementInput.y) <= minimum_input || Math.Abs(movementInput.x) > minimum_input);
+        animator.SetTrigger("Attack");
+        Debug.Log("Attacking");
         float x_offset = movementInput.x, y_offset = movementInput.y;
         if (movementInput == Vector2.zero)
         {
