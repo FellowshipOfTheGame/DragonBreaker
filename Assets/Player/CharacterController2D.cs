@@ -91,7 +91,6 @@ public class CharacterController2D : MonoBehaviour
                 }
             }
         }
-        animator.SetBool("grounded", grounded);
     }
 
     public void Move(float move)
@@ -121,6 +120,7 @@ public class CharacterController2D : MonoBehaviour
 
     public void Jump()
     {
+        animator.SetBool("isJumping", true);
         // If the player should jump...
         if (grounded)
         {
@@ -148,6 +148,23 @@ public class CharacterController2D : MonoBehaviour
 
         // Invokes a dashStart
         OnDashStartEvent.Invoke();
+    }
+
+    public void OnLanding()
+    {
+        animator.SetBool("isJumping", false);
+    }
+
+    public void OnDashStart()
+    {
+        Debug.Log("Starting dash");
+        animator.SetBool("isDashing", true);
+    }
+
+    public void OnDashEnd()
+    {
+        Debug.Log("Finishing dash");
+        animator.SetBool("isDashing", false);
     }
 
     private void Flip()

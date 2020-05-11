@@ -18,7 +18,12 @@ public class PlayerMovement : MonoBehaviour
         inputAction = GetComponent<PlayerInput>().actions;
 
         // If arrows are pressed, sets the direction of movement;
-        inputAction["Move"].performed += ctx => movementInput = ctx.ReadValue<Vector2>();
+        inputAction["Move"].performed += ctx =>
+        {
+            movementInput = ctx.ReadValue<Vector2>();
+            if (animator.GetBool("walking") != true && movementInput.x != 0) animator.SetBool("walking", true);
+            else if (animator.GetBool("walking") != false) animator.SetBool("walking", false);
+        };
         inputAction["Attack"].performed += ctx => breaker.Attack(movementInput, controller.facingRight);
         inputAction["Jump"].started += ctx => controller.Jump();
         inputAction["Dash"].started += ctx => controller.Dash(movementInput);
@@ -39,8 +44,6 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         controller.Move(movementInput.x * runSpeed * Time.fixedDeltaTime);
-        if (movementInput.x != 0) animator.SetBool("walking", true);
-        else animator.SetBool("walking", false);
     }
     //private void OnEnable() => inputAction.Enable();
     //private void OnDisable() => inputAction.Disable();
