@@ -35,8 +35,6 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         controller.Move(movementInput.x * runSpeed * Time.fixedDeltaTime);
-        if (movementInput.x != 0) animator.SetBool("walking", true);
-        else animator.SetBool("walking", false);
     }
 
     private void EnableActions()
@@ -62,7 +60,12 @@ public class PlayerMovement : MonoBehaviour
         DisableActions();
     }
 
-    private void MovePerformed(InputAction.CallbackContext ctx) => movementInput = ctx.ReadValue<Vector2>();
+    private void MovePerformed(InputAction.CallbackContext ctx)
+    {
+        movementInput = ctx.ReadValue<Vector2>();
+        if (animator.GetBool("walking") != true && movementInput.x != 0) animator.SetBool("walking", true);
+        else if (animator.GetBool("walking") != false) animator.SetBool("walking", false);
+    }
     private void AttackPerformed(InputAction.CallbackContext ctx) => breaker.Attack(movementInput, controller.facingRight);
     private void JumpStarted(InputAction.CallbackContext ctx) => controller.Jump();
     private void DashStarted(InputAction.CallbackContext ctx) => controller.Dash(movementInput);
