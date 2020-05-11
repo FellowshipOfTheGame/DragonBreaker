@@ -125,7 +125,6 @@ public class CharacterController2D : MonoBehaviour
         if (grounded)
         {
             // Add a vertical force to the player.
-            grounded = false;
             rigidbody2D.AddForce(new Vector2(0f, jumpForce));
         }
     }
