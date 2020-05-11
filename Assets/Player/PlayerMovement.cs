@@ -17,11 +17,7 @@ public class PlayerMovement : MonoBehaviour
         animator = GetComponent<Animator>();
         inputAction = GetComponent<PlayerInput>().actions;
 
-        // If arrows are pressed, sets the direction of movement;
-        inputAction["Move"].performed += ctx => movementInput = ctx.ReadValue<Vector2>();
-        inputAction["Attack"].performed += ctx => breaker.Attack(movementInput, controller.facingRight);
-        inputAction["Jump"].started += ctx => controller.Jump();
-        inputAction["Dash"].started += ctx => controller.Dash(movementInput);
+        EnableActions();
     }
 
     private void OnDrawGizmos()
@@ -42,6 +38,32 @@ public class PlayerMovement : MonoBehaviour
         if (movementInput.x != 0) animator.SetBool("walking", true);
         else animator.SetBool("walking", false);
     }
-    //private void OnEnable() => inputAction.Enable();
-    //private void OnDisable() => inputAction.Disable();
+
+    private void EnableActions()
+    {
+        inputAction["Move"].performed += MovePerformed;
+        inputAction["Attack"].performed += AttackPerformed;
+        inputAction["Jump"].started += JumpStarted;
+        inputAction["Dash"].started += DashStarted;
+        inputAction.Enable();
+    }
+
+    private void DisableActions()
+    {
+        inputAction["Move"].performed -= MovePerformed;
+        inputAction["Attack"].performed -= AttackPerformed;
+        inputAction["Jump"].started -= JumpStarted;
+        inputAction["Dash"].started -= DashStarted;
+        inputAction.Disable();
+    }
+
+    private void OnDestroy()
+    {
+        DisableActions();
+    }
+
+    private void MovePerformed(InputAction.CallbackContext ctx) => movementInput = ctx.ReadValue<Vector2>();
+    private void AttackPerformed(InputAction.CallbackContext ctx) => breaker.Attack(movementInput, controller.facingRight);
+    private void JumpStarted(InputAction.CallbackContext ctx) => controller.Jump();
+    private void DashStarted(InputAction.CallbackContext ctx) => controller.Dash(movementInput);
 }
