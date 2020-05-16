@@ -6,9 +6,15 @@ using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Utilities;
 using UnityEngine.SceneManagement;
 
+[RequireComponent(typeof(PlayerInputManager))]
 public class MultiplayerManager : MonoBehaviour
 {
+    // Instance for singleton
     public static MultiplayerManager Instance { get; private set; }
+    // Number of players to be instantiated at the start of the scene, need to be at least 1 and no more then available devices
+    public static int NumberOfPlayers { get; set; } = 0;
+
+    public GameObject[] PlayerPrefabs = { };
     public event Action<int> onGameOver;
 
     [SerializeField] private PlayerUI[] _playerUIs = { };
@@ -16,31 +22,6 @@ public class MultiplayerManager : MonoBehaviour
 
     private Dictionary<ReadOnlyArray<InputDevice>, int> _indexUI;
     private List<PlayerInput> _players;
-    private int _alivePlayerCount = 0;
-
-    /// <summary>
-    /// Called when a new player input is instantiated
-    /// Makes him a child of this gameObject and activate its UI
-    /// </summary>
-    /// <param name="player"></param>
-    public void OnPlayerJoined(PlayerInput player)
-    {
-        player.transform.SetParent(this.transform);
-        _players.Add(player);
-        if (!_indexUI.ContainsKey(player.devices))
-        {
-            _indexUI.Add(player.devices, _playerCount);
-            _playerCount++;
-        }
-
-        int index = _indexUI[player.devices];
-        _playerUIs[index].gameObject.SetActive(true);
-        _playerUIs[index].Setup(player.gameObject);
-
-        player.GetComponent<HealthSystem>().onDeath += HandlePlayerJoin_onDeath;
-
-        _alivePlayerCount++;
-    }
 
     //Make it Singleton
     private void Awake()
@@ -54,15 +35,59 @@ public class MultiplayerManager : MonoBehaviour
             Destroy(this);
         }
         _playerCount = 0;
-        _alivePlayerCount = 0;
         _players = new List<PlayerInput>();
         _indexUI = new Dictionary<ReadOnlyArray<InputDevice>, int>();
+        InstantiatePlayers();
     }
 
-    private void HandlePlayerJoin_onDeath()
+    public void InstantiatePlayers()
     {
-        _alivePlayerCount--;
-        if(_alivePlayerCount <= 1)
+        PlayerInputManager manager = GetComponent<PlayerInputManager>();
+        for (int i = 0; i < NumberOfPlayers; i++)
+        {
+            if (i < PlayerPrefabs.Length)
+            {
+                manager.playerPrefab = PlayerPrefabs[i];
+            }
+            manager.JoinPlayer(i);
+        }
+    }
+
+    /// <summary>
+    /// Called when a new player input is instantiated
+    /// Makes him a child of this gameObject and activate its UI
+    /// </summary>
+    /// <param name="player"></param>
+    public void OnPlayerJoined(PlayerInput player)
+    {
+        Debug.Log("Joined: " + player.gameObject.name);
+        player.transform.SetParent(this.transform);
+        _players.Add(player);
+        if (!_indexUI.ContainsKey(player.devices))
+        {
+            _indexUI.Add(player.devices, _playerCount);
+            _playerCount++;
+        }
+
+        int index = _indexUI[player.devices];
+        _playerUIs[index].gameObject.SetActive(true);
+        _playerUIs[index].Setup(player.gameObject);
+
+        player.GetComponent<HealthSystem>().onDeath += HandlePlayer_onDeath;
+    }
+
+    public void OnPlayerLeft(PlayerInput player)
+    {
+        int index = _indexUI[player.devices];
+        _playerUIs[index].gameObject.SetActive(false);
+        _players.Remove(player);
+    }
+
+
+    private void HandlePlayer_onDeath()
+    {
+        _playerCount--;
+        if(_playerCount <= 1)
         {
             GameOver();
         }
@@ -98,4 +123,6 @@ public class MultiplayerManager : MonoBehaviour
             Instance = null;
         }
     }
+
+    
 }

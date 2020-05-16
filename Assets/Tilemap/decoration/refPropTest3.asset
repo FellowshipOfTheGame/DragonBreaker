@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: refPropTest2
-  m_EditorClassIdentifier: Assembly-CSharp::TileReference
+  m_Script: {fileID: 11500000, guid: 9c65d3d397ac0dc44918f4cbef3f8a23, type: 3}
+  m_Name: refPropTest3
+  m_EditorClassIdentifier: 
   title: propTest2
   objPrefab: {fileID: 1883587547889485719, guid: 05fbd7fa5468965458aab9200fc2cd6e,
     type: 3}

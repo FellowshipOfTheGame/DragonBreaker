@@ -13,9 +13,10 @@ public class PlayerUI : MonoBehaviour
     private HealthSystem playerHealth;
     private EnergyController playerEnergy;
 
-    /**
-     * Setup player UI
-     **/
+    /// <summary>
+    /// Enable callbacks for player's UI
+    /// </summary>
+    /// <param name="player"></param>
     public void Setup(GameObject player)
     {
         playerHealth = player.GetComponent<HealthSystem>();
@@ -26,9 +27,19 @@ public class PlayerUI : MonoBehaviour
         playerEnergy.onExperienceChange += ExperienceChange;
     }
 
-    /*
-     Change player health UI when player health's changes
-    */
+    /// <summary>
+    /// When player dies, stop listening for events
+    /// </summary>
+    public void Deactivate()
+    {
+        playerHealth.onHealthChange -= HealthChange;
+        playerEnergy.onLevelChange -= LevelChange;
+        playerEnergy.onExperienceChange -= ExperienceChange;
+    }
+
+    /// <summary>
+    /// Change player health UI when player health's changes
+    /// </summary>
     private void HealthChange(float healthPercent)
     {
         healthBar.fillAmount = healthPercent;
