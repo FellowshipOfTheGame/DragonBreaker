@@ -1,0 +1,320 @@
+fileFormatVersion: 2
+guid: 555170057ce116941a3757c9936e1ce9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3501397269222831425
+    second: lightning f-a_0
+  - first:
+      213: 4214878341813054227
+    second: lightning f-a_1
+  - first:
+      213: -623805542050227633
+    second: lightning f-a_2
+  - first:
+      213: 2392181867183210754
+    second: lightning f-a_3
+  - first:
+      213: 48085338174906714
+    second: lightning f-a_4
+  - first:
+      213: -6316221176013934333
+    second: lightning f-a_5
+  - first:
+      213: -8405258029960969057
+    second: lightning f-a_6
+  - first:
+      213: 312637346605920624
+    second: lightning f-a_7
+  - first:
+      213: -1641815950057236622
+    second: lightning f-a_0
+  - first:
+      213: 2320197751669707991
+    second: lightning f-a_1
+  - first:
+      213: -1495478391225327698
+    second: lightning f-a_2
+  - first:
+      213: 6765551435782599312
+    second: lightning f-a_3
+  - first:
+      213: 7484874790266439892
+    second: lightning f-a_4
+  - first:
+      213: -9084956186807979571
+    second: lightning f-a_5
+  - first:
+      213: 839355935746060277
+    second: lightning f-a_6
+  - first:
+      213: -2135960030216652458
+    second: lightning f-a_7
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: lightning f-a_0
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 896
+        width: 132
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 277944697191739e0800000000000000
+      internalID: -1641815950057236622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning f-a_1
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 896
+        width: 148
+        height: 132
+      alignment: 9
+      pivot: {x: 0.5540541, y: 0.45454547}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d4deecef8ff23020800000000000000
+      internalID: 2320197751669707991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning f-a_2
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 896
+        width: 236
+        height: 124
+      alignment: 9
+      pivot: {x: 0.720339, y: 0.48387095}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eafddb9935efe3be0800000000000000
+      internalID: -1495478391225327698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning f-a_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 244
+        height: 100
+      alignment: 9
+      pivot: {x: 0.7295082, y: 0.6}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 092b4777f2114ed50800000000000000
+      internalID: 6765551435782599312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning f-a_4
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 512
+        width: 232
+        height: 92
+      alignment: 9
+      pivot: {x: 0.7155172, y: 0.65217394}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d88b1617fd9fd760800000000000000
+      internalID: 7484874790266439892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning f-a_5
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 512
+        width: 176
+        height: 96
+      alignment: 9
+      pivot: {x: 0.625, y: 0.625}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc1b2557b70cbe180800000000000000
+      internalID: -9084956186807979571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning f-a_6
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 128
+        width: 148
+        height: 148
+      alignment: 9
+      pivot: {x: 0.5540541, y: 0.4054054}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ff6246c6cdf5ab00800000000000000
+      internalID: 839355935746060277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning f-a_7
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 128
+        width: 120
+        height: 124
+      alignment: 9
+      pivot: {x: 0.45, y: 0.48387095}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 659f0885bab8b52e0800000000000000
+      internalID: -2135960030216652458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
