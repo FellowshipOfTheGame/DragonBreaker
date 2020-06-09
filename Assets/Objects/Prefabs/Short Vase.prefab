@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 9097231896157449012}
   - component: {fileID: 9097231896157449013}
   - component: {fileID: 9097231896157449010}
-  - component: {fileID: 9097231896157449015}
+  - component: {fileID: 9023225138987351785}
   m_Layer: 10
-  m_Name: Breakable
+  m_Name: Short Vase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -72,12 +72,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f9082645c144dcf499bba08ac93c162f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5c6c797fbb08d5c4b8f2f7904250a0a6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.34375, y: 0.46875}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -95,10 +95,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63d36f662f7759e4a8cdedb1aa69c713, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _experience_reward: 100
+  _experience_reward: 1
   _required_level: 0
---- !u!60 &9097231896157449015
-PolygonCollider2D:
+  _respawn_interval_min: 3
+  _respawn_interval_max: 10
+--- !u!61 &9023225138987351785
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -114,17 +116,12 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
+    oldSize: {x: 0.34375, y: 0.46875}
+    newSize: {x: 0.34375, y: 0.46875}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0, y: 0.5}
-      - {x: -0.43301272, y: 0.25}
-      - {x: -0.4330127, y: -0.25000003}
-      - {x: -0.023706615, y: -0.5}
-      - {x: 0.43301272, y: -0.24999994}
-      - {x: 0.45671958, y: 0.22629309}
+  serializedVersion: 2
+  m_Size: {x: 0.34375, y: 0.46875}
+  m_EdgeRadius: 0
