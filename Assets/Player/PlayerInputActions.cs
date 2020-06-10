@@ -273,6 +273,74 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""UI"",
+            ""id"": ""1399dad4-e2bd-4b08-be7d-5ada3f469dd2"",
+            ""actions"": [
+                {
+                    ""name"": ""Join"",
+                    ""type"": ""Button"",
+                    ""id"": ""079c467d-d160-4bed-b66d-d815ccb9b5a0"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Leave"",
+                    ""type"": ""Button"",
+                    ""id"": ""f2afb516-7329-4a94-9d84-47a5b860d25a"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """"
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""b53194ad-3b22-47e0-837e-7e21eb5c4e19"",
+                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Leave"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e5393be5-d537-4877-bcde-4b75fd3d600e"",
+                    ""path"": ""<Keyboard>/x"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Leave"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4d736f59-ac43-41f0-91bb-23152f108f65"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Join"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f0e81eb3-9a57-437f-9ada-918cce154d01"",
+                    ""path"": ""<Keyboard>/z"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Join"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": [
@@ -306,6 +374,10 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
         m_PlayerControls_Jump = m_PlayerControls.FindAction("Jump", throwIfNotFound: true);
         m_PlayerControls_Dash = m_PlayerControls.FindAction("Dash", throwIfNotFound: true);
         m_PlayerControls_Attack = m_PlayerControls.FindAction("Attack", throwIfNotFound: true);
+        // UI
+        m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
+        m_UI_Join = m_UI.FindAction("Join", throwIfNotFound: true);
+        m_UI_Leave = m_UI.FindAction("Leave", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -408,6 +480,47 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
         }
     }
     public PlayerControlsActions @PlayerControls => new PlayerControlsActions(this);
+
+    // UI
+    private readonly InputActionMap m_UI;
+    private IUIActions m_UIActionsCallbackInterface;
+    private readonly InputAction m_UI_Join;
+    private readonly InputAction m_UI_Leave;
+    public struct UIActions
+    {
+        private @PlayerInputActions m_Wrapper;
+        public UIActions(@PlayerInputActions wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Join => m_Wrapper.m_UI_Join;
+        public InputAction @Leave => m_Wrapper.m_UI_Leave;
+        public InputActionMap Get() { return m_Wrapper.m_UI; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(UIActions set) { return set.Get(); }
+        public void SetCallbacks(IUIActions instance)
+        {
+            if (m_Wrapper.m_UIActionsCallbackInterface != null)
+            {
+                @Join.started -= m_Wrapper.m_UIActionsCallbackInterface.OnJoin;
+                @Join.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnJoin;
+                @Join.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnJoin;
+                @Leave.started -= m_Wrapper.m_UIActionsCallbackInterface.OnLeave;
+                @Leave.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnLeave;
+                @Leave.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnLeave;
+            }
+            m_Wrapper.m_UIActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @Join.started += instance.OnJoin;
+                @Join.performed += instance.OnJoin;
+                @Join.canceled += instance.OnJoin;
+                @Leave.started += instance.OnLeave;
+                @Leave.performed += instance.OnLeave;
+                @Leave.canceled += instance.OnLeave;
+            }
+        }
+    }
+    public UIActions @UI => new UIActions(this);
     private int m_GamepadSchemeIndex = -1;
     public InputControlScheme GamepadScheme
     {
@@ -432,5 +545,10 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
         void OnJump(InputAction.CallbackContext context);
         void OnDash(InputAction.CallbackContext context);
         void OnAttack(InputAction.CallbackContext context);
+    }
+    public interface IUIActions
+    {
+        void OnJoin(InputAction.CallbackContext context);
+        void OnLeave(InputAction.CallbackContext context);
     }
 }
