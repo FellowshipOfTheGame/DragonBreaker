@@ -3,12 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public struct PlayerInfo
 {
-    public enum PlayerElement { Fire, Ice, Lightning, Leaf};
+    public enum PlayerElement { Fire, Ice, Leaf, Lightning};
     public PlayerElement element;
-    public UnityEngine.InputSystem.Utilities.ReadOnlyArray<InputDevice> devices;
+    public string devicePath;
 };
 
 public class CharacterSelection : MonoBehaviour
@@ -33,7 +34,7 @@ public class CharacterSelection : MonoBehaviour
         {
             if (_availableElements[i])
             {
-                _playerInfo.Add(new PlayerInfo { element = (PlayerInfo.PlayerElement)i, devices = playerInput.devices });
+                _playerInfo.Add(new PlayerInfo { element = (PlayerInfo.PlayerElement)i, devicePath = playerInput.devices[0].layout });
                 switch (playerInput.currentControlScheme)
                 {
                     case "Gamepad":
@@ -59,5 +60,20 @@ public class CharacterSelection : MonoBehaviour
         int i = playerInput.gameObject.name[7] - 48;
         _availableElements[i] = true;
         players_selection_UI[i].SetupLeftPlayer(no_player_sprite);
+    }
+    
+    public void LoadLevel(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
+    }
+
+    void OnDisable()
+    {
+        PlayerPrefs.SetInt("Number of Players", _playerInfo.Count);
+        for(int i = 0; i < _playerInfo.Count; i++)
+        {
+            PlayerPrefs.SetString($"Player_{i}_device", _playerInfo[i].devicePath);
+            PlayerPrefs.SetInt($"Player_{i}_element", (int)_playerInfo[i].element);
+        }
     }
 }

@@ -13,7 +13,7 @@ public class MultiplayerManager : MonoBehaviour
     public static MultiplayerManager Instance { get; private set; }
     // Number of players to be instantiated at the start of the scene, need to be at least 1 and no more then available devices
     public static int NumberOfPlayers { get; set; } = 0;
-
+    
     public GameObject[] PlayerPrefabs = { };
     public event Action<int> onGameOver;
 
@@ -37,7 +37,9 @@ public class MultiplayerManager : MonoBehaviour
         _playerCount = 0;
         _players = new List<PlayerInput>();
         _indexUI = new Dictionary<ReadOnlyArray<InputDevice>, int>();
-        InstantiatePlayers();
+        
+        //InstantiatePlayers();
+        InstantiatePlayersWithSetDevices();
     }
 
     public void InstantiatePlayers()
@@ -50,6 +52,21 @@ public class MultiplayerManager : MonoBehaviour
                 manager.playerPrefab = PlayerPrefabs[i];
             }
             manager.JoinPlayer(i);
+        }
+    }
+
+    public void InstantiatePlayersWithSetDevices()
+    {
+        NumberOfPlayers = PlayerPrefs.GetInt("Number of Players");
+        PlayerInputManager manager = GetComponent<PlayerInputManager>();
+        string devicePath = null; 
+        for (int i = 0; i < NumberOfPlayers; i++)
+        {
+            if((devicePath = PlayerPrefs.GetString($"Player_{i}_device", null)) != null)
+            {
+                manager.playerPrefab = PlayerPrefabs[PlayerPrefs.GetInt($"Player_{i}_element", 0)];
+                manager.JoinPlayer(i, pairWithDevice: InputSystem.GetDevice(devicePath));
+            }
         }
     }
 
@@ -124,5 +141,4 @@ public class MultiplayerManager : MonoBehaviour
         }
     }
 
-    
 }
