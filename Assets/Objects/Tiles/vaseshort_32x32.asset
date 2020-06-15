@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: vasetall
+  m_Name: vaseshort_32x32
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 21300000, guid: 02db47b7f5a705b429c400282d3329b7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 839b574498220974ca3f2a77e3d3782a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1

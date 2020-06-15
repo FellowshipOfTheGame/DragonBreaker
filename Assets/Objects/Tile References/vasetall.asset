@@ -15,4 +15,4 @@ MonoBehaviour:
   title: Vase Tall
   objPrefab: {fileID: 9097231896157449011, guid: 230c3708fb42f8f48a48e75c3bc2acc9,
     type: 3}
-  refTile: {fileID: 11400000, guid: 2fac6268feef8d346906743b47ddcf33, type: 2}
+  refTile: {fileID: 11400000, guid: c1dcdf44d873b894790a067071b21772, type: 2}

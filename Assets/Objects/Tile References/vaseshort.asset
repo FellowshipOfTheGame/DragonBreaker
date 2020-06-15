@@ -15,4 +15,4 @@ MonoBehaviour:
   title: Vase Short
   objPrefab: {fileID: 9097231896157449011, guid: 8a9fc27200a854c458e876e285ba3115,
     type: 3}
-  refTile: {fileID: 11400000, guid: ef5d80cb7814f89409e318fd1ad0d666, type: 2}
+  refTile: {fileID: 11400000, guid: 0d67aba482995f64a8457569ffb34bdc, type: 2}
