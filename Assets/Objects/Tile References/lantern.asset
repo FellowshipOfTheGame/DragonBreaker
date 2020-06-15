@@ -15,4 +15,4 @@ MonoBehaviour:
   title: lantern
   objPrefab: {fileID: 9097231896157449011, guid: f961459d53129df4685e197761b15c30,
     type: 3}
-  refTile: {fileID: 11400000, guid: 630c74d5e8abed64193b34e062a5d364, type: 2}
+  refTile: {fileID: 11400000, guid: 293ab3a18dfa1cb44b9088b88e99c70c, type: 2}
