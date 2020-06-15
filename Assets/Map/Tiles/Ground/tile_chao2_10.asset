@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: Ground_4
+  m_Name: tile_chao2_10
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: -4233739483619845583, guid: 67afec14c95bff64abc96385301733f1,
+  m_Sprite: {fileID: -475229916630878047, guid: 7e230c2e0095a9b428065bf72a85a7b8,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:

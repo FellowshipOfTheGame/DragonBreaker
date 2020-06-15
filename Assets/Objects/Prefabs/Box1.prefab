@@ -123,5 +123,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _experience_reward: 10
   _required_level: 3
-  _respawn_interval_min: 3
-  _respawn_interval_max: 10
+  _respawn_interval_min: 0
+  _respawn_interval_max: 0
