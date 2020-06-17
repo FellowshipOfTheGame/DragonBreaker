@@ -269,7 +269,7 @@ MonoBehaviour:
   airControl: 1
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 2304
   groundCheck: {fileID: 6279948798424692579}
   OnLandEvent:
     m_PersistentCalls:
