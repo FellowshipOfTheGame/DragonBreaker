@@ -7,5 +7,5 @@ using UnityEngine.Tilemaps;
 public class TileReference : ScriptableObject{
     public string title;
     public GameObject objPrefab;
-    public TileBase refTile;
+    public TileBase[] refTiles;
 }

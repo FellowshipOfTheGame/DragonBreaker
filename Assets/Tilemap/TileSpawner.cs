@@ -37,15 +37,22 @@ public class TileSpawner : MonoBehaviour{
             TileBase tile = tilemap.GetTile(tilePos);
             if(tile != null){
                 for (int i=0; i<objectList.Length; i++){
-                    if(tile == objectList[i].refTile){
-                        //spawn object on tile center and register it
-                        GameObject newObj = Instantiate(objectList[i].objPrefab, tilemap.gameObject.transform);
-                        newObj.transform.position = tilePos + tilemap.layoutGrid.cellSize / 2;
-                        boxes[i].Add(newObj);
+                    for (int j = 0; j < objectList[i].refTiles.Length; j++)
+                        if (tile == objectList[i].refTiles[j])
+                        {
+                            //spawn object on tile center and register it
+                            GameObject newObj = Instantiate(objectList[i].objPrefab, tilemap.gameObject.transform);
+                            newObj.transform.position = tilePos + tilemap.layoutGrid.cellSize / 2;
 
-                        tilemap.SetTile(tilePos, null); //erase tile pivot
-                        break;
-                    }
+                            SpriteRenderer newObjSpriteRenderer = newObj.GetComponent<SpriteRenderer>();
+                            if (newObjSpriteRenderer && tile.GetType() == typeof(Tile))
+                                newObjSpriteRenderer.sprite = (tile as Tile).sprite;
+
+                            boxes[i].Add(newObj);
+
+                            tilemap.SetTile(tilePos, null); //erase tile pivot
+                            break;
+                        }
                 }
             }
         }
