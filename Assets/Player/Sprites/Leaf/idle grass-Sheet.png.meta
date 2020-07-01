@@ -1,31 +1,25 @@
 fileFormatVersion: 2
-guid: 7381672ccf9fede4c8a0a084bb7d840b
+guid: a56e4b336b9714546a42f0d16bab0ca6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3349555159124819686
-    second: leaf w_0
+      213: 1816431461907807270
+    second: idle grass-Sheet_0
   - first:
-      213: -8080797886862143173
-    second: leaf w_1
+      213: 5434731690348754062
+    second: idle grass-Sheet_1
   - first:
-      213: -4644813220305866683
-    second: leaf w_2
+      213: -2587650348099330449
+    second: idle grass-Sheet_2
   - first:
-      213: -1643716632172188399
-    second: leaf w_3
+      213: -2565364546265113417
+    second: idle grass-Sheet_0
   - first:
-      213: -4426035165185421328
-    second: leaf w_0
+      213: -1587026521835373776
+    second: idle grass-Sheet_1
   - first:
-      213: -6638742783906460249
-    second: leaf w_1
-  - first:
-      213: 8764329402345777638
-    second: leaf w_2
-  - first:
-      213: -7961205292124267471
-    second: leaf w_3
+      213: -8007911499318707991
+    second: idle grass-Sheet_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -111,49 +105,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: leaf w_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 128
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0ff4cb7a7709392c0800000000000000
-      internalID: -4426035165185421328
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: leaf w_1
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 128
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7ad41129c927ed3a0800000000000000
-      internalID: -6638742783906460249
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: leaf w_2
+      name: idle grass-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -167,14 +119,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e9e451f72721a970800000000000000
-      internalID: 8764329402345777638
+      spriteID: 7bc9c7c798ef56cd0800000000000000
+      internalID: -2565364546265113417
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: leaf w_3
+      name: idle grass-Sheet_1
       rect:
         serializedVersion: 2
         x: 128
@@ -188,8 +140,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 13c19f297fd148190800000000000000
-      internalID: -7961205292124267471
+      spriteID: 03bf0ec69cfb9f9e0800000000000000
+      internalID: -1587026521835373776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idle grass-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e8b75a4bee2ed090800000000000000
+      internalID: -8007911499318707991
       vertices: []
       indices: 
       edges: []

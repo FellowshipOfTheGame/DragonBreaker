@@ -1,163 +1,55 @@
 fileFormatVersion: 2
-guid: 7f221fbdb68f40a40ad2c86a8af65833
+guid: b1a37e17c71b57a4fbffa3857988e262
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7427171121555989627
-    second: leaf d-a_0
+      213: -5759176522201841591
+    second: f-a leaf-Sheet_0
   - first:
-      213: -6215525344780273917
-    second: leaf d-a_1
+      213: -4394630156954384742
+    second: f-a leaf-Sheet_1
   - first:
-      213: -149995634396640862
-    second: leaf d-a_2
+      213: 4200113321039776063
+    second: f-a leaf-Sheet_2
   - first:
-      213: -168612055180811147
-    second: leaf d-a_3
+      213: 434335319874968005
+    second: f-a leaf-Sheet_3
   - first:
-      213: 2822247094359187953
-    second: leaf d-a_4
+      213: 8144668937794260626
+    second: f-a leaf-Sheet_4
   - first:
-      213: 804000095567884862
-    second: leaf d-a_5
+      213: 4732387873582193898
+    second: f-a leaf-Sheet_5
   - first:
-      213: -5306608466325314631
-    second: leaf d-a_6
+      213: -1699240219937975341
+    second: f-a leaf-Sheet_6
   - first:
-      213: -5438407547640506371
-    second: leaf d-a_7
+      213: 3623598772047369830
+    second: f-a leaf-Sheet_7
   - first:
-      213: -5249137592294287781
-    second: leaf d-a_0
+      213: 5478177156850341400
+    second: f-a leaf-Sheet_0
   - first:
-      213: -7091546162746829373
-    second: leaf d-a_1
+      213: -878369443921976178
+    second: f-a leaf-Sheet_1
   - first:
-      213: 8504429882571847055
-    second: leaf d-a_2
+      213: -378599986072811206
+    second: f-a leaf-Sheet_2
   - first:
-      213: 251767285455197496
-    second: leaf d-a_3
+      213: -4587282581512995793
+    second: f-a leaf-Sheet_3
   - first:
-      213: 3612439572546461202
-    second: leaf d-a_4
+      213: 7042187631126880601
+    second: f-a leaf-Sheet_4
   - first:
-      213: 5317279743763377997
-    second: leaf d-a_5
+      213: -8759334430769835775
+    second: f-a leaf-Sheet_5
   - first:
-      213: -4039606216502852771
-    second: leaf d-a_6
+      213: -3026863656399586120
+    second: f-a leaf-Sheet_6
   - first:
-      213: -7532593179289043851
-    second: leaf d-a_7
-  - first:
-      213: -364175428199814004
-    second: leaf d-a_8
-  - first:
-      213: -1618414458441633764
-    second: leaf d-a_9
-  - first:
-      213: 3464680281523196401
-    second: leaf d-a_10
-  - first:
-      213: -3764544118688915600
-    second: leaf d-a_11
-  - first:
-      213: 6909282552360923389
-    second: leaf d-a_12
-  - first:
-      213: 8519501799648343540
-    second: leaf d-a_13
-  - first:
-      213: 8354300345902068956
-    second: leaf d-a_14
-  - first:
-      213: -1465120956671972913
-    second: leaf d-a_15
-  - first:
-      213: -5333559664090184238
-    second: leaf d-a_16
-  - first:
-      213: 3968805718158100993
-    second: leaf d-a_17
-  - first:
-      213: -6491211306753477370
-    second: leaf d-a_18
-  - first:
-      213: -2287723954102500174
-    second: leaf d-a_19
-  - first:
-      213: -6028432856088774599
-    second: leaf d-a_20
-  - first:
-      213: -5312634559150310518
-    second: leaf d-a_21
-  - first:
-      213: -1355847094817083946
-    second: leaf d-a_22
-  - first:
-      213: 930180272835819032
-    second: leaf d-a_23
-  - first:
-      213: -6468440155548267588
-    second: leaf d-a_24
-  - first:
-      213: 6402562083615887741
-    second: leaf d-a_25
-  - first:
-      213: 2867333638593777618
-    second: leaf d-a_26
-  - first:
-      213: -8363642492086778803
-    second: leaf d-a_27
-  - first:
-      213: -5633409133113049080
-    second: leaf d-a_28
-  - first:
-      213: 6935625762374568016
-    second: leaf d-a_29
-  - first:
-      213: 3957086172539835759
-    second: leaf d-a_30
-  - first:
-      213: 1081930102487161422
-    second: leaf d-a_31
-  - first:
-      213: -9019733260493308247
-    second: leaf d-a_32
-  - first:
-      213: 7565805613387485625
-    second: leaf d-a_33
-  - first:
-      213: -7136157170069516817
-    second: leaf d-a_34
-  - first:
-      213: -2975961265620905400
-    second: leaf d-a_35
-  - first:
-      213: -275424641092702484
-    second: leaf d-a_36
-  - first:
-      213: 5773288490414346281
-    second: leaf d-a_37
-  - first:
-      213: -5246194771435035581
-    second: leaf d-a_38
-  - first:
-      213: 6292024988443759944
-    second: leaf d-a_39
-  - first:
-      213: 1662738062929889842
-    second: leaf d-a_40
-  - first:
-      213: 8596587708893706190
-    second: leaf d-a_41
-  - first:
-      213: -3957452616428542593
-    second: leaf d-a_42
-  - first:
-      213: -3202816770865644570
-    second: leaf d-a_43
+      213: 8054980838552846780
+    second: f-a leaf-Sheet_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -243,169 +135,169 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: leaf d-a_0
+      name: f-a leaf-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 768
         width: 256
         height: 384
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b565622cb215727b0800000000000000
-      internalID: -5249137592294287781
+      spriteID: 81659ba7915660c40800000000000000
+      internalID: 5478177156850341400
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: leaf d-a_1
+      name: f-a leaf-Sheet_1
       rect:
         serializedVersion: 2
         x: 256
         y: 768
         width: 256
         height: 384
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3c5d03d6654c59d90800000000000000
-      internalID: -7091546162746829373
+      spriteID: e84297105a76fc3f0800000000000000
+      internalID: -878369443921976178
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: leaf d-a_2
+      name: f-a leaf-Sheet_2
       rect:
         serializedVersion: 2
         x: 512
         y: 768
         width: 256
         height: 384
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f8579e77bedc50670800000000000000
-      internalID: 8504429882571847055
+      spriteID: a39892e8151febaf0800000000000000
+      internalID: -378599986072811206
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: leaf d-a_3
+      name: f-a leaf-Sheet_3
       rect:
         serializedVersion: 2
         x: 0
         y: 384
         width: 256
         height: 384
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8351f9f13057e7300800000000000000
-      internalID: 251767285455197496
+      spriteID: f2cb49cebc2b650c0800000000000000
+      internalID: -4587282581512995793
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: leaf d-a_4
+      name: f-a leaf-Sheet_4
       rect:
         serializedVersion: 2
         x: 256
         y: 384
         width: 256
         height: 384
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 21e1236d6a6f12230800000000000000
-      internalID: 3612439572546461202
+      spriteID: 951a7f2e650eab160800000000000000
+      internalID: 7042187631126880601
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: leaf d-a_5
+      name: f-a leaf-Sheet_5
       rect:
         serializedVersion: 2
         x: 512
         y: 384
         width: 256
         height: 384
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d4f656a31c5cac940800000000000000
-      internalID: 5317279743763377997
+      spriteID: 1019d118eb7907680800000000000000
+      internalID: -8759334430769835775
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: leaf d-a_6
+      name: f-a leaf-Sheet_6
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 256
         height: 384
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d5343e08c8f60f7c0800000000000000
-      internalID: -4039606216502852771
+      spriteID: 8bc33c0aa8b6ef5d0800000000000000
+      internalID: -3026863656399586120
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: leaf d-a_7
+      name: f-a leaf-Sheet_7
       rect:
         serializedVersion: 2
         x: 256
         y: 0
         width: 256
         height: 384
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 57c32fea96ad67790800000000000000
-      internalID: -7532593179289043851
+      spriteID: cb14582456a09cf60800000000000000
+      internalID: 8054980838552846780
       vertices: []
       indices: 
       edges: []

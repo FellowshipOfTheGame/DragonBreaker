@@ -23,6 +23,27 @@ TextureImporter:
   - first:
       213: -4292125839947945803
     second: leaf d-j_6
+  - first:
+      213: 6323521373221575169
+    second: leaf d-j_0
+  - first:
+      213: 3227853792908251798
+    second: leaf d-j_1
+  - first:
+      213: 4323063080185301718
+    second: leaf d-j_2
+  - first:
+      213: -3809500376016329837
+    second: leaf d-j_3
+  - first:
+      213: -2805446276050512035
+    second: leaf d-j_4
+  - first:
+      213: 2423404661358581963
+    second: leaf d-j_5
+  - first:
+      213: 1016991732774277360
+    second: leaf d-j_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -111,10 +132,10 @@ TextureImporter:
       name: leaf d-j_0
       rect:
         serializedVersion: 2
-        x: 8
+        x: 0
         y: 256
-        width: 116
-        height: 108
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -122,8 +143,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 25e0a0e4b827c9da0800000000000000
-      internalID: -5936744266145853870
+      spriteID: 10a567c7f29a1c750800000000000000
+      internalID: 6323521373221575169
       vertices: []
       indices: 
       edges: []
@@ -132,10 +153,10 @@ TextureImporter:
       name: leaf d-j_1
       rect:
         serializedVersion: 2
-        x: 132
+        x: 128
         y: 256
-        width: 124
-        height: 80
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,8 +164,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8c91770d3a93555e0800000000000000
-      internalID: -1921566290263729720
+      spriteID: 69291393ce3abcc20800000000000000
+      internalID: 3227853792908251798
       vertices: []
       indices: 
       edges: []
@@ -153,10 +174,10 @@ TextureImporter:
       name: leaf d-j_2
       rect:
         serializedVersion: 2
-        x: 280
-        y: 260
-        width: 92
-        height: 120
+        x: 256
+        y: 256
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -164,8 +185,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 84a00b62123485690800000000000000
-      internalID: -7613261360407770552
+      spriteID: 6da0d0487fa9efb30800000000000000
+      internalID: 4323063080185301718
       vertices: []
       indices: 
       edges: []
@@ -174,10 +195,10 @@ TextureImporter:
       name: leaf d-j_3
       rect:
         serializedVersion: 2
-        x: 8
-        y: 140
-        width: 116
-        height: 112
+        x: 0
+        y: 128
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -185,8 +206,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 02c2b1932c19879d0800000000000000
-      internalID: -2776308906906145760
+      spriteID: 39364d3779fe12bc0800000000000000
+      internalID: -3809500376016329837
       vertices: []
       indices: 
       edges: []
@@ -195,10 +216,10 @@ TextureImporter:
       name: leaf d-j_4
       rect:
         serializedVersion: 2
-        x: 132
-        y: 140
-        width: 124
-        height: 112
+        x: 128
+        y: 128
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -206,8 +227,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8337c51c17cb5d9c0800000000000000
-      internalID: -3903006305285278920
+      spriteID: d57119fc97d0119d0800000000000000
+      internalID: -2805446276050512035
       vertices: []
       indices: 
       edges: []
@@ -216,10 +237,10 @@ TextureImporter:
       name: leaf d-j_5
       rect:
         serializedVersion: 2
-        x: 260
+        x: 256
         y: 128
-        width: 124
-        height: 124
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -227,8 +248,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4e5f9587ea0e5ac00800000000000000
-      internalID: 911381539560486372
+      spriteID: bc8dd4323b9a1a120800000000000000
+      internalID: 2423404661358581963
       vertices: []
       indices: 
       edges: []
@@ -237,10 +258,10 @@ TextureImporter:
       name: leaf d-j_6
       rect:
         serializedVersion: 2
-        x: 8
+        x: 0
         y: 0
-        width: 120
-        height: 120
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -248,8 +269,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5b8a0aa0a4e4f64c0800000000000000
-      internalID: -4292125839947945803
+      spriteID: 0f0158bb7941d1e00800000000000000
+      internalID: 1016991732774277360
       vertices: []
       indices: 
       edges: []
