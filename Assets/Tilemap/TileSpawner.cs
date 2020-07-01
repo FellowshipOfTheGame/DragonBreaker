@@ -44,6 +44,7 @@ public class TileSpawner : MonoBehaviour{
                             GameObject newObj = Instantiate(objectList[i].objPrefab, tilemap.gameObject.transform);
                             newObj.transform.position = tilePos + tilemap.layoutGrid.cellSize / 2;
 
+                            // Changes its sprite to the one in the tile
                             SpriteRenderer newObjSpriteRenderer = newObj.GetComponent<SpriteRenderer>();
                             if (newObjSpriteRenderer && tile.GetType() == typeof(Tile))
                                 newObjSpriteRenderer.sprite = (tile as Tile).sprite;
