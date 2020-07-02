@@ -1,31 +1,16 @@
 fileFormatVersion: 2
-guid: 2f55e5172b4af854eaad310c45aed369
+guid: a43fa028c86e41346bcb4861baeba022
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6639101856383489587
-    second: ice w_0
+      213: 8195281977789905879
+    second: idle ice-Sheet_0
   - first:
-      213: -4708374221887940263
-    second: ice w_1
+      213: -502419365384805910
+    second: idle ice-Sheet_1
   - first:
-      213: -2784073942487738881
-    second: ice w_2
-  - first:
-      213: 1783133396454458557
-    second: ice w_3
-  - first:
-      213: 4746423275209371199
-    second: ice w_0
-  - first:
-      213: -7798944855564203660
-    second: ice w_1
-  - first:
-      213: -325370885672189665
-    second: ice w_2
-  - first:
-      213: -1463540711214743188
-    second: ice w_3
+      213: 6044160510550881529
+    second: idle ice-Sheet_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -111,49 +96,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ice w_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 128
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f3e208832deaed140800000000000000
-      internalID: 4746423275209371199
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ice w_1
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 128
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4794c3579f494c390800000000000000
-      internalID: -7798944855564203660
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ice w_2
+      name: idle ice-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -167,14 +110,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f11414347ec0c7bf0800000000000000
-      internalID: -325370885672189665
+      spriteID: 7dbf350d98d7bb170800000000000000
+      internalID: 8195281977789905879
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ice w_3
+      name: idle ice-Sheet_1
       rect:
         serializedVersion: 2
         x: 128
@@ -188,8 +131,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c6109b13a7570bbe0800000000000000
-      internalID: -1463540711214743188
+      spriteID: ae126f5cf3c0709f0800000000000000
+      internalID: -502419365384805910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idle ice-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f434d406fb21e350800000000000000
+      internalID: 6044160510550881529
       vertices: []
       indices: 
       edges: []

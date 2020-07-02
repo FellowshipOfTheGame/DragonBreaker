@@ -132,10 +132,10 @@ TextureImporter:
       name: blue d-j_0
       rect:
         serializedVersion: 2
-        x: 8
+        x: 0
         y: 256
-        width: 116
-        height: 108
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,10 +153,10 @@ TextureImporter:
       name: blue d-j_1
       rect:
         serializedVersion: 2
-        x: 132
+        x: 128
         y: 256
-        width: 124
-        height: 80
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,10 +174,10 @@ TextureImporter:
       name: blue d-j_2
       rect:
         serializedVersion: 2
-        x: 280
-        y: 260
-        width: 92
-        height: 120
+        x: 256
+        y: 256
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,10 +195,10 @@ TextureImporter:
       name: blue d-j_3
       rect:
         serializedVersion: 2
-        x: 8
-        y: 140
-        width: 116
-        height: 112
+        x: 0
+        y: 128
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,10 +216,10 @@ TextureImporter:
       name: blue d-j_4
       rect:
         serializedVersion: 2
-        x: 132
-        y: 140
-        width: 124
-        height: 112
+        x: 128
+        y: 128
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -237,10 +237,10 @@ TextureImporter:
       name: blue d-j_5
       rect:
         serializedVersion: 2
-        x: 260
+        x: 256
         y: 128
-        width: 124
-        height: 124
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -258,10 +258,10 @@ TextureImporter:
       name: blue d-j_6
       rect:
         serializedVersion: 2
-        x: 8
+        x: 0
         y: 0
-        width: 120
-        height: 120
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
