@@ -35,6 +35,7 @@ public class CharacterSelection : MonoBehaviour
             if (_availableElements[i])
             {
                 _playerInfo.Add(new PlayerInfo { element = (PlayerInfo.PlayerElement)i, devicePath = playerInput.devices[0].layout });
+                Debug.Log($"Joined player {_playerInfo[_playerInfo.Count - 1]}");
                 switch (playerInput.currentControlScheme)
                 {
                     case "Gamepad":
@@ -60,20 +61,32 @@ public class CharacterSelection : MonoBehaviour
         int i = playerInput.gameObject.name[7] - 48;
         _availableElements[i] = true;
         players_selection_UI[i].SetupLeftPlayer(no_player_sprite);
+        _playerInfo.Remove(_playerInfo.Find((match) => i.Equals((int)match.element)));
+        Debug.Log($"Left player{(PlayerInfo.PlayerElement) i}");
     }
     
     public void LoadLevel(string sceneName)
     {
+        if(_playerInfo.Count <= 0)
+        {
+            return;
+        }
+        SetPlayerPrefs();
         SceneManager.LoadScene(sceneName);
     }
 
-    void OnDisable()
+    public void SetPlayerPrefs()
     {
         PlayerPrefs.SetInt("Number of Players", _playerInfo.Count);
-        for(int i = 0; i < _playerInfo.Count; i++)
+        Debug.Log(_playerInfo.Count);
+        for (int i = 0; i < _playerInfo.Count; i++)
         {
             PlayerPrefs.SetString($"Player_{i}_device", _playerInfo[i].devicePath);
             PlayerPrefs.SetInt($"Player_{i}_element", (int)_playerInfo[i].element);
+            Debug.Log(_playerInfo[i].devicePath);
+            Debug.Log((int)_playerInfo[i].element);
         }
     }
+
+    //void OnDisable() => SetPlayerPrefs();
 }
