@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c65d3d397ac0dc44918f4cbef3f8a23, type: 3}
   m_Name: box2
   m_EditorClassIdentifier: 
-  title: 
+  title: Box 2
   objPrefab: {fileID: 2125253717175999365, guid: 4e5b4b7fc7a5d544ba53d58cced594fa,
     type: 3}
-  refTile: {fileID: 11400000, guid: f540ea91e8cfc5842b93cb1d13b3c06f, type: 2}
+  refTiles:
+  - {fileID: 11400000, guid: f540ea91e8cfc5842b93cb1d13b3c06f, type: 2}
