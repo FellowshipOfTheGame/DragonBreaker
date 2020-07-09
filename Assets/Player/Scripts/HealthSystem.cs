@@ -27,6 +27,7 @@ public class HealthSystem : MonoBehaviour, IDamagable
 
     public void hit(float damage, Action<int> callback)
     {
+        Debug.Log("Taking damage " + gameObject.name);
         //Taking damage
         health -= damage;
 

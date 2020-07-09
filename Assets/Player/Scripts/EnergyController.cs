@@ -17,7 +17,6 @@ public class EnergyController : MonoBehaviour
 
     public void addExperience(int experience)
     {
-        Debug.Log("Adding experience");
         if (level == maxLevel) return;
         currentExperience += experience;
         onExperienceChange?.Invoke(currentExperience / (float)levels[level+1]);
@@ -43,7 +42,6 @@ public class EnergyController : MonoBehaviour
 
     public void resetLevel()
     {
-        Debug.Log("Reseting level");
         level = 0;
         currentExperience = 0;
         onLevelChange?.Invoke(level);
