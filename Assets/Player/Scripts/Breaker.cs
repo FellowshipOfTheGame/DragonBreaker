@@ -3,9 +3,11 @@ using UnityEngine;
 
 public class Breaker : MonoBehaviour
 {
+    [SerializeField] private Transform attackPoint;
     [SerializeField] private EnergyController energyController;
     [SerializeField] private LayerMask _attack_layer;
     [SerializeField] private Animator animator;
+    [SerializeField] private float attackDelay = 1 / 12;
 
     [Header("Attack Properties")]
     [SerializeField] public float range = 1f;
@@ -13,34 +15,33 @@ public class Breaker : MonoBehaviour
     public void Attack(Vector2 movementInput, bool facingRight)
     {
         const float minimum_input = 0.4f;
+
         animator.SetFloat("Vertical attack", movementInput.y);
         animator.SetBool("Side attack", Math.Abs(movementInput.y) <= minimum_input || Math.Abs(movementInput.x) > minimum_input);
         animator.SetTrigger("Attack");
-        Debug.Log("Attacking");
-        float x_offset = movementInput.x, y_offset = movementInput.y;
-        if (movementInput == Vector2.zero)
+
+        if (Mathf.Abs(movementInput.y) >= minimum_input)
         {
-            if (!facingRight) x_offset = 1;
-            else x_offset = -1;
+            if (movementInput.y > 0)
+                Invoke("UpAttack", attackDelay);
+            else
+                Invoke("DownAttack", attackDelay);
         }
+        else
+            Invoke("SideAttack", attackDelay);
 
-        Vector2 attack_position = new Vector2(x_offset + transform.position.x, y_offset + transform.position.y);
+        return;
 
-        //Check 4 directions
-        if (movementInput.y > minimum_input)
-            attack_position = transform.position + Vector3.up;
-        else if (movementInput.y < -minimum_input)
-            attack_position = transform.position + Vector3.down;
-        else if (movementInput.x > minimum_input)
-            attack_position = transform.position + Vector3.right;
-        else if (movementInput.x < -minimum_input)
-            attack_position = transform.position + Vector3.left;
+        
+    }
 
+    private void PerfomAttack(Vector2 attack_position)
+    {
         //Checking collisions on attack area
         Collider2D[] collisions = Physics2D.OverlapCircleAll(attack_position, range, _attack_layer);
-        
+
         //TEMPORARY FIX to player having 2 colliders
-        GameObject lastE = null; 
+        GameObject lastE = null;
         foreach (Collider2D entity in collisions)
         {
             //If hitting same twice or itself, continue
@@ -52,5 +53,19 @@ public class Breaker : MonoBehaviour
 
             entity.GetComponent<IDamagable>()?.hit(energyController.level, callbackFunction);
         }
+    }
+
+    private void SideAttack()
+    {
+        PerfomAttack(attackPoint.position);
+    }
+
+    private void UpAttack()
+    {
+        PerfomAttack(new Vector2(transform.position.x, transform.position.y) + Vector2.up * attackPoint.position.x);
+    }
+    private void DownAttack()
+    {
+        PerfomAttack(new Vector2(transform.position.x, transform.position.y) + Vector2.down * attackPoint.position.x);
     }
 }
