@@ -30,6 +30,7 @@ public class CharacterSelection : MonoBehaviour
 
     public void OnPlayerJoined(PlayerInput playerInput)
     {
+        Debug.Log("Player joining");
         for (int i = 0; i < _availableElements.Length; i++)
         {
             if (_availableElements[i])
@@ -67,7 +68,7 @@ public class CharacterSelection : MonoBehaviour
     
     public void LoadLevel(string sceneName)
     {
-        if(_playerInfo.Count <= 0)
+        if(_playerInfo.Count < 2)
         {
             return;
         }
@@ -88,5 +89,19 @@ public class CharacterSelection : MonoBehaviour
         }
     }
 
-    //void OnDisable() => SetPlayerPrefs();
+    private void OnEnable()
+    {
+        FindObjectOfType<PlayerInputManager>().EnableJoining();
+    }
+
+    void OnDisable()
+    {
+        var players = FindObjectsOfType<PlayerInput>();
+
+        foreach (var p in players)
+        {
+            OnPlayerLeft(p);
+            Destroy(p.gameObject);
+        }
+    }
 }

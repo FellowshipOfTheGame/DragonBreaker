@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class CharacterSelectionUI : MonoBehaviour
 {
-    [SerializeField] private Image _deviceImage;
-    [SerializeField] private GameObject _playerImage;
+    [SerializeField] private Image _deviceImage = null;
+    [SerializeField] private GameObject _playerImage = null;
 
     public void SetupJoinedPlayer(Sprite sprite)
     {
