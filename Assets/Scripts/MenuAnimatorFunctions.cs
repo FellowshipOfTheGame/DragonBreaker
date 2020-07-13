@@ -25,5 +25,4 @@ public class MenuAnimatorFunctions : MonoBehaviour
     {
         MenuStateMachine.PlayEnterStateAnimation();
     }
-
 }
