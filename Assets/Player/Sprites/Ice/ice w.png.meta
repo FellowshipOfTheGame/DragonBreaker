@@ -14,6 +14,18 @@ TextureImporter:
   - first:
       213: 1783133396454458557
     second: ice w_3
+  - first:
+      213: 4746423275209371199
+    second: ice w_0
+  - first:
+      213: -7798944855564203660
+    second: ice w_1
+  - first:
+      213: -325370885672189665
+    second: ice w_2
+  - first:
+      213: -1463540711214743188
+    second: ice w_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -102,10 +114,10 @@ TextureImporter:
       name: ice w_0
       rect:
         serializedVersion: 2
-        x: 8
-        y: 132
-        width: 112
-        height: 104
+        x: 0
+        y: 128
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -113,8 +125,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dc920ae790c2dd3a0800000000000000
-      internalID: -6639101856383489587
+      spriteID: f3e208832deaed140800000000000000
+      internalID: 4746423275209371199
       vertices: []
       indices: 
       edges: []
@@ -123,10 +135,10 @@ TextureImporter:
       name: ice w_1
       rect:
         serializedVersion: 2
-        x: 136
+        x: 128
         y: 128
-        width: 112
-        height: 112
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,8 +146,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 95953ca579e78aeb0800000000000000
-      internalID: -4708374221887940263
+      spriteID: 4794c3579f494c390800000000000000
+      internalID: -7798944855564203660
       vertices: []
       indices: 
       edges: []
@@ -144,10 +156,10 @@ TextureImporter:
       name: ice w_2
       rect:
         serializedVersion: 2
-        x: 8
-        y: 4
-        width: 112
-        height: 104
+        x: 0
+        y: 0
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -155,8 +167,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ff5d89dff7bfc59d0800000000000000
-      internalID: -2784073942487738881
+      spriteID: f11414347ec0c7bf0800000000000000
+      internalID: -325370885672189665
       vertices: []
       indices: 
       edges: []
@@ -165,10 +177,10 @@ TextureImporter:
       name: ice w_3
       rect:
         serializedVersion: 2
-        x: 136
+        x: 128
         y: 0
-        width: 112
-        height: 112
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -176,8 +188,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: db4cdca6066feb810800000000000000
-      internalID: 1783133396454458557
+      spriteID: c6109b13a7570bbe0800000000000000
+      internalID: -1463540711214743188
       vertices: []
       indices: 
       edges: []

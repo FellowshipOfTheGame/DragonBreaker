@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: a3b141465cde61c4fa891fa04dbdc01a
+guid: 4bdd98159516639499f4ec0a2134c3ed
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5113850848988359095
-    second: platform_0
+      213: -2474471468938751521
+    second: platformas_96x32_0
   - first:
-      213: -2220758982292089259
-    second: platform_1
+      213: 2836068471491485374
+    second: platformas_96x32_1
   - first:
-      213: -1698345488966040518
-    second: platform_2
+      213: 2250035614223960535
+    second: platformas_96x32_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -96,13 +96,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: platform_0
+      name: platformas_96x32_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 6
+        y: 0
         width: 32
-        height: 10
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -110,20 +110,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 94618b74fb3f709b0800000000000000
-      internalID: -5113850848988359095
+      spriteID: fd1111f2f49e8add0800000000000000
+      internalID: -2474471468938751521
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: platform_1
+      name: platformas_96x32_1
       rect:
         serializedVersion: 2
         x: 32
-        y: 6
+        y: 0
         width: 32
-        height: 10
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,20 +131,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 556d8b0c8774e21e0800000000000000
-      internalID: -2220758982292089259
+      spriteID: ebe5fe9af3dbb5720800000000000000
+      internalID: 2836068471491485374
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: platform_2
+      name: platformas_96x32_2
       rect:
         serializedVersion: 2
         x: 64
-        y: 6
+        y: 0
         width: 32
-        height: 10
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,8 +152,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a34ca48a6c34e68e0800000000000000
-      internalID: -1698345488966040518
+      spriteID: 7d90ccd487bb93f10800000000000000
+      internalID: 2250035614223960535
       vertices: []
       indices: 
       edges: []

@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c65d3d397ac0dc44918f4cbef3f8a23, type: 3}
   m_Name: lantern
   m_EditorClassIdentifier: 
-  title: lantern
+  title: Lantern
   objPrefab: {fileID: 9097231896157449011, guid: f961459d53129df4685e197761b15c30,
     type: 3}
-  refTile: {fileID: 11400000, guid: 630c74d5e8abed64193b34e062a5d364, type: 2}
+  refTiles:
+  - {fileID: 11400000, guid: 293ab3a18dfa1cb44b9088b88e99c70c, type: 2}
+  - {fileID: 11400000, guid: 44613f75ac28f864f8aabe5840e0117b, type: 2}
+  - {fileID: 11400000, guid: b1db632beea1df94797882fb595535fe, type: 2}
