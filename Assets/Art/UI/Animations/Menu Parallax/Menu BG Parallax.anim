@@ -22,15 +22,15 @@ AnimationClip:
         time: 0
         value: {x: -956.86, y: -536.66, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
-        outSlope: {x: -0.3080017, y: 0, z: 0}
+        outSlope: {x: -0.15400085, y: 0, z: 0}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 20
+        time: 40
         value: {x: -963.02, y: -536.66, z: 0}
-        inSlope: {x: -0.3080017, y: 0, z: 0}
+        inSlope: {x: -0.15400085, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
         weightedMode: 0
@@ -39,7 +39,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: bg_dragon_breaker (1)
+    path: skybox
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -47,15 +47,15 @@ AnimationClip:
         time: 0
         value: {x: -952.689, y: -543, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
-        outSlope: {x: -0.7196472, y: 0, z: 0}
+        outSlope: {x: -0.3598236, y: 0, z: 0}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 20
+        time: 40
         value: {x: -967.082, y: -543, z: 0}
-        inSlope: {x: -0.7196472, y: 0, z: 0}
+        inSlope: {x: -0.3598236, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
         weightedMode: 0
@@ -64,7 +64,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: tile_chao (1)
+    path: ground
   m_ScaleCurves: []
   m_FloatCurves:
   - curve:
@@ -80,7 +80,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.33333334
+        time: 1
         value: 1
         inSlope: 0
         outSlope: 0
@@ -89,7 +89,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 19.5
+        time: 38.966667
         value: 1
         inSlope: 0
         outSlope: 0
@@ -98,7 +98,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 20
+        time: 40
         value: 0
         inSlope: 0
         outSlope: 0
@@ -110,7 +110,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Color.a
-    path: bg_dragon_breaker (1)
+    path: skybox
     classID: 212
     script: {fileID: 0}
   m_PPtrCurves: []
@@ -122,21 +122,21 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 3617228943
+      path: 860481198
       attribute: 1
       script: {fileID: 0}
       typeID: 4
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 744357220
+      path: 2818540392
       attribute: 1
       script: {fileID: 0}
       typeID: 4
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 3617228943
+      path: 860481198
       attribute: 304273561
       script: {fileID: 0}
       typeID: 212
@@ -148,7 +148,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 20
+    m_StopTime: 40
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -171,15 +171,15 @@ AnimationClip:
         time: 0
         value: -956.86
         inSlope: 0
-        outSlope: -0.3080017
+        outSlope: -0.15400085
         tangentMode: 65
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 20
+        time: 40
         value: -963.02
-        inSlope: -0.3080017
+        inSlope: -0.15400085
         outSlope: 0
         tangentMode: 5
         weightedMode: 0
@@ -189,7 +189,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: bg_dragon_breaker (1)
+    path: skybox
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -205,7 +205,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 20
+        time: 40
         value: -536.66
         inSlope: 0
         outSlope: 0
@@ -217,7 +217,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: bg_dragon_breaker (1)
+    path: skybox
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -233,7 +233,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 20
+        time: 40
         value: 0
         inSlope: 0
         outSlope: 0
@@ -245,7 +245,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: bg_dragon_breaker (1)
+    path: skybox
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -261,7 +261,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.33333334
+        time: 1
         value: 1
         inSlope: 0
         outSlope: 0
@@ -270,7 +270,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 19.5
+        time: 38.966667
         value: 1
         inSlope: 0
         outSlope: 0
@@ -279,7 +279,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 20
+        time: 40
         value: 0
         inSlope: 0
         outSlope: 0
@@ -291,7 +291,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Color.a
-    path: bg_dragon_breaker (1)
+    path: skybox
     classID: 212
     script: {fileID: 0}
   - curve:
@@ -301,15 +301,15 @@ AnimationClip:
         time: 0
         value: -952.689
         inSlope: 0
-        outSlope: -0.7196472
+        outSlope: -0.3598236
         tangentMode: 65
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 20
+        time: 40
         value: -967.082
-        inSlope: -0.7196472
+        inSlope: -0.3598236
         outSlope: 0
         tangentMode: 5
         weightedMode: 0
@@ -319,7 +319,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: tile_chao (1)
+    path: ground
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -335,7 +335,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 20
+        time: 40
         value: -543
         inSlope: 0
         outSlope: 0
@@ -347,7 +347,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: tile_chao (1)
+    path: ground
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -363,7 +363,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 20
+        time: 40
         value: 0
         inSlope: 0
         outSlope: 0
@@ -375,7 +375,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: tile_chao (1)
+    path: ground
     classID: 4
     script: {fileID: 0}
   m_EulerEditorCurves: []
