@@ -202,6 +202,12 @@ MonoBehaviour:
   textUI: {fileID: 6024961384641197638}
   healthBar: {fileID: 1093484934578608950}
   expBar: {fileID: 4951154563938122289}
+  healthBarProgress:
+  - {fileID: 21300000, guid: 475b1a3248ea69a4eb9ff3b3fc51b20d, type: 3}
+  - {fileID: 21300000, guid: ee3557fd53fb0a24389bf579d7770aca, type: 3}
+  - {fileID: 21300000, guid: d588a44ea5ffd7348baf953226aef165, type: 3}
+  - {fileID: 21300000, guid: 5d2f32612e3fa2a40870c881547d9366, type: 3}
+  - {fileID: 21300000, guid: f5e2d5d22236afb4dbd01d192424c45b, type: 3}
 --- !u!1 &5324464831325890944
 GameObject:
   m_ObjectHideFlags: 0

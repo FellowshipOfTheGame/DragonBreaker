@@ -65,15 +65,15 @@ public class CharacterSelection : MonoBehaviour
         _playerInfo.Remove(_playerInfo.Find((match) => i.Equals((int)match.element)));
         Debug.Log($"Left player{(PlayerInfo.PlayerElement) i}");
     }
-    
-    public void LoadLevel(string sceneName)
+
+    public void LoadLevel()
     {
-        if(_playerInfo.Count < 2)
+        if (_playerInfo.Count < 2)
         {
             return;
         }
         SetPlayerPrefs();
-        SceneManager.LoadScene(sceneName);
+        LoadSceneManager.LoadNextScene();
     }
 
     public void SetPlayerPrefs()

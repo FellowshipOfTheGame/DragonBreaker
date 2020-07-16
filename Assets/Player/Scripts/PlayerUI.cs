@@ -10,8 +10,10 @@ public class PlayerUI : MonoBehaviour
     [SerializeField] private Image healthBar;
     [SerializeField] private Image expBar;
 
-    private HealthSystem playerHealth;
-    private EnergyController playerEnergy;
+    [SerializeField] private Sprite[] healthBarProgress = new Sprite[5];
+
+    private HealthSystem _playerHealth;
+    private EnergyController _playerEnergy;
 
     /// <summary>
     /// Enable callbacks for player's UI
@@ -19,12 +21,14 @@ public class PlayerUI : MonoBehaviour
     /// <param name="player"></param>
     public void Setup(GameObject player)
     {
-        playerHealth = player.GetComponent<HealthSystem>();
-        playerEnergy = player.GetComponent<EnergyController>();
+        _playerHealth = player.GetComponent<HealthSystem>();
+        _playerEnergy = player.GetComponent<EnergyController>();
 
-        playerHealth.onHealthChange += HealthChange;
-        playerEnergy.onLevelChange += LevelChange;
-        playerEnergy.onExperienceChange += ExperienceChange;
+        healthBar.sprite = healthBarProgress[0];
+
+        _playerHealth.onHealthChange += HealthChange;
+        _playerEnergy.onLevelChange += LevelChange;
+        _playerEnergy.onExperienceChange += ExperienceChange;
     }
 
     /// <summary>
@@ -32,9 +36,9 @@ public class PlayerUI : MonoBehaviour
     /// </summary>
     public void Deactivate()
     {
-        playerHealth.onHealthChange -= HealthChange;
-        playerEnergy.onLevelChange -= LevelChange;
-        playerEnergy.onExperienceChange -= ExperienceChange;
+        _playerHealth.onHealthChange -= HealthChange;
+        _playerEnergy.onLevelChange -= LevelChange;
+        _playerEnergy.onExperienceChange -= ExperienceChange;
     }
 
     /// <summary>
@@ -42,7 +46,31 @@ public class PlayerUI : MonoBehaviour
     /// </summary>
     private void HealthChange(float healthPercent)
     {
-        healthBar.fillAmount = healthPercent;
+        //healthBar.fillAmount = healthPercent;
+        if(healthPercent > 0.8f)
+        {
+            healthBar.sprite = healthBarProgress[0];
+        }
+        else if (healthPercent > 0.6f)
+        {
+            healthBar.sprite = healthBarProgress[1];
+        }
+        else if (healthPercent > 0.4f)
+        {
+            healthBar.sprite = healthBarProgress[2];
+        }
+        else if (healthPercent > 0.2f)
+        {
+            healthBar.sprite = healthBarProgress[3];
+        }
+        else if(healthPercent > 0.0f)
+        {
+            healthBar.sprite = healthBarProgress[4];
+        }
+        else
+        {
+            healthBar.sprite = null;
+        }
     }
 
     /*
@@ -61,8 +89,8 @@ public class PlayerUI : MonoBehaviour
     // Free delegate
     private void OnDestroy()
     {
-        playerHealth.onHealthChange -= HealthChange;
-        playerEnergy.onLevelChange -= LevelChange;
-        playerEnergy.onExperienceChange -= ExperienceChange;
+        _playerHealth.onHealthChange -= HealthChange;
+        _playerEnergy.onLevelChange -= LevelChange;
+        _playerEnergy.onExperienceChange -= ExperienceChange;
     }
 }

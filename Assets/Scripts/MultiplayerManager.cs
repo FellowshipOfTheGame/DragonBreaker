@@ -113,7 +113,7 @@ public class MultiplayerManager : MonoBehaviour
     private void GameOver()
     {
         //Calculate winner
-        int winner = 0;
+        int winner = -1;
         foreach (var p in _players)
         {
             if (p.gameObject.activeInHierarchy)
@@ -125,10 +125,10 @@ public class MultiplayerManager : MonoBehaviour
 
         onGameOver?.Invoke(winner);
         //Reload active Scene
-        Invoke("ReloadScene", 1f);
+        //Invoke("ReloadScene", 1f);
     }
 
-    private void ReloadScene()
+    public void ReloadScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name, LoadSceneMode.Single);
     }

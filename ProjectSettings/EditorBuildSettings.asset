@@ -6,11 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Main Menu (Old).unity
-    guid: f11ebc934dffc9e459b1677216c392b5
-  - enabled: 1
-    path: Assets/Scenes/Transition Scene.unity
-    guid: 8c8bb91a3d1b2c64bba5440c78d0c4eb
+    path: Assets/Scenes/Main Menu Complete Edition.unity
+    guid: fc3c0c8a364eef44eb022d29d9bd00f2
   - enabled: 1
     path: Assets/Scenes/Scene Tijolo.unity
     guid: 03067b0b555f1ef42ba68635b43c537f
