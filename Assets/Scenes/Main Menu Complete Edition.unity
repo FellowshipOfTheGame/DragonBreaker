@@ -1285,7 +1285,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "CREDITS\nGustavo Akira\nEnrico Mandelli\nLuis Chaves\nWilliam Leodegario\nLu\xEDs
+  m_Text: "CREDITS\nGustavo Akira\nEnrico Mandelli\nLuis Chaves\nWillian Leodegario\nLu\xEDs
     Eduardo Cabral\nTiago Marino Silva\nRenato Amprino"
 --- !u!222 &430998787
 CanvasRenderer:
