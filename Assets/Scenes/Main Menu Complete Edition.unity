@@ -964,10 +964,10 @@ RectTransform:
   m_Father: {fileID: 1764250280}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.014334281, y: 0.83337086}
-  m_AnchorMax: {x: 0.10585512, y: 0.97451895}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -0.000061035156, y: 0.000030517578}
+  m_AnchorMin: {x: 0.8517709, y: 0}
+  m_AnchorMax: {x: 1, y: 0.26574072}
+  m_AnchoredPosition: {x: 0.00018310547, y: 0}
+  m_SizeDelta: {x: -0.00024414, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &316887860
 MonoBehaviour:
@@ -987,7 +987,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 47b711e8dce3b094e9d2a03a76784e14, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 781250de99c99664284651413205ec17, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -2558,8 +2558,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03d18c9b611cb4b4f9c6f07a193eafbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller_sprite: {fileID: 21300000, guid: ff37ab5f81a91f442ab6e6f76826b6f5, type: 3}
-  keyboard_sprite: {fileID: 21300000, guid: 1ee5888c98f18fc4da5985f233bab462, type: 3}
+  controller_sprite: {fileID: 21300000, guid: a0283a833ea28314e9ef634688f8a520, type: 3}
+  keyboard_sprite: {fileID: 21300000, guid: 3737f1e1a458fce4fa6b090fc7f591dc, type: 3}
   no_player_sprite: {fileID: 21300000, guid: e660c18d254611548bdfc6db85ef18a8, type: 3}
   players_selection_UI:
   - {fileID: 2353981217774267772}
