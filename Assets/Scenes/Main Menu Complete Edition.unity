@@ -513,7 +513,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.26035684, y: 0.43137038}
   m_AnchorMax: {x: 0.734, y: 0.5472963}
-  m_AnchoredPosition: {x: 0.24127197, y: -0.5}
+  m_AnchoredPosition: {x: 0.24133301, y: -0.5}
   m_SizeDelta: {x: -0.5, y: -0.99998}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &92605437
@@ -966,7 +966,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.8517709, y: 0}
   m_AnchorMax: {x: 1, y: 0.26574072}
-  m_AnchoredPosition: {x: 0.00018310547, y: 0}
+  m_AnchoredPosition: {x: 0.00024414062, y: 0}
   m_SizeDelta: {x: -0.00024414, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &316887860
@@ -2082,8 +2082,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1377722746}
-        m_MethodName: LoadNextSceneMet
+      - m_Target: {fileID: 920463199}
+        m_MethodName: LoadLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2491,6 +2491,7 @@ GameObject:
   - component: {fileID: 920463198}
   - component: {fileID: 920463199}
   - component: {fileID: 920463200}
+  - component: {fileID: 920463201}
   m_Layer: 5
   m_Name: Selection Layout
   m_TagString: Untagged
@@ -2627,6 +2628,20 @@ MonoBehaviour:
     y: 0
     width: 1
     height: 1
+--- !u!114 &920463201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 920463196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8dd1bc7c6733e14b96b3e45f9e60f35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _PlayButton: {fileID: 702340092}
+  minimumToDisplay: 2
 --- !u!1 &931987231
 GameObject:
   m_ObjectHideFlags: 0
@@ -3413,18 +3428,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f943932bc2f82e4d882cb5ded34cd44, type: 3}
---- !u!114 &1377722746 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 9170245238219884640, guid: 2f943932bc2f82e4d882cb5ded34cd44,
-    type: 3}
-  m_PrefabInstance: {fileID: 1377722745}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2e533bbd98d3e44c805dc238ad3e5f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1448971064
 GameObject:
   m_ObjectHideFlags: 0
