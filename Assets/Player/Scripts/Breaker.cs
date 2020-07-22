@@ -71,7 +71,7 @@ public class Breaker : MonoBehaviour
 
     private void UpAttack()
     {
-        PerfomAttack(new Vector2(transform.position.x - 0.1f, attackPoint.transform.position.x));
+        PerfomAttack(new Vector2(transform.position.x - 0.1f, Math.Abs(attackPoint.transform.position.x)));
     }
     private void DownAttack()
     {
