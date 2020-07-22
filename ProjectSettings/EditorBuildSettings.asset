@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu Complete Edition.unity
     guid: fc3c0c8a364eef44eb022d29d9bd00f2
   - enabled: 1
+    path: "Assets/Scenes/Scene Lu\xEDs.unity"
+    guid: 421778a132c4e484e8ec76886f6811ec
+  - enabled: 1
     path: Assets/Scenes/Scene Tijolo.unity
     guid: 03067b0b555f1ef42ba68635b43c537f
   m_configObjects: {}

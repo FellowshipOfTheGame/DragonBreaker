@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Breaker : MonoBehaviour
@@ -38,31 +39,39 @@ public class Breaker : MonoBehaviour
     private void PerfomAttack(Vector2 attack_position)
     {
         //Checking collisions on attack area
-        Collider2D[] collisions = Physics2D.OverlapCircleAll(attack_position, range, _attack_layer);
+        Collider2D[] collisions = Physics2D.OverlapAreaAll(transform.position, attack_position, _attack_layer);
 
-        //TEMPORARY FIX to player having 2 colliders
-        GameObject lastE = null;
+        Collider2D closestPlayer = null;
+        Action<int> callbackFunction = null;
+
         foreach (Collider2D entity in collisions)
         {
-            //If hitting same twice or itself, continue
-            if (entity.gameObject == lastE || entity.gameObject == gameObject) continue;
-            lastE = entity.gameObject;
-            Action<int> callbackFunction;
-            if (entity.gameObject.layer == 9) callbackFunction = _ => energyController.resetLevel();
-            else callbackFunction = experience => energyController.addExperience(experience);
 
-            entity.GetComponent<IDamagable>()?.hit(energyController.level, callbackFunction);
+            if (entity.tag == "Object")
+            {
+                callbackFunction = experience => energyController.addExperience(experience);
+                entity.GetComponent<IDamagable>()?.hit(energyController.level, callbackFunction);
+            }
+            else if (entity.tag == "Player" && entity.gameObject != gameObject && (!closestPlayer || (closestPlayer.transform.position - transform.position).sqrMagnitude > (entity.transform.position - transform.position).sqrMagnitude))
+                closestPlayer = entity;
+        }
+
+        
+        if (closestPlayer)
+        {
+            callbackFunction = _ => energyController.resetLevel();
+            closestPlayer.GetComponent<IDamagable>()?.hit(energyController.level, callbackFunction);
         }
     }
 
     private void SideAttack()
     {
-        PerfomAttack(attackPoint.position);
+        PerfomAttack(attackPoint.transform.position);
     }
 
     private void UpAttack()
     {
-        PerfomAttack(new Vector2(transform.position.x, transform.position.y) + Vector2.up * attackPoint.position.x);
+        PerfomAttack(new Vector2(transform.position.x - 0.1f, Math.Abs(attackPoint.transform.position.x)));
     }
     private void DownAttack()
     {

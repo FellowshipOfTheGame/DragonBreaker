@@ -140,8 +140,8 @@ BoxCollider2D:
   m_Offset: {x: -0.25, y: 0.32}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.625, y: 3.375}
+    pivot: {x: 0.75, y: 0.5}
+    oldSize: {x: 8, y: 12}
     newSize: {x: 3.625, y: 3.375}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -325,11 +325,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfa77c3b3c160ef4abf6e8fed221663b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackPoint: {fileID: 0}
   energyController: {fileID: 6127616478613266648}
   _attack_layer:
     serializedVersion: 2
     m_Bits: 1536
   animator: {fileID: 7693209983371422482}
+  attackDelay: 0
   range: 0.4
 --- !u!114 &6127616478613266648
 MonoBehaviour:
@@ -370,6 +372,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd723ba3ebfe5104482f0357629e54e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _time: 0.3
 --- !u!95 &7693209983371422482
 Animator:
   serializedVersion: 3

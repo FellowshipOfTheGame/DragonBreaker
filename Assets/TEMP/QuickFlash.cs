@@ -10,6 +10,8 @@ public class QuickFlash : MonoBehaviour
     SpriteRenderer sp_rend;
     Color df_color;
 
+    [SerializeField] private float _time = 0.3f;
+
     private void Awake()
     {
         hs = GetComponent<HealthSystem>();
@@ -22,7 +24,7 @@ public class QuickFlash : MonoBehaviour
     private void Hs_onDamageTaken()
     {
         sp_rend.color = Color.white;
-        Invoke("ChangeBack", 0.1f);
+        Invoke("ChangeBack", _time);
     }
 
     public void ChangeBack()
