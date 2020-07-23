@@ -22,11 +22,13 @@ public class HidePlayButton : MonoBehaviour
         Debug.Log(_manager.playerCount);
         if(_manager.playerCount < minimumToDisplay)
         {
-            _PlayButton.enabled = false;
+            _PlayButton.color = new Color (1, 1, 1, 0);
+            //Play button is transparent when there are less than 2 players
         }
         else
         {
-            _PlayButton.enabled = true;
+            _PlayButton.color = new Color(1, 1, 1, 1);
+            //Play button is visible when there are two players or more
         }
     }
 
