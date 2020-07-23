@@ -1992,7 +1992,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: v. 0.0.1 WIP
+  m_Text: v. 0.0.1 ALPHA
 --- !u!222 &694682371
 CanvasRenderer:
   m_ObjectHideFlags: 0
