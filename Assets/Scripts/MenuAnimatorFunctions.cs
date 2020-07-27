@@ -5,10 +5,13 @@ using UnityEngine;
 public class MenuAnimatorFunctions : MonoBehaviour
 {
     public MenuManager MenuStateMachine = null;
+    [SerializeField] private GameObject _eventSystem = null;
+
 
     private void Awake()
     {
         MenuStateMachine = FindObjectOfType<MenuManager>();
+        _eventSystem = FindObjectOfType<GameObject>();
     }
 
     public void ChangeState(int state)
@@ -24,5 +27,12 @@ public class MenuAnimatorFunctions : MonoBehaviour
     public void PlayEnterStateAnimation()
     {
         MenuStateMachine.PlayEnterStateAnimation();
+    }
+
+    public void ResetEventSystem()
+    {
+        _eventSystem.SetActive(false);
+        _eventSystem.SetActive(true);
+        Debug.Log("EventSystem restarted.");
     }
 }

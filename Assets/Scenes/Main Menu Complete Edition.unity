@@ -1450,6 +1450,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MenuStateMachine: {fileID: 807787682}
+  _eventSystem: {fileID: 662503216}
 --- !u!1 &444142810
 GameObject:
   m_ObjectHideFlags: 0
@@ -2014,7 +2015,7 @@ GameObject:
   - component: {fileID: 702340092}
   - component: {fileID: 702340091}
   m_Layer: 5
-  m_Name: Play Button
+  m_Name: Ready Play Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2111,7 +2112,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 702340089}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -2503,6 +2504,7 @@ GameObject:
   - component: {fileID: 920463199}
   - component: {fileID: 920463200}
   - component: {fileID: 920463201}
+  - component: {fileID: 920463202}
   m_Layer: 5
   m_Name: Selection Layout
   m_TagString: Untagged
@@ -2653,6 +2655,102 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _PlayButton: {fileID: 702340092}
   minimumToDisplay: 2
+--- !u!82 &920463202
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 920463196}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 8d81f5cc2e26de64a95608a126bf0d42, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 137
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &931987231
 GameObject:
   m_ObjectHideFlags: 0
@@ -3297,6 +3395,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MenuStateMachine: {fileID: 807787682}
+  _eventSystem: {fileID: 0}
 --- !u!1 &1372913367
 GameObject:
   m_ObjectHideFlags: 0
@@ -4113,6 +4212,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MenuStateMachine: {fileID: 807787682}
+  _eventSystem: {fileID: 0}
 --- !u!1 &1596603925
 GameObject:
   m_ObjectHideFlags: 0
@@ -4465,6 +4565,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MenuStateMachine: {fileID: 807787682}
+  _eventSystem: {fileID: 0}
 --- !u!1 &1859489859
 GameObject:
   m_ObjectHideFlags: 0
@@ -5017,6 +5118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MenuStateMachine: {fileID: 807787682}
+  _eventSystem: {fileID: 0}
 --- !u!1 &2050378030
 GameObject:
   m_ObjectHideFlags: 0
