@@ -22,7 +22,7 @@ public class GameOverScreen : MonoBehaviour
         }
         else
         {
-            _text.text = $"The winner is player {winner_id}";
+            _text.text = $"JOGADOR {winner_id} VENCEU!";
             _gameOverScreen.SetActive(true);
         }
     }
