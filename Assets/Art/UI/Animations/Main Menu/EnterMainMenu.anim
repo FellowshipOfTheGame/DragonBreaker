@@ -554,7 +554,7 @@ AnimationClip:
     intParameter: 1
     messageOptions: 0
   - time: 0.46666667
-    functionName: FixButton
+    functionName: SelectFirstButton
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

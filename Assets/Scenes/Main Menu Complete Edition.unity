@@ -1451,7 +1451,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MenuStateMachine: {fileID: 807787682}
   _eventSystem: {fileID: 662503216}
-  playButton: {fileID: 1539166840}
+  buttonToSelect: {fileID: 1539166840}
 --- !u!1 &444142810
 GameObject:
   m_ObjectHideFlags: 0
@@ -3397,7 +3397,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MenuStateMachine: {fileID: 807787682}
   _eventSystem: {fileID: 0}
-  playButton: {fileID: 0}
+  buttonToSelect: {fileID: 0}
 --- !u!1 &1372913367
 GameObject:
   m_ObjectHideFlags: 0
@@ -4215,7 +4215,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MenuStateMachine: {fileID: 807787682}
   _eventSystem: {fileID: 0}
-  playButton: {fileID: 0}
+  buttonToSelect: {fileID: 0}
 --- !u!1 &1596603925
 GameObject:
   m_ObjectHideFlags: 0
@@ -4569,7 +4569,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MenuStateMachine: {fileID: 807787682}
   _eventSystem: {fileID: 0}
-  playButton: {fileID: 0}
+  buttonToSelect: {fileID: 0}
 --- !u!1 &1859489859
 GameObject:
   m_ObjectHideFlags: 0
@@ -5123,7 +5123,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MenuStateMachine: {fileID: 807787682}
   _eventSystem: {fileID: 0}
-  playButton: {fileID: 0}
+  buttonToSelect: {fileID: 0}
 --- !u!1 &2050378030
 GameObject:
   m_ObjectHideFlags: 0
