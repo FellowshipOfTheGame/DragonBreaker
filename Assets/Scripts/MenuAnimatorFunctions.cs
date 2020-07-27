@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class MenuAnimatorFunctions : MonoBehaviour
 {
     public MenuManager MenuStateMachine = null;
     [SerializeField] private GameObject _eventSystem = null;
+    public Button buttonToSelect;
 
 
     private void Awake()
@@ -29,10 +32,10 @@ public class MenuAnimatorFunctions : MonoBehaviour
         MenuStateMachine.PlayEnterStateAnimation();
     }
 
-    public void ResetEventSystem()
+    public void SelectFirstButton()
     {
-        _eventSystem.SetActive(false);
-        _eventSystem.SetActive(true);
-        Debug.Log("EventSystem restarted.");
+        buttonToSelect.Select();
+
+        Debug.Log((buttonToSelect.name) + "selected.");
     }
 }
