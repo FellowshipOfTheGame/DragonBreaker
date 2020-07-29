@@ -7,14 +7,12 @@ using UnityEngine.EventSystems;
 public class MenuAnimatorFunctions : MonoBehaviour
 {
     public MenuManager MenuStateMachine = null;
-    [SerializeField] private GameObject _eventSystem = null;
-    public Button buttonToSelect;
+    public Button firstButtonToSelect;
 
 
     private void Awake()
     {
         MenuStateMachine = FindObjectOfType<MenuManager>();
-        _eventSystem = FindObjectOfType<GameObject>();
     }
 
     public void ChangeState(int state)
@@ -34,8 +32,8 @@ public class MenuAnimatorFunctions : MonoBehaviour
 
     public void SelectFirstButton()
     {
-        buttonToSelect.Select();
+        firstButtonToSelect.Select();
 
-        Debug.Log((buttonToSelect.name) + "selected.");
+        Debug.Log((firstButtonToSelect.name) + " selected.");
     }
 }
