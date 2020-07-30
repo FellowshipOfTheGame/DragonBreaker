@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class HidePlayButton : MonoBehaviour
 {
-    [SerializeField] private Image _PlayButton;
+    public Image _PlayButton;
     [SerializeField] private int minimumToDisplay = 2;
 
     private PlayerInputManager _manager;
@@ -23,10 +23,12 @@ public class HidePlayButton : MonoBehaviour
         if(_manager.playerCount < minimumToDisplay)
         {
             _PlayButton.enabled = false;
+            Debug.Log("Play Button disabled.");
         }
         else
         {
             _PlayButton.enabled = true;
+            Debug.Log("Play Button enabled.");
         }
     }
 

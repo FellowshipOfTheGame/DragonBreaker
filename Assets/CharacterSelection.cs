@@ -22,10 +22,13 @@ public class CharacterSelection : MonoBehaviour
     protected List<PlayerInfo> _playerInfo;
     protected bool[] _availableElements;
 
+    AudioSource JoinSound;
+
     private void Start()
     {
         _availableElements = new bool[4] { true, true, true, true};
         _playerInfo = new List<PlayerInfo>();
+        JoinSound = GetComponent<AudioSource>();
     }
 
     public void OnPlayerJoined(PlayerInput playerInput)
@@ -54,6 +57,7 @@ public class CharacterSelection : MonoBehaviour
                 break;
             }
         }
+        JoinSound.Play();
     }
 
     public void OnPlayerLeft(PlayerInput playerInput)
