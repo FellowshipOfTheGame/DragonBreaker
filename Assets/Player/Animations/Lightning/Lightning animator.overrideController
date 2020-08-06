@@ -7,5 +7,19 @@ AnimatorOverrideController:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Lightning animator
-  m_Controller: {fileID: 0}
-  m_Clips: []
+  m_Controller: {fileID: 9100000, guid: 96264ad2f1efb5e4da3c1305475e385a, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: ad7cd78e99dca994cafa6a9d6d65aee1, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: ba0881ecc0f75ca4585b8becf5dd4030, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 3027d73c323dd1a4db4c85d4108faf02, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: c60ad7911a65bd4478d7f0b1448f2c66, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 0bc7dd4ec0e83554d872661a1b0dcc3e, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 9b5c93cece8267e42b6426bdb82f69d4, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 59eaf780fe4d3d74b938f2ee887c24d3, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 4e855a053049d6541bf505bb2c349b0d, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: ed3414d96de7b6b41aca1acc12aaca5a, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: aaadef31b2d5074458fddb91236a4598, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 5f9c76a099eca6e44b73dcd46c760f46, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 212a4e53fd166994db7e673b1019667e, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: ac9fd873d3c7e5b4bb3d763e38500702, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 6f8f7f2cc7121d2459cda234f22f3428, type: 2}

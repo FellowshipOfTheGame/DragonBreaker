@@ -7,5 +7,19 @@ AnimatorOverrideController:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Leaf animator
-  m_Controller: {fileID: 0}
-  m_Clips: []
+  m_Controller: {fileID: 9100000, guid: 96264ad2f1efb5e4da3c1305475e385a, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: ad7cd78e99dca994cafa6a9d6d65aee1, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 2b11beced66074c47babdcd792266eea, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 3027d73c323dd1a4db4c85d4108faf02, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 0222c613dd5bdd34987fb8c4362008c1, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 0bc7dd4ec0e83554d872661a1b0dcc3e, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 8e6bf4a72625e1a498f84c462a516a76, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 59eaf780fe4d3d74b938f2ee887c24d3, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: e9b845d184bca744a88a3eeaf6e3505a, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 5f9c76a099eca6e44b73dcd46c760f46, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 3b55b0f1415bc934fb2ceec59bf40ae2, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: ed3414d96de7b6b41aca1acc12aaca5a, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 0b8bd07a49f37d84c86cdb541d0d9c3a, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: ac9fd873d3c7e5b4bb3d763e38500702, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 656fc29cc4cb9f041acb51e5bbce4f55, type: 2}
