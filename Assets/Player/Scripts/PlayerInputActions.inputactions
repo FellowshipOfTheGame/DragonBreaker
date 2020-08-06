@@ -271,6 +271,14 @@
                     "interactions": ""
                 },
                 {
+                    "name": "Exit",
+                    "type": "Button",
+                    "id": "4e5d4117-0f69-4e06-86f8-1a0fe231a818",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
                     "name": "Pause",
                     "type": "Button",
                     "id": "efb5919d-83f1-49ce-96f3-564b6a023d0b",
@@ -343,6 +351,28 @@
                     "processors": "",
                     "groups": "Gamepad",
                     "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "58e43870-9591-46d6-ae8f-5bc3a3a14e9b",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "Hold(duration=1)",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Exit",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1202452c-825b-438c-9646-ccf9f64d8e3c",
+                    "path": "<Keyboard>/x",
+                    "interactions": "Hold(duration=1)",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "Exit",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

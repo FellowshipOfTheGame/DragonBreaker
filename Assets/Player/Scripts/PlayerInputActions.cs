@@ -284,6 +284,14 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                     ""interactions"": """"
                 },
                 {
+                    ""name"": ""Exit"",
+                    ""type"": ""Button"",
+                    ""id"": ""4e5d4117-0f69-4e06-86f8-1a0fe231a818"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
                     ""name"": ""Pause"",
                     ""type"": ""Button"",
                     ""id"": ""efb5919d-83f1-49ce-96f3-564b6a023d0b"",
@@ -358,6 +366,28 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                     ""action"": ""Pause"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""58e43870-9591-46d6-ae8f-5bc3a3a14e9b"",
+                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""interactions"": ""Hold(duration=1)"",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Exit"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1202452c-825b-438c-9646-ccf9f64d8e3c"",
+                    ""path"": ""<Keyboard>/x"",
+                    ""interactions"": ""Hold(duration=1)"",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Exit"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -397,6 +427,7 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Join = m_UI.FindAction("Join", throwIfNotFound: true);
         m_UI_Leave = m_UI.FindAction("Leave", throwIfNotFound: true);
+        m_UI_Exit = m_UI.FindAction("Exit", throwIfNotFound: true);
         m_UI_Pause = m_UI.FindAction("Pause", throwIfNotFound: true);
     }
 
@@ -506,6 +537,7 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
     private IUIActions m_UIActionsCallbackInterface;
     private readonly InputAction m_UI_Join;
     private readonly InputAction m_UI_Leave;
+    private readonly InputAction m_UI_Exit;
     private readonly InputAction m_UI_Pause;
     public struct UIActions
     {
@@ -513,6 +545,7 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
         public UIActions(@PlayerInputActions wrapper) { m_Wrapper = wrapper; }
         public InputAction @Join => m_Wrapper.m_UI_Join;
         public InputAction @Leave => m_Wrapper.m_UI_Leave;
+        public InputAction @Exit => m_Wrapper.m_UI_Exit;
         public InputAction @Pause => m_Wrapper.m_UI_Pause;
         public InputActionMap Get() { return m_Wrapper.m_UI; }
         public void Enable() { Get().Enable(); }
@@ -529,6 +562,9 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                 @Leave.started -= m_Wrapper.m_UIActionsCallbackInterface.OnLeave;
                 @Leave.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnLeave;
                 @Leave.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnLeave;
+                @Exit.started -= m_Wrapper.m_UIActionsCallbackInterface.OnExit;
+                @Exit.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnExit;
+                @Exit.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnExit;
                 @Pause.started -= m_Wrapper.m_UIActionsCallbackInterface.OnPause;
                 @Pause.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnPause;
                 @Pause.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnPause;
@@ -542,6 +578,9 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                 @Leave.started += instance.OnLeave;
                 @Leave.performed += instance.OnLeave;
                 @Leave.canceled += instance.OnLeave;
+                @Exit.started += instance.OnExit;
+                @Exit.performed += instance.OnExit;
+                @Exit.canceled += instance.OnExit;
                 @Pause.started += instance.OnPause;
                 @Pause.performed += instance.OnPause;
                 @Pause.canceled += instance.OnPause;
@@ -578,6 +617,7 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
     {
         void OnJoin(InputAction.CallbackContext context);
         void OnLeave(InputAction.CallbackContext context);
+        void OnExit(InputAction.CallbackContext context);
         void OnPause(InputAction.CallbackContext context);
     }
 }

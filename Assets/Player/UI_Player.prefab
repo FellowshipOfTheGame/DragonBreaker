@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Actions: {fileID: -944628639613478452, guid: bf15ac95d1445e749b5d18e5203bf1fd,
     type: 3}
-  m_NotificationBehavior: 0
+  m_NotificationBehavior: 3
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
     m_PersistentCalls:
@@ -89,6 +89,18 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: f2afb516-7329-4a94-9d84-47a5b860d25a
     m_ActionName: UI/Leave[/DualShock4GamepadHID/buttonEast,/Keyboard/backspace]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 079c467d-d160-4bed-b66d-d815ccb9b5a0
+    m_ActionName: UI/Join[/DualShock4GamepadHID/buttonSouth,/Keyboard/z]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 4e5d4117-0f69-4e06-86f8-1a0fe231a818
+    m_ActionName: UI/Exit[/DualShock4GamepadHID/buttonEast,/Keyboard/x]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: efb5919d-83f1-49ce-96f3-564b6a023d0b
+    m_ActionName: UI/Pause[/Keyboard/escape,/DualShock4GamepadHID/start]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard
   m_DefaultActionMap: UI

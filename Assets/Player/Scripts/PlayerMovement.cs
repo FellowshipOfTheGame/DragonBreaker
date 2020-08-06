@@ -8,8 +8,8 @@ public class PlayerMovement : MonoBehaviour
 
     Animator animator;
 
-    [SerializeField] CharacterController2D controller;      // Reference to a controller2D
-    [SerializeField] Breaker breaker;
+    [SerializeField] CharacterController2D controller = null;      // Reference to a controller2D
+    [SerializeField] Breaker breaker = null;
     [SerializeField] float runSpeed = 40f;                  // Speed of running
 
     private void Awake()
@@ -53,8 +53,8 @@ public class PlayerMovement : MonoBehaviour
     private void MovePerformed(InputAction.CallbackContext ctx)
     {
         movementInput = ctx.ReadValue<Vector2>();
-        if (animator.GetBool("walking") != true && movementInput.x != 0) animator.SetBool("walking", true);
-        else if (animator.GetBool("walking") != false) animator.SetBool("walking", false);
+        if (animator.GetBool("walking") == false && movementInput.x != 0) animator.SetBool("walking", true);
+        else if (animator.GetBool("walking") == true && movementInput.x == 0) animator.SetBool("walking", false);
     }
     private void AttackPerformed(InputAction.CallbackContext ctx) => breaker.Attack(movementInput, controller.facingRight);
     private void JumpStarted(InputAction.CallbackContext ctx) => controller.Jump();

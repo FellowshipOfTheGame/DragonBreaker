@@ -14,8 +14,8 @@ public class CharacterController2D : MonoBehaviour
 
     [SerializeField] private bool airControl = true;                         // Whether or not a player can steer while jumping;
 
-    [SerializeField] private LayerMask whatIsGround;                          // A mask determining what is ground to the character
-    [SerializeField] private Transform groundCheck;                           // A position marking where to check if the player is grounded.
+    [SerializeField] private LayerMask whatIsGround = 0;                          // A mask determining what is ground to the character
+    [SerializeField] private Transform groundCheck = null;                           // A position marking where to check if the player is grounded.
 
     Vector2 dashDirection;
     bool dash = false;
@@ -27,7 +27,7 @@ public class CharacterController2D : MonoBehaviour
 
     Animator animator;
 
-    Rigidbody2D rigidbody2D;
+    Rigidbody2D _rigidbody2D;
     public bool facingRight { get; private set; } = true;            // For determining which way the player is currently facing.
     Vector3 velocity = Vector3.zero;
 
@@ -40,17 +40,26 @@ public class CharacterController2D : MonoBehaviour
 
     private void Awake()
     {
-        rigidbody2D = GetComponent<Rigidbody2D>();
+        _rigidbody2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
 
         remainingDashes = qtdDash;
 
+        SubscribeToEvents();
+    }
+
+    private void SubscribeToEvents()
+    {
         if (OnLandEvent == null)
             OnLandEvent = new UnityEvent();
         if (OnDashStartEvent == null)
             OnDashStartEvent = new UnityEvent();
         if (OnDashEndEvent == null)
             OnDashEndEvent = new UnityEvent();
+
+        OnLandEvent.AddListener(OnLanding);
+        OnDashStartEvent.AddListener(OnDashStart);
+        OnDashEndEvent.AddListener(OnDashEnd);
     }
 
     private void FixedUpdate()
@@ -60,12 +69,12 @@ public class CharacterController2D : MonoBehaviour
         {
             // While there is time for dashing, dashes
             dashTimeLeft -= Time.fixedDeltaTime;
-            rigidbody2D.velocity = dashDirection * dashSpeed;
+            _rigidbody2D.velocity = dashDirection * dashSpeed;
 
             // Stops dashing
             if (dashTimeLeft <= 0)
             {
-                rigidbody2D.velocity = Vector2.zero;
+                _rigidbody2D.velocity = Vector2.zero;
                 // Invokes a dashEnd
                 OnDashEndEvent.Invoke();
                 dash = false;
@@ -99,9 +108,9 @@ public class CharacterController2D : MonoBehaviour
         if (grounded || airControl)
         {
             // Move the character by finding the target velocity
-            Vector3 targetVelocity = new Vector2(move * 10f, rigidbody2D.velocity.y);
+            Vector3 targetVelocity = new Vector2(move * 10f, _rigidbody2D.velocity.y);
             // And then smoothing it out and applying it to the character
-            rigidbody2D.velocity = Vector3.SmoothDamp(rigidbody2D.velocity, targetVelocity, ref velocity, movementSmoothing);
+            _rigidbody2D.velocity = Vector3.SmoothDamp(_rigidbody2D.velocity, targetVelocity, ref velocity, movementSmoothing);
 
             // If the input is moving the player right and the player is facing left...
             if (move < 0 && !facingRight)
@@ -125,7 +134,7 @@ public class CharacterController2D : MonoBehaviour
         if (grounded)
         {
             // Add a vertical force to the player.
-            rigidbody2D.AddForce(new Vector2(0f, jumpForce));
+            _rigidbody2D.AddForce(new Vector2(0f, jumpForce));
         }
     }
 
@@ -138,8 +147,8 @@ public class CharacterController2D : MonoBehaviour
         remainingDashes--;
 
         // Stops the player
-        rigidbody2D.velocity = Vector2.zero;
-        rigidbody2D.angularVelocity = 0;
+        _rigidbody2D.velocity = Vector2.zero;
+        _rigidbody2D.angularVelocity = 0;
 
         // Starts dash
         dash = true;

@@ -6,9 +6,9 @@ using UnityEngine.UI;
 
 public class PlayerUI : MonoBehaviour
 {
-    [SerializeField] private Text textUI;
-    [SerializeField] private Image healthBar;
-    [SerializeField] private Image expBar;
+    [SerializeField] private Text textUI = null;
+    [SerializeField] private Image healthBar = null;
+    [SerializeField] private Image expBar = null;
 
     [SerializeField] private Sprite[] healthBarProgress = new Sprite[5];
 

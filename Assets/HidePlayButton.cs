@@ -6,7 +6,8 @@ using UnityEngine.UI;
 
 public class HidePlayButton : MonoBehaviour
 {
-    public Image _PlayButton;
+    [SerializeField] private Button _PlayButton;
+    [SerializeField] private Image _playButtonImg;
     [SerializeField] private int minimumToDisplay = 2;
 
     private PlayerInputManager _manager;
@@ -16,18 +17,18 @@ public class HidePlayButton : MonoBehaviour
         _manager = GetComponent<PlayerInputManager>();
     }
 
-
     public void DisplayCheck()
     {
         Debug.Log(_manager.playerCount);
         if(_manager.playerCount < minimumToDisplay)
         {
-            _PlayButton.enabled = false;
+            _playButtonImg.enabled = false;
             Debug.Log("Play Button disabled.");
         }
         else
         {
-            _PlayButton.enabled = true;
+            _playButtonImg.enabled = true;
+            //_PlayButton.Select(); --> faz quando o player entra com o controle ja ir direto pro jogo (se tiver 2 jogadores)
             Debug.Log("Play Button enabled.");
         }
     }

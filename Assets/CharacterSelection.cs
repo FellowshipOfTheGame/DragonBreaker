@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
@@ -14,10 +15,16 @@ public struct PlayerInfo
 
 public class CharacterSelection : MonoBehaviour
 {
+    [Header("Sprites")]
     [SerializeField] private Sprite controller_sprite = null;
     [SerializeField] private Sprite keyboard_sprite = null;
     [SerializeField] private Sprite no_player_sprite = null;
+
+    [Header("Selection UI")]
     [SerializeField] private CharacterSelectionUI[] players_selection_UI = new CharacterSelectionUI[4];
+
+    [Header("Exit Event")]
+    [SerializeField] private UnityEvent OnPlayerExitCharacterSelectionEvent = null;
 
     protected List<PlayerInfo> _playerInfo;
     protected bool[] _availableElements;
@@ -53,12 +60,15 @@ public class CharacterSelection : MonoBehaviour
                         break;
                 }
                 playerInput.name = "Player_" + i;
+                playerInput.actions["Exit"].performed += OnPlayerExit;
                 _availableElements[i] = false;
                 break;
             }
         }
         JoinSound.Play();
     }
+
+    private void OnPlayerExit(InputAction.CallbackContext obj) => OnPlayerExitCharacterSelectionEvent?.Invoke();
 
     public void OnPlayerLeft(PlayerInput playerInput)
     {
@@ -67,6 +77,7 @@ public class CharacterSelection : MonoBehaviour
         _availableElements[i] = true;
         players_selection_UI[i].SetupLeftPlayer(no_player_sprite);
         _playerInfo.Remove(_playerInfo.Find((match) => i.Equals((int)match.element)));
+        playerInput.actions["Exit"].performed -= OnPlayerExit;
         Debug.Log($"Left player{(PlayerInfo.PlayerElement) i}");
     }
 
