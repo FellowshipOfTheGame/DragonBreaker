@@ -459,8 +459,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1536
   animator: {fileID: 7693209983371422482}
-  attackDelay: 0
-  range: 0.4
+  attackDelay: 0.25
+  range: 0.1
 --- !u!114 &6127616478613266648
 MonoBehaviour:
   m_ObjectHideFlags: 0
