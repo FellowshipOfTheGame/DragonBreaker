@@ -188,6 +188,7 @@ GameObject:
   - component: {fileID: 782939466412337242}
   - component: {fileID: 553404391780033246}
   - component: {fileID: 7693209983371422482}
+  - component: {fileID: 7820434527394208566}
   m_Layer: 9
   m_Name: Player-Fire
   m_TagString: Player
@@ -457,8 +458,9 @@ MonoBehaviour:
   energyController: {fileID: 6127616478613266648}
   _attack_layer:
     serializedVersion: 2
-    m_Bits: 1536
+    m_Bits: 3584
   animator: {fileID: 7693209983371422482}
+  thicness: 1
   range: 0.1
   attackDelay: 0.25
 --- !u!114 &6127616478613266648
@@ -522,6 +524,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7820434527394208566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6279948799033416963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0823cef9ce0516c48929215e323102b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  KnockbackForce: 1000
 --- !u!1 &7282929230876387863
 GameObject:
   m_ObjectHideFlags: 0
@@ -546,7 +561,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7282929230876387863}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.99, y: -0.37, z: 0}
+  m_LocalPosition: {x: -5.5, y: -0.37, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6279948799033416962}

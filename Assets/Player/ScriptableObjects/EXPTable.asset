@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8317932d4c7c72448f60e6642fd55a3, type: 3}
   m_Name: EXPTable
   m_EditorClassIdentifier: 
-  levels: 
+  levels: 00000000050000000a0000000f000000140000001e000000

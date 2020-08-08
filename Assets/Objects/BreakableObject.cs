@@ -9,6 +9,7 @@ public class BreakableObject : MonoBehaviour, IDamagable
 
     [SerializeField] private ParticleSystem particle;
 
+
     private void Awake()
     {
         gameObject.SetActive(false);

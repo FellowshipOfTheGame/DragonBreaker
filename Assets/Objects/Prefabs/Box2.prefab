@@ -124,8 +124,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _experience_reward: 10
   _required_level: 3
-  _respawn_interval_min: 0
-  _respawn_interval_max: 0
+  _respawn_interval_min: 8
+  _respawn_interval_max: 15
   particle: {fileID: 5483064598712913976}
 --- !u!1 &7257385301625007090
 GameObject:
