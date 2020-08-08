@@ -10,26 +10,26 @@ public class EnergyController : MonoBehaviour
     public System.Action<float> onExperienceChange; 
 
     [Header("Required Exp")]
-    [SerializeField] private List<int> levels = new List<int>(new int[6] {0, 1, 10, 100, 1000, 10000});
+    [SerializeField] private EXPTableSO xpTable = null;
 
-    private int currentExperience = 0;
-    private int maxLevel= 5;
+    private int _currentExperience = 0;
+    private int _maxLevel = 5;
 
     public void addExperience(int experience)
     {
-        if (level == maxLevel) return;
-        currentExperience += experience;
-        onExperienceChange?.Invoke(currentExperience / (float)levels[level+1]);
-        for(int i = level + 1; i <= maxLevel; i++)
+        if (level == _maxLevel) return;
+        _currentExperience += experience;
+        onExperienceChange?.Invoke(_currentExperience / (float)xpTable.levels[level+1]);
+        for(int i = level + 1; i <= _maxLevel; i++)
         { 
-            if (currentExperience - levels[i] >= 0)
+            if (_currentExperience - xpTable.levels[i] >= 0)
             {
                 level++;
-                currentExperience -= levels[i];
+                _currentExperience -= xpTable.levels[i];
                 onLevelChange?.Invoke(level);
-                if (level == maxLevel)
+                if (level == _maxLevel)
                 {
-                    currentExperience = 0;
+                    _currentExperience = 0;
                     onExperienceChange?.Invoke(0);
                     return;
                 }
@@ -37,13 +37,13 @@ public class EnergyController : MonoBehaviour
             }
             else break;
         }
-        onExperienceChange?.Invoke(currentExperience / (float)levels[level+1]);
+        onExperienceChange?.Invoke(_currentExperience / (float)xpTable.levels[level+1]);
     }
 
     public void resetLevel()
     {
         level = 0;
-        currentExperience = 0;
+        _currentExperience = 0;
         onLevelChange?.Invoke(level);
     }
 }

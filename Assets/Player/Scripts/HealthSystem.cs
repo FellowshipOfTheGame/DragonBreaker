@@ -9,10 +9,13 @@ public class HealthSystem : MonoBehaviour, IDamagable
     public event Action onDamageTaken;
     public event Action onDeath;
 
-    [Header("Health Properties")]
-    [SerializeField] private float MaxHealth = 1f;
-    [SerializeField] private float health = 0f;
     public float HealthPercent => health / MaxHealth;
+    public bool Invulnerable = false;
+
+    [Header("Health Properties")]
+    [SerializeField] private float MaxHealth = 5f;
+    [SerializeField] private float health = 0f;
+    [SerializeField] private float invulnerabilityTime = 0.5f;
      
     private void Awake()
     {
@@ -20,16 +23,18 @@ public class HealthSystem : MonoBehaviour, IDamagable
         onDeath += die;
     }
 
-    private void die()
-    {
-        gameObject.SetActive(false);
-    }
-
     public void hit(float damage, Action<int> callback)
     {
+        if (Invulnerable || damage == 0f)
+            return;
         Debug.Log("Taking damage " + gameObject.name);
+        
         //Taking damage
         health -= damage;
+        
+        //Making invulnerable
+        Invulnerable = true;
+        Invoke("MakeVulnerable", invulnerabilityTime);
 
         //Check death
         if (health <= 0f)
@@ -42,8 +47,7 @@ public class HealthSystem : MonoBehaviour, IDamagable
         callback?.Invoke(0);
     }
 
-    private void OnDestroy()
-    {
-        onDeath -= die;
-    }
+    private void die() => gameObject.SetActive(false);
+    private void MakeVulnerable() => Invulnerable = false;
+    private void OnDestroy() => onDeath -= die;
 }

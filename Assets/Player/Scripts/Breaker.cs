@@ -8,10 +8,10 @@ public class Breaker : MonoBehaviour
     [SerializeField] private EnergyController energyController;
     [SerializeField] private LayerMask _attack_layer;
     [SerializeField] private Animator animator;
-    [SerializeField] private float attackDelay = 1 / 12;
 
     [Header("Attack Properties")]
     [SerializeField] public float range = 1f;
+    [SerializeField] private float attackDelay = 1 / 4f;
 
     public void Attack(Vector2 movementInput, bool facingRight)
     {

@@ -489,8 +489,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1536
   animator: {fileID: 7693209983371422482}
-  attackDelay: 0.25
   range: 0.1
+  attackDelay: 0.25
 --- !u!114 &6127616478613266648
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -503,7 +503,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67fc2a7d24db4414597220c769d29657, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levels: 01000000050000000a000000190000003200000064000000
+  xpTable: {fileID: 11400000, guid: 39e8532bad1b91b42806c7d9137bf3d1, type: 2}
 --- !u!114 &782939466412337242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -516,8 +516,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b996f9f56a8eb942961cfa35855b55f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Invulnerable: 0
   MaxHealth: 5
   health: 0
+  invulnerabilityTime: 0.5
 --- !u!114 &553404391780033246
 MonoBehaviour:
   m_ObjectHideFlags: 0
