@@ -13,6 +13,12 @@ public class Breaker : MonoBehaviour
     [SerializeField] public float thicness = 1f;
     [SerializeField] private float range = 1f;
     [SerializeField] private float attackDelay = 1 / 4f;
+    
+    SFX _sfx;
+
+    private void Awake() {
+        _sfx = GetComponent<SFX>();
+    } 
 
     public void Attack(Vector2 movementInput, bool facingRight)
     {
@@ -102,6 +108,7 @@ public class Breaker : MonoBehaviour
         var collisions = Physics2D.OverlapCapsuleAll(center, size, CapsuleDirection2D.Horizontal, 0, _attack_layer);
         PerformAttack(collisions);
         DrawCapsule(center, size, CapsuleDirection2D.Horizontal);
+        _sfx.Play("attack");
     }
 
     private void UpAttack()
@@ -111,6 +118,7 @@ public class Breaker : MonoBehaviour
         Vector2 size = new Vector2(thicness, Vector2.Distance(attackPoint.position, transform.position));
         var collisions = Physics2D.OverlapCapsuleAll(center, size, CapsuleDirection2D.Vertical, 0, _attack_layer);
         PerformAttack(collisions);
+        _sfx.Play("attack");
     }
     private void DownAttack()
     {
@@ -119,6 +127,7 @@ public class Breaker : MonoBehaviour
         Vector2 size = new Vector2(thicness, Vector2.Distance(attackPoint.position, transform.position));
         var collisions = Physics2D.OverlapCapsuleAll(center, size, CapsuleDirection2D.Vertical, 0, _attack_layer);
         PerformAttack(collisions);
+        _sfx.Play("attack");
     }
 
     //For debug purposes

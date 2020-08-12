@@ -28,6 +28,7 @@ public class CharacterController2D : MonoBehaviour
     Animator animator;
 
     Rigidbody2D _rigidbody2D;
+    SFX _sfx;
     public bool facingRight { get; private set; } = true;            // For determining which way the player is currently facing.
     Vector3 velocity = Vector3.zero;
 
@@ -41,6 +42,7 @@ public class CharacterController2D : MonoBehaviour
     private void Awake()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
+        _sfx = GetComponent<SFX>();
         animator = GetComponent<Animator>();
 
         remainingDashes = qtdDash;
@@ -135,6 +137,7 @@ public class CharacterController2D : MonoBehaviour
         {
             // Add a vertical force to the player.
             _rigidbody2D.AddForce(new Vector2(0f, jumpForce));
+            if (_sfx != null) _sfx.Play("jump"); 
         }
     }
 
@@ -167,6 +170,7 @@ public class CharacterController2D : MonoBehaviour
     public void OnDashStart()
     {
         Debug.Log("Starting dash");
+        if (_sfx != null) _sfx.Play("dash");
         animator.SetBool("isDashing", true);
     }
 

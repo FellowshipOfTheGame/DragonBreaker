@@ -8,7 +8,7 @@ public class HealthSystem : MonoBehaviour, IDamagable
     public event Action<float> onHealthChange;
     public event Action onDamageTaken;
     public event Action onDeath;
-
+    SFX _sfx;
     public float HealthPercent => health / MaxHealth;
     public bool Invulnerable = false;
 
@@ -21,6 +21,7 @@ public class HealthSystem : MonoBehaviour, IDamagable
     {
         health = MaxHealth;
         onDeath += die;
+        _sfx = GetComponent<SFX>();
     }
 
     public void hit(float damage, Action<int> callback)
@@ -31,6 +32,7 @@ public class HealthSystem : MonoBehaviour, IDamagable
         
         //Taking damage
         health -= damage;
+        _sfx.Play("damage");
         
         //Making invulnerable
         Invulnerable = true;

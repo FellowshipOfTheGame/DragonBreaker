@@ -219,6 +219,7 @@ GameObject:
   - component: {fileID: 553404391780033246}
   - component: {fileID: 7693209983371422482}
   - component: {fileID: 5604497599263038380}
+  - component: {fileID: 2942370452908261324}
   m_Layer: 9
   m_Name: Player-Lightning
   m_TagString: Player
@@ -567,3 +568,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   KnockbackForce: 1000
+--- !u!114 &2942370452908261324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6279948799033416963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb9255f86d641954b959457ad02eb3ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  single:
+  - title: jump
+    clip: {fileID: 8300000, guid: a2e0485de51cd844c9d119854a39b3f8, type: 3}
+  - title: damage
+    clip: {fileID: 8300000, guid: 5b68c1d1b89c5ef4eaac00b7e859076a, type: 3}
+  random:
+  - title: attack
+    clip:
+    - {fileID: 8300000, guid: 29ad9628d5c9cae4594a1ad095c5568e, type: 3}
+    - {fileID: 8300000, guid: e0dcfbbeaddca1a4e8b03312835578e9, type: 3}
+    - {fileID: 8300000, guid: 795a8a7882b219641949c45ceca8a440, type: 3}
+    - {fileID: 8300000, guid: 33de9ceb55bd67146910883cad619bb9, type: 3}
+  - title: dash
+    clip:
+    - {fileID: 8300000, guid: 05f45bf3976d0214b9d3ea523ab4b83a, type: 3}
+    - {fileID: 8300000, guid: ef388ad78517d5048861c79ffec5c370, type: 3}
+    - {fileID: 8300000, guid: 54b009ee3a88ebb43b5e738455675db8, type: 3}
