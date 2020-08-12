@@ -14,6 +14,7 @@ public class MenuManager : MonoBehaviour
 
     [SerializeField] protected InputActionAsset ActionsAsset;
 
+    public AudioSource backSound;
 
     protected void Awake()
     {
@@ -58,10 +59,12 @@ public class MenuManager : MonoBehaviour
         if (CurrentState.Equals(States.MainScreen))
         {
             ChangeState(States.StartScreen);
+            backSound.Play();
         }
         else if (CurrentState.Equals(States.Options) || CurrentState.Equals(States.Credits))
         {
             ChangeState(States.MainScreen);
+            backSound.Play();
         }
     }
 

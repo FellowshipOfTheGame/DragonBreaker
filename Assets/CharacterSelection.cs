@@ -29,13 +29,14 @@ public class CharacterSelection : MonoBehaviour
     protected List<PlayerInfo> _playerInfo;
     protected bool[] _availableElements;
 
-    AudioSource JoinSound;
+    [Header("Audio")]
+    [SerializeField] AudioSource JoinSound;
+    [SerializeField] AudioSource LeaveSound;
 
     private void Start()
     {
         _availableElements = new bool[4] { true, true, true, true};
         _playerInfo = new List<PlayerInfo>();
-        JoinSound = GetComponent<AudioSource>();
     }
 
     public void OnPlayerJoined(PlayerInput playerInput)
@@ -79,6 +80,8 @@ public class CharacterSelection : MonoBehaviour
         _playerInfo.Remove(_playerInfo.Find((match) => i.Equals((int)match.element)));
         playerInput.actions["Exit"].performed -= OnPlayerExit;
         Debug.Log($"Left player{(PlayerInfo.PlayerElement) i}");
+        LeaveSound.Play();
+
     }
 
     public void LoadLevel()
