@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c65d3d397ac0dc44918f4cbef3f8a23, type: 3}
-  m_Name: lantern
+  m_Name: vasetall_right
   m_EditorClassIdentifier: 
-  title: Lantern
-  objPrefab: {fileID: 9097231896157449011, guid: f961459d53129df4685e197761b15c30,
+  title: Vase Tall
+  objPrefab: {fileID: 9097231896157449011, guid: 8947613bd28153b4882b35b68902c7b3,
     type: 3}
   refTiles:
-  - {fileID: 11400000, guid: 293ab3a18dfa1cb44b9088b88e99c70c, type: 2}
+  - {fileID: 11400000, guid: 878bb34f011d40742af8c282321ce9d7, type: 2}

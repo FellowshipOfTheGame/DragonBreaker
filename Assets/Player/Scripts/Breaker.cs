@@ -107,7 +107,7 @@ public class Breaker : MonoBehaviour
         Vector2 size = new Vector2(Vector2.Distance(attackPoint.position, transform.position), thicness);
         var collisions = Physics2D.OverlapCapsuleAll(center, size, CapsuleDirection2D.Horizontal, 0, _attack_layer);
         PerformAttack(collisions);
-        DrawCapsule(center, size, CapsuleDirection2D.Horizontal);
+        //DrawCapsule(center, size, CapsuleDirection2D.Horizontal);
         _sfx.Play("attack");
     }
 
@@ -131,7 +131,7 @@ public class Breaker : MonoBehaviour
     }
 
     //For debug purposes
-#if true
+#if false
     private CapsuleCollider2D coll = null;
     private void DrawCapsule(Vector2 center, Vector2 size, CapsuleDirection2D direction)
     {

@@ -10,13 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c65d3d397ac0dc44918f4cbef3f8a23, type: 3}
-  m_Name: vaseshort
+  m_Name: vaseshort_middle_right
   m_EditorClassIdentifier: 
   title: Vase Short
-  objPrefab: {fileID: 9097231896157449011, guid: 8a9fc27200a854c458e876e285ba3115,
+  objPrefab: {fileID: 9097231896157449011, guid: b4363608e5866c54f86cea0b7e47d140,
     type: 3}
   refTiles:
-  - {fileID: 11400000, guid: 0d67aba482995f64a8457569ffb34bdc, type: 2}
-  - {fileID: 11400000, guid: 88c130ade68c83b4884fd20bf6e93767, type: 2}
   - {fileID: 11400000, guid: a753994306eb20a49af061ceb52114b0, type: 2}
-  - {fileID: 11400000, guid: 4c5e3d38b9a603d419f7b90a1c5b2deb, type: 2}

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5515294967992645858
+--- !u!1 &6041725070483949048
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,9 +8,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1046750094692276332}
-  - component: {fileID: 6068016234581785233}
-  - component: {fileID: 2404816196953296360}
+  - component: {fileID: 3751663596534884224}
+  - component: {fileID: 7192533323526090804}
+  - component: {fileID: 540371749443808182}
   m_Layer: 10
   m_Name: Particle System
   m_TagString: Untagged
@@ -18,27 +18,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1046750094692276332
+--- !u!4 &3751663596534884224
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5515294967992645858}
+  m_GameObject: {fileID: 6041725070483949048}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.251, y: -0.238, z: 0}
+  m_LocalPosition: {x: -0.31911328, y: -0.198, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 9097231896157449012}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
---- !u!198 &6068016234581785233
+--- !u!198 &7192533323526090804
 ParticleSystem:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5515294967992645858}
+  m_GameObject: {fileID: 6041725070483949048}
   serializedVersion: 6
   lengthInSec: 1
   simulationSpeed: 1
@@ -51,7 +51,7 @@ ParticleSystem:
   playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
-  useRigidbodyForVelocity: 1
+  useRigidbodyForVelocity: 0
   startDelay:
     serializedVersion: 2
     minMaxState: 0
@@ -168,7 +168,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 10
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -4748,14 +4748,14 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
---- !u!199 &2404816196953296360
+--- !u!199 &540371749443808182
 ParticleSystemRenderer:
   serializedVersion: 6
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5515294967992645858}
+  m_GameObject: {fileID: 6041725070483949048}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -4823,9 +4823,9 @@ GameObject:
   - component: {fileID: 9097231896157449012}
   - component: {fileID: 9097231896157449013}
   - component: {fileID: 9097231896157449010}
-  - component: {fileID: 2305534290690361839}
+  - component: {fileID: 8483204315808005846}
   m_Layer: 10
-  m_Name: Lantern
+  m_Name: Tall Vase_middle_right
   m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4840,9 +4840,9 @@ Transform:
   m_GameObject: {fileID: 9097231896157449011}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.99742, y: 1, z: 1}
   m_Children:
-  - {fileID: 1046750094692276332}
+  - {fileID: 3751663596534884224}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4885,7 +4885,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 634b1b4238cb0b8438ebbd56e1208487, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7abab6bdc0431dd4aae3f349e5a1e1d8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4912,8 +4912,8 @@ MonoBehaviour:
   _required_level: 0
   _respawn_interval_min: 3
   _respawn_interval_max: 10
-  particle: {fileID: 6068016234581785233}
---- !u!61 &2305534290690361839
+  particle: {fileID: 7192533323526090804}
+--- !u!61 &8483204315808005846
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4926,7 +4926,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.25, y: -0.24354136}
+  m_Offset: {x: 0.108, y: -0.19248134}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -4937,5 +4937,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5094379, y: 0.5129173}
+  m_Size: {x: 0.3608415, y: 0.6150373}
   m_EdgeRadius: 0

@@ -17,6 +17,3 @@ MonoBehaviour:
     type: 3}
   refTiles:
   - {fileID: 11400000, guid: c1dcdf44d873b894790a067071b21772, type: 2}
-  - {fileID: 11400000, guid: 3ff9b0d9287f88343b7648a9ba517950, type: 2}
-  - {fileID: 11400000, guid: c9c430aede52af34687c6d1c23ce9fec, type: 2}
-  - {fileID: 11400000, guid: 878bb34f011d40742af8c282321ce9d7, type: 2}

@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c65d3d397ac0dc44918f4cbef3f8a23, type: 3}
-  m_Name: lantern
+  m_Name: lantern_right
   m_EditorClassIdentifier: 
   title: Lantern
-  objPrefab: {fileID: 9097231896157449011, guid: f961459d53129df4685e197761b15c30,
+  objPrefab: {fileID: 9097231896157449011, guid: 70e793ab1717e1144ac4d9d4f6a18a44,
     type: 3}
   refTiles:
-  - {fileID: 11400000, guid: 293ab3a18dfa1cb44b9088b88e99c70c, type: 2}
+  - {fileID: 11400000, guid: b1db632beea1df94797882fb595535fe, type: 2}
