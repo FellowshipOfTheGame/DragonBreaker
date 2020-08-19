@@ -38,7 +38,7 @@ public class CharacterSelection : MonoBehaviour
         _availableElements = new bool[4] { true, true, true, true};
         _playerInfo = new List<PlayerInfo>();
     }
-
+    
     public void OnPlayerJoined(PlayerInput playerInput)
     {
         Debug.Log("Player joining");
@@ -68,9 +68,6 @@ public class CharacterSelection : MonoBehaviour
         }
         JoinSound.Play();
     }
-
-    private void OnPlayerExit(InputAction.CallbackContext obj) => OnPlayerExitCharacterSelectionEvent?.Invoke();
-
     public void OnPlayerLeft(PlayerInput playerInput)
     {
         //Convert to int Player_{i}
@@ -78,11 +75,12 @@ public class CharacterSelection : MonoBehaviour
         _availableElements[i] = true;
         players_selection_UI[i].SetupLeftPlayer(no_player_sprite);
         _playerInfo.Remove(_playerInfo.Find((match) => i.Equals((int)match.element)));
-        playerInput.actions["Exit"].performed -= OnPlayerExit;
+        playerInput.actions["Exit"].performed -= OnPlayerExit;                          //não está funcionando quando nenhum jogador foi adicionado
         Debug.Log($"Left player{(PlayerInfo.PlayerElement) i}");
         LeaveSound.Play();
-
     }
+
+    private void OnPlayerExit(InputAction.CallbackContext obj) => OnPlayerExitCharacterSelectionEvent?.Invoke();
 
     public void LoadLevel()
     {
