@@ -787,8 +787,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ENTER / A = SELECIONAR     ESC / B = TELA DE TITULO     ALT+F4 = SAIR DO
-    JOGO
+  m_Text: '[Z] / (A) = SELECIONAR     [X] / (B) = TELA DE TITULO'
 --- !u!222 &130946938
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1572,7 +1571,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &440501538
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2532,7 +2531,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: APERTE ENTER OU A!
+  m_Text: APERTE [Z] OU (A)!
 --- !u!222 &747433405
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3646,6 +3645,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1172017180}
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1317685556
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3788,7 +3798,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1350590963
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4131,7 +4141,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ESC / B = MENU PRINCIPAL
+  m_Text: '[X] / (B) = MENU PRINCIPAL'
 --- !u!222 &1479985519
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4348,7 +4358,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ESC / B = MENU PRINCIPAL
+  m_Text: '[X] / (B) = MENU PRINCIPAL'
 --- !u!222 &1494254515
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4599,7 +4609,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1589563685
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4959,7 +4969,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1764250280
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5640,7 +5650,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Z / A = ENTRAR     X / B = SAIR     X / B [SEGURAR] = VOLTAR
+  m_Text: '[Z] / (A) = ENTRAR     [X] / (B) = SAIR     [X] / (B) <SEGURAR> = VOLTAR'
 --- !u!222 &2050378033
 CanvasRenderer:
   m_ObjectHideFlags: 0
