@@ -9687,6 +9687,11 @@ PrefabInstance:
       propertyPath: _playerUIs.Array.data[3]
       value: 
       objectReference: {fileID: 681707731}
+    - target: {fileID: 9115703777886441473, guid: d8a69597c32bc714eb17ce272ee4f97e,
+        type: 3}
+      propertyPath: _pauseScreen
+      value: 
+      objectReference: {fileID: 1425156342}
     - target: {fileID: 9115703777886441474, guid: d8a69597c32bc714eb17ce272ee4f97e,
         type: 3}
       propertyPath: m_LocalPosition.x

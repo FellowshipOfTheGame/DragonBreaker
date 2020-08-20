@@ -19,6 +19,7 @@ public class MultiplayerManager : MonoBehaviour
 
     [SerializeField] private PlayerUI[] _playerUIs = { };
     [SerializeField] private int _playerCount = 0;
+    [SerializeField] private PauseScreen _pauseScreen = null;
 
     private Dictionary<ReadOnlyArray<InputDevice>, int> _indexUI;
     private List<PlayerInput> _players;
@@ -92,6 +93,7 @@ public class MultiplayerManager : MonoBehaviour
         _playerUIs[index].Setup(player.gameObject);
 
         player.GetComponent<HealthSystem>().onDeath += HandlePlayer_onDeath;
+        player.actions["Pause"].started += _pauseScreen.ChangePausedState;
     }
 
     public void OnPlayerLeft(PlayerInput player)
@@ -99,6 +101,7 @@ public class MultiplayerManager : MonoBehaviour
         int index = _indexUI[player.devices];
         _playerUIs[index].gameObject.SetActive(false);
         _players.Remove(player);
+        player.actions["Pause"].started -= _pauseScreen.ChangePausedState;
     }
 
 
@@ -125,8 +128,6 @@ public class MultiplayerManager : MonoBehaviour
         }
 
         onGameOver?.Invoke(winner);
-        //Reload active Scene
-        //Invoke("ReloadScene", 1f);
     }
 
     public void ReloadScene()

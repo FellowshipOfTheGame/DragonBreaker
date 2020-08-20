@@ -12,8 +12,8 @@ public class PauseScreen : MonoBehaviour
 
     private void Start()
     {
-        ActionsAsset["Pause"].started += ChangePausedState;
-        ActionsAsset.Enable();
+        //ActionsAsset["Pause"].started += ChangePausedState;
+        //ActionsAsset.Enable();
     }
 
     public void ChangePausedState(InputAction.CallbackContext obj) => ChangePausedState();
