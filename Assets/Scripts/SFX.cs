@@ -34,7 +34,7 @@ public class SFX : MonoBehaviour {
             if (a.title == label){
                 source.clip = a.clip;
                 source.Play();
-                Debug.Log("found!");
+                //Debug.Log("found!");
                 return;
             }
         }

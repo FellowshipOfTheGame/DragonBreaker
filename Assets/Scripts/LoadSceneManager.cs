@@ -7,22 +7,22 @@ public class LoadSceneManager : MonoBehaviour
 {
     public static void RestartScene()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex, LoadSceneMode.Single);
     }
 
     public static void LoadSceneByName(string sceneName)
     {
-        SceneManager.LoadScene(sceneName);
+        SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
     }
 
     public static void LoadNextScene()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1, LoadSceneMode.Single);
     }
 
     public static void LoadSceneByBuildIndex(int buildIndex)
     {
-        SceneManager.LoadScene(buildIndex);
+        SceneManager.LoadScene(buildIndex, LoadSceneMode.Single);
     }
 
     public void RestartSceneMet() => LoadSceneManager.RestartScene();

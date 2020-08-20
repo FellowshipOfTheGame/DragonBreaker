@@ -77,7 +77,7 @@ public class CharacterSelection : MonoBehaviour
         _playerInfo.Remove(_playerInfo.Find((match) => i.Equals((int)match.element)));
         playerInput.actions["Exit"].performed -= OnPlayerExit;                          //não está funcionando quando nenhum jogador foi adicionado
         Debug.Log($"Left player{(PlayerInfo.PlayerElement) i}");
-        LeaveSound.Play();
+        LeaveSound?.Play();
     }
 
     private void OnPlayerExit(InputAction.CallbackContext obj) => OnPlayerExitCharacterSelectionEvent?.Invoke();

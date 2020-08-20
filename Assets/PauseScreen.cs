@@ -7,8 +7,8 @@ public class PauseScreen : MonoBehaviour
 {
     private bool paused = false;
 
-    [SerializeField] private InputActionAsset ActionsAsset;
-    [SerializeField] private Animator animator;
+    [SerializeField] private InputActionAsset ActionsAsset = null;
+    [SerializeField] private Animator animator = null;
 
     private void Start()
     {
@@ -30,15 +30,18 @@ public class PauseScreen : MonoBehaviour
     {
         animator.SetBool("PauseStatus", false);
         Time.timeScale = 1f;
+        MultiplayerManager.Instance.ActivatePlayersInputs();
     }
     private void Pause()
     {
         animator.SetBool("PauseStatus", true);
         Time.timeScale = 0f;
+        MultiplayerManager.Instance.DeactivatePlayersInputs();
     }
 
     public void QuitGame()
     {
+        Time.timeScale = 1f;
         LoadSceneManager.LoadSceneByBuildIndex(0);
     }
 }

@@ -16,7 +16,6 @@ public class PlayerMovement : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         inputAction = GetComponent<PlayerInput>().actions;
-        Debug.Log(inputAction);
 
         EnableActions();
     }

@@ -169,14 +169,14 @@ public class CharacterController2D : MonoBehaviour
 
     public void OnDashStart()
     {
-        Debug.Log("Starting dash");
+        //Debug.Log("Starting dash");
         if (_sfx != null) _sfx.Play("dash");
         animator.SetBool("isDashing", true);
     }
 
     public void OnDashEnd()
     {
-        Debug.Log("Finishing dash");
+        //Debug.Log("Finishing dash");
         animator.SetBool("isDashing", false);
     }
 

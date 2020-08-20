@@ -44,8 +44,9 @@ public class GameOverScreen : MonoBehaviour
                     winner_name = "DA FOLHA";
                     break;
             }*/
-            _text.text = $"GUERREIRO {winner_id} VENCEU!";
+            _text.text = $"GUERREIRO {winner_id+1} VENCEU!";
             _gameOverScreen.SetActive(true);
+            MultiplayerManager.Instance.DeactivatePlayersInputs();
         }
     }
 }
