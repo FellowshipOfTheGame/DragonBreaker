@@ -9,10 +9,12 @@ public class BreakableObject : MonoBehaviour, IDamagable
 
     [SerializeField] private ParticleSystem particle;
 
+    SFX _sfx;
 
     private void Awake()
     {
         gameObject.SetActive(false);
+        _sfx = particle.GetComponent<SFX>();
         Invoke("ActivateGameObject", Random.Range(_respawn_interval_min, _respawn_interval_max));
     }
 
@@ -27,6 +29,7 @@ public class BreakableObject : MonoBehaviour, IDamagable
         //Test if enough Energy
         if (_required_level > energy) return;
 
+        _sfx.Play("break");
         particle.transform.SetParent(null);
         particle.Play();
         gameObject.SetActive(false);
