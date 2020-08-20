@@ -588,10 +588,9 @@ MonoBehaviour:
   random:
   - title: attack
     clip:
-    - {fileID: 8300000, guid: 29ad9628d5c9cae4594a1ad095c5568e, type: 3}
-    - {fileID: 8300000, guid: e0dcfbbeaddca1a4e8b03312835578e9, type: 3}
-    - {fileID: 8300000, guid: 795a8a7882b219641949c45ceca8a440, type: 3}
-    - {fileID: 8300000, guid: 33de9ceb55bd67146910883cad619bb9, type: 3}
+    - {fileID: 8300000, guid: 6c77d75983448f84882e37b236161136, type: 3}
+    - {fileID: 8300000, guid: c33ae1adae53ca849a5d9364ee4dc5d5, type: 3}
+    - {fileID: 8300000, guid: 8db0f13dd7663504a89c22fc8c391fe0, type: 3}
   - title: dash
     clip:
     - {fileID: 8300000, guid: 05f45bf3976d0214b9d3ea523ab4b83a, type: 3}
