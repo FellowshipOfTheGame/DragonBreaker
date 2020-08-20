@@ -64,8 +64,9 @@ public class MultiplayerManager : MonoBehaviour
         {
             if((devicePath = PlayerPrefs.GetString($"Player_{i}_device", null)) != null)
             {
-                manager.playerPrefab = PlayerPrefabs[PlayerPrefs.GetInt($"Player_{i}_element", 0)];
-                manager.JoinPlayer(i, pairWithDevice: InputSystem.GetDevice(devicePath));
+                int element = PlayerPrefs.GetInt($"Player_{i}_element", 0);
+                manager.playerPrefab = PlayerPrefabs[element];
+                manager.JoinPlayer(element, pairWithDevice: InputSystem.GetDevice(devicePath));
             }
         }
     }
@@ -82,7 +83,7 @@ public class MultiplayerManager : MonoBehaviour
         _players.Add(player);
         if (!_indexUI.ContainsKey(player.devices))
         {
-            _indexUI.Add(player.devices, _playerCount);
+            _indexUI.Add(player.devices, player.playerIndex);
             _playerCount++;
         }
 

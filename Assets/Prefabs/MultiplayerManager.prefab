@@ -107,8 +107,8 @@ MonoBehaviour:
   PlayerPrefabs:
   - {fileID: 6279948799033416963, guid: 84621e3af44569e4592ca8653ed0a1a6, type: 3}
   - {fileID: 6279948799033416963, guid: 4b16b95b7582e0144ab2c3fe8c9bd6b0, type: 3}
-  - {fileID: 6279948799033416963, guid: 92d63b22c81254642846e0a017c2655b, type: 3}
   - {fileID: 6279948799033416963, guid: 36fa30edf24ff5844b5f6df3c3866a85, type: 3}
+  - {fileID: 6279948799033416963, guid: 92d63b22c81254642846e0a017c2655b, type: 3}
   _playerUIs:
   - {fileID: 0}
   - {fileID: 0}

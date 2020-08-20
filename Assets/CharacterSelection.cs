@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 
 public struct PlayerInfo
 {
-    public enum PlayerElement { Fire, Ice, Leaf, Lightning};
+    public enum PlayerElement { Fire, Ice, Lightning, Leaf};
     public PlayerElement element;
     public string devicePath;
 };
