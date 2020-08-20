@@ -19,9 +19,11 @@ public class MultiplayerManager : MonoBehaviour
 
     [SerializeField] private PlayerUI[] _playerUIs = { };
     [SerializeField] private int _playerCount = 0;
+    [SerializeField] private PauseScreen _pauseScreen = null;
 
     private Dictionary<ReadOnlyArray<InputDevice>, int> _indexUI;
-    private List<PlayerInput> _players;
+    private List<PlayerInput> _players = null;
+    private Countdown _countdown = null;
 
     //Make it Singleton
     private void Awake()
@@ -66,9 +68,13 @@ public class MultiplayerManager : MonoBehaviour
             {
                 int element = PlayerPrefs.GetInt($"Player_{i}_element", 0);
                 manager.playerPrefab = PlayerPrefabs[element];
-                manager.JoinPlayer(element, pairWithDevice: InputSystem.GetDevice(devicePath));
+                _players.Add(manager.JoinPlayer(element, pairWithDevice: InputSystem.GetDevice(devicePath)));
             }
         }
+
+        // Begin Countdown
+        _countdown = FindObjectOfType<Countdown>();
+        _countdown.StartCountdown();
     }
 
     /// <summary>
@@ -78,9 +84,7 @@ public class MultiplayerManager : MonoBehaviour
     /// <param name="player"></param>
     public void OnPlayerJoined(PlayerInput player)
     {
-        Debug.Log("Joined: " + player.gameObject.name);
         player.transform.SetParent(this.transform);
-        _players.Add(player);
         if (!_indexUI.ContainsKey(player.devices))
         {
             _indexUI.Add(player.devices, player.playerIndex);
@@ -92,6 +96,7 @@ public class MultiplayerManager : MonoBehaviour
         _playerUIs[index].Setup(player.gameObject);
 
         player.GetComponent<HealthSystem>().onDeath += HandlePlayer_onDeath;
+        player.actions["Pause"].started += _pauseScreen.ChangePausedState;
     }
 
     public void OnPlayerLeft(PlayerInput player)
@@ -99,8 +104,26 @@ public class MultiplayerManager : MonoBehaviour
         int index = _indexUI[player.devices];
         _playerUIs[index].gameObject.SetActive(false);
         _players.Remove(player);
+        player.actions["Pause"].started -= _pauseScreen.ChangePausedState;
     }
 
+    public void ActivatePlayersInputs()
+    {
+        if (_countdown.InCountdown) return;
+
+        foreach(PlayerInput player in _players)
+        {
+            player.ActivateInput();
+        }
+    }
+
+    public void DeactivatePlayersInputs()
+    {
+        foreach (PlayerInput player in _players)
+        {
+            player.DeactivateInput();
+        }
+    }
 
     private void HandlePlayer_onDeath()
     {
@@ -113,20 +136,23 @@ public class MultiplayerManager : MonoBehaviour
 
     private void GameOver()
     {
+        // Deacivate inputs
+        DeactivatePlayersInputs();
+
         //Calculate winner
         int winner = -1;
         foreach (var p in _players)
         {
             if (p.gameObject.activeInHierarchy)
             {
+                p.actions["Pause"].started -= _pauseScreen.ChangePausedState;
                 winner = p.playerIndex;
                 break;
             }
         }
 
+        // Call game over event
         onGameOver?.Invoke(winner);
-        //Reload active Scene
-        //Invoke("ReloadScene", 1f);
     }
 
     public void ReloadScene()

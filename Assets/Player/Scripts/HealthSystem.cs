@@ -20,7 +20,6 @@ public class HealthSystem : MonoBehaviour, IDamagable
     private void Awake()
     {
         health = MaxHealth;
-        onDeath += die;
         _sfx = GetComponent<SFX>();
     }
 
@@ -28,7 +27,6 @@ public class HealthSystem : MonoBehaviour, IDamagable
     {
         if (Invulnerable || damage == 0f)
             return;
-        Debug.Log("Taking damage " + gameObject.name);
         
         //Taking damage
         health -= damage;
@@ -40,7 +38,10 @@ public class HealthSystem : MonoBehaviour, IDamagable
 
         //Check death
         if (health <= 0f)
+        {
+            die();
             onDeath?.Invoke();
+        }
 
         //Invoke onDamage and onHealthChange events
         onDamageTaken?.Invoke();
@@ -51,5 +52,4 @@ public class HealthSystem : MonoBehaviour, IDamagable
 
     private void die() => gameObject.SetActive(false);
     private void MakeVulnerable() => Invulnerable = false;
-    private void OnDestroy() => onDeath -= die;
 }
