@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 using UnityEngine.InputSystem.Controls;
 using UnityEngine.InputSystem.Utilities;
 
@@ -12,8 +13,8 @@ public class PauseScreen : MonoBehaviour
 
     private void Start()
     {
-        //ActionsAsset["Pause"].started += ChangePausedState;
-        //ActionsAsset.Enable();
+        ActionsAsset["Pause"].started += ChangePausedState;
+        ActionsAsset.Enable();
     }
 
     public void ChangePausedState(InputAction.CallbackContext obj) => ChangePausedState();
@@ -26,7 +27,7 @@ public class PauseScreen : MonoBehaviour
         paused = !paused;
     }
 
-    private void Resume() 
+    private void Resume()
     {
         animator.SetBool("PauseStatus", false);
         Time.timeScale = 1f;
@@ -37,7 +38,7 @@ public class PauseScreen : MonoBehaviour
         animator.SetBool("PauseStatus", true);
         Time.timeScale = 0f;
         MultiplayerManager.Instance.DeactivatePlayersInputs();
-    }
+        }
 
     public void QuitGame()
     {
