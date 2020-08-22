@@ -666,7 +666,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.020437501, y: 0.7973333}
   m_AnchorMax: {x: 0.20583333, y: 0.96040744}
-  m_AnchoredPosition: {x: -0.3550415, y: 0.11999512}
+  m_AnchoredPosition: {x: -0.35498047, y: 0.11999512}
   m_SizeDelta: {x: 0.70996, y: 0.23993}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &110838607
@@ -1142,7 +1142,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.13618521}
   m_AnchorMax: {x: 0.94000006, y: 0.8965927}
-  m_AnchoredPosition: {x: -0.000030517578, y: 0.000030517578}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: -0}
   m_Pivot: {x: 0.49999997, y: 0.5}
 --- !u!114 &318294571
@@ -1215,7 +1215,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.06343751, y: 0.13618521}
   m_AnchorMax: {x: 0.5, y: 0.8965927}
-  m_AnchoredPosition: {x: -0.63238525, y: 0.000030517578}
+  m_AnchoredPosition: {x: -0.6323242, y: 0}
   m_SizeDelta: {x: 1.2648, y: 0}
   m_Pivot: {x: 0.49999997, y: 0.5}
 --- !u!114 &350737573
@@ -2858,6 +2858,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  OnStartGameEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 920463199}
+        m_MethodName: LoadLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   JoinSound: {fileID: 1193665045}
   LeaveSound: {fileID: 1172017180}
 --- !u!114 &920463200
@@ -3569,7 +3583,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.020437501, y: 0.7973333}
   m_AnchorMax: {x: 0.20583333, y: 0.96040744}
-  m_AnchoredPosition: {x: 0.025024414, y: 0.0004272461}
+  m_AnchoredPosition: {x: 0.025146484, y: 0.00036621094}
   m_SizeDelta: {x: -0.049988, y: 0.00097656}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1317685555

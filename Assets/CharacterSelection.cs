@@ -26,12 +26,15 @@ public class CharacterSelection : MonoBehaviour
     [Header("Exit Event")]
     [SerializeField] private UnityEvent OnPlayerExitCharacterSelectionEvent = null;
 
+    [Header("Start Event")]
+    [SerializeField] private UnityEvent OnStartGameEvent = null;
+
     protected List<PlayerInfo> _playerInfo;
     protected bool[] _availableElements;
 
     [Header("Audio")]
-    [SerializeField] AudioSource JoinSound;
-    [SerializeField] AudioSource LeaveSound;
+    [SerializeField] AudioSource JoinSound = null;
+    [SerializeField] AudioSource LeaveSound = null;
 
     private void Start()
     {
@@ -61,7 +64,8 @@ public class CharacterSelection : MonoBehaviour
                         break;
                 }
                 playerInput.name = "Player_" + i;
-                playerInput.actions["Exit"].performed += OnPlayerExit;
+                playerInput.actions["Exit"].performed += OnPlayerExit;      //segure para sair
+                playerInput.actions["Start"].performed += StartGame;     //aperte start para começar
                 _availableElements[i] = false;
                 break;
             }
@@ -75,12 +79,14 @@ public class CharacterSelection : MonoBehaviour
         _availableElements[i] = true;
         players_selection_UI[i].SetupLeftPlayer(no_player_sprite);
         _playerInfo.Remove(_playerInfo.Find((match) => i.Equals((int)match.element)));
-        playerInput.actions["Exit"].performed -= OnPlayerExit;                          //não está funcionando quando nenhum jogador foi adicionado
+        playerInput.actions["Exit"].performed -= OnPlayerExit;                          //não está funcionando quando nenhum jogador foi adicionado já que depende do PlayerInput
         Debug.Log($"Left player{(PlayerInfo.PlayerElement) i}");
         LeaveSound?.Play();
     }
 
     private void OnPlayerExit(InputAction.CallbackContext obj) => OnPlayerExitCharacterSelectionEvent?.Invoke();
+
+    private void StartGame(InputAction.CallbackContext obj) => OnStartGameEvent?.Invoke();
 
     public void LoadLevel()
     {

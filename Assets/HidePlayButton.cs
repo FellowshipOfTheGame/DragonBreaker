@@ -9,12 +9,14 @@ public class HidePlayButton : MonoBehaviour
     [SerializeField] private Button _PlayButton;
     [SerializeField] private Image _playButtonImg;
     [SerializeField] private int minimumToDisplay = 2;
+    private AudioSource readyDrum;
 
     private PlayerInputManager _manager;
 
     private void Awake()
     {
         _manager = GetComponent<PlayerInputManager>();
+        readyDrum = gameObject.GetComponent<AudioSource>();
     }
 
     public void DisplayCheck()
@@ -29,6 +31,7 @@ public class HidePlayButton : MonoBehaviour
         {
             _playButtonImg.enabled = true;
             //_PlayButton.Select(); --> faz quando o player entra com o controle ja ir direto pro jogo (se tiver 2 jogadores)
+            readyDrum.Play();
             Debug.Log("Play Button enabled.");
         }
     }
