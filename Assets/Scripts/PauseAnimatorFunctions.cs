@@ -8,13 +8,12 @@ public class PauseAnimatorFunctions : MonoBehaviour
 {
     public Button firstButtonToSelect;
 
-    public void SelectFirstButton()
+    public void SelectFirstButton() //selects the first chosen button
     {
         firstButtonToSelect.Select();
-        Debug.Log((firstButtonToSelect.name) + " selected.");
     }
 
-    public void DeselectButtons()
+    public void DeselectButtons()   //deselects buttons to prevent sprites from getting stuck
     {
         GameObject EventSystem = GameObject.Find("EventSystem");
         EventSystem.GetComponent<EventSystem>().SetSelectedGameObject(null);
