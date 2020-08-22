@@ -11,17 +11,20 @@ public class Countdown : MonoBehaviour
 
     [SerializeField] private Image CountdownImage = null;
     [SerializeField] private Sprite[] Numbers = null;
+    public AudioSource backgroundMusic;
+    private AudioSource countdownSound;
+    
 
     private int _index = 0;
     private const float _countdownTime = 1f;
-    
+
     public void StartCountdown()
     {
         _index = 0;
         MultiplayerManager.Instance.DeactivatePlayersInputs();
+        countdownSound = gameObject.GetComponent<AudioSource>();
         Count();
     }
-
     private void Count()
     {
         if (InCountdown)
@@ -31,10 +34,14 @@ public class Countdown : MonoBehaviour
             StartCoroutine("ChangeCountdownScale");
             _index++;
             Invoke("Count", _countdownTime);
+            countdownSound.Play();
+
         }
         else
         {
+            backgroundMusic.Play();
             MultiplayerManager.Instance.ActivatePlayersInputs();
+
         }
     }
 
