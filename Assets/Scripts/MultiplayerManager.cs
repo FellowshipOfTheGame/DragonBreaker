@@ -109,7 +109,6 @@ public class MultiplayerManager : MonoBehaviour
 
     public void ActivatePlayersInputs()
     {
-        if (_countdown.InCountdown) return;
 
         foreach(PlayerInput player in _players)
         {
