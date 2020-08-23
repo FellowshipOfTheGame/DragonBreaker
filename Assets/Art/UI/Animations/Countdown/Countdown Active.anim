@@ -1833,14 +1833,21 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 4
+  - time: 3.9833333
+    functionName: FinalCount
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 3.9833333
     functionName: EndCountdown
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 4
+  - time: 3.9833333
     functionName: Count
     data: 
     objectReferenceParameter: {fileID: 0}
