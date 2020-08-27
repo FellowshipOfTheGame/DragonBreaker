@@ -9,6 +9,7 @@ public class HealthSystem : MonoBehaviour, IDamagable
     public event Action onDamageTaken;
     public event Action onDeath;
     SFX _sfx;
+    Animator animator;
     public float HealthPercent => health / MaxHealth;
     public bool Invulnerable = false;
 
@@ -21,6 +22,12 @@ public class HealthSystem : MonoBehaviour, IDamagable
     {
         health = MaxHealth;
         _sfx = GetComponent<SFX>();
+        animator = GetComponent<Animator>();
+
+    }
+
+    private void Update() {
+        animator.SetBool("invincible", Invulnerable);
     }
 
     public void hit(float damage, Action<int> callback)
