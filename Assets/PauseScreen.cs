@@ -1,8 +1,10 @@
 ﻿using UnityEngine;
 using UnityEngine.InputSystem;
+using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.InputSystem.Controls;
 using UnityEngine.InputSystem.Utilities;
+using UnityEngine.U2D;
 
 public class PauseScreen : MonoBehaviour
 {
@@ -10,6 +12,9 @@ public class PauseScreen : MonoBehaviour
 
     [SerializeField] private InputActionAsset ActionsAsset = null;
     [SerializeField] private Animator animator = null;
+    [SerializeField] private GameObject mCamera = null;
+    [SerializeField] private Image pCamOn = null;
+    [SerializeField] private Image pCamOff = null;
 
     private void Start()
     {
@@ -38,11 +43,40 @@ public class PauseScreen : MonoBehaviour
         animator.SetBool("PauseStatus", true);
         Time.timeScale = 0f;
         MultiplayerManager.Instance.DeactivatePlayersInputs();
+
+        if (!mCamera.GetComponent<PixelPerfectCamera>().enabled)
+        {
+            pCamOn.enabled = true;
+            pCamOff.enabled = false;
         }
+        else
+        {
+            pCamOn.enabled = false;
+            pCamOff.enabled = true;
+        }
+    }
 
     public void QuitGame()
     {
         Time.timeScale = 1f;
         LoadSceneManager.LoadSceneByBuildIndex(0);
+    }
+
+    public void TogglePixelCamera()
+    {
+        if (!mCamera.GetComponent<PixelPerfectCamera>().enabled)
+        {
+            mCamera.GetComponent<PixelPerfectCamera>().enabled = true;
+            pCamOn.enabled = true;
+            pCamOff.enabled = false;
+            Debug.Log("Toggled Pixel Camera ON");
+        }
+        else
+        {
+            mCamera.GetComponent<PixelPerfectCamera>().enabled = false;
+            pCamOn.enabled = false;
+            pCamOff.enabled = true;
+            Debug.Log("Toggled Pixel Camera OFF");
+        }
     }
 }

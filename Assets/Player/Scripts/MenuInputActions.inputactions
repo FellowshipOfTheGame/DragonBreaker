@@ -16,7 +16,7 @@
                 {
                     "name": "Jump",
                     "type": "Button",
-                    "id": "58a497ec-e809-4318-b9d8-94de1a582fb7",
+                    "id": "1c986e72-c524-4c87-a218-9b8805f7f4b3",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": ""
@@ -24,7 +24,7 @@
                 {
                     "name": "Dash",
                     "type": "Button",
-                    "id": "118559a7-1974-483d-a299-d93720187d0b",
+                    "id": "58a497ec-e809-4318-b9d8-94de1a582fb7",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
@@ -32,7 +32,7 @@
                 {
                     "name": "Attack",
                     "type": "Button",
-                    "id": "508962be-f5cb-4184-b8c7-0df99fec80b6",
+                    "id": "118559a7-1974-483d-a299-d93720187d0b",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": ""
