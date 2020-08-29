@@ -21,34 +21,6 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0
-        value: 1
-        inSlope: -286.84814
-        outSlope: -286.84814
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.13129056
-        outWeight: 0.11784091
-      - serializedVersion: 3
-        time: 0.41666666
-        value: 960
-        inSlope: 3283.6523
-        outSlope: 0
-        tangentMode: 1
-        weightedMode: 0
-        inWeight: 0.11965914
-        outWeight: 0.33333334
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_AnchoredPosition.x
-    path: Configurations Button
-    classID: 224
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
         time: 0.083333336
         value: 1
         inSlope: -278.9574
@@ -157,6 +129,34 @@ AnimationClip:
     path: Controls Text
     classID: 224
     script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: -286.84814
+        outSlope: -286.84814
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.13129056
+        outWeight: 0.11784091
+      - serializedVersion: 3
+        time: 0.41666666
+        value: 960
+        inSlope: 3283.6523
+        outSlope: 0
+        tangentMode: 1
+        weightedMode: 0
+        inWeight: 0.11965914
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_AnchoredPosition.x
+    path: Info Button
+    classID: 224
+    script: {fileID: 0}
   m_PPtrCurves: []
   m_SampleRate: 60
   m_WrapMode: 0
@@ -165,13 +165,6 @@ AnimationClip:
     m_Extent: {x: 0, y: 0, z: 0}
   m_ClipBindingConstant:
     genericBindings:
-    - serializedVersion: 2
-      path: 1776317525
-      attribute: 1460864421
-      script: {fileID: 0}
-      typeID: 224
-      customType: 28
-      isPPtrCurve: 0
     - serializedVersion: 2
       path: 2273347236
       attribute: 1460864421
@@ -196,6 +189,13 @@ AnimationClip:
     - serializedVersion: 2
       path: 3321309209
       attribute: 538195251
+      script: {fileID: 0}
+      typeID: 224
+      customType: 28
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 1825298760
+      attribute: 1460864421
       script: {fileID: 0}
       typeID: 224
       customType: 28
@@ -226,34 +226,6 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0
-        value: 1
-        inSlope: -286.84814
-        outSlope: -286.84814
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.13129056
-        outWeight: 0.11784091
-      - serializedVersion: 3
-        time: 0.41666666
-        value: 960
-        inSlope: 3283.6523
-        outSlope: 0
-        tangentMode: 1
-        weightedMode: 0
-        inWeight: 0.11965914
-        outWeight: 0.33333334
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_AnchoredPosition.x
-    path: Configurations Button
-    classID: 224
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
         time: 0.083333336
         value: 1
         inSlope: -278.9574
@@ -362,6 +334,34 @@ AnimationClip:
     path: Controls Text
     classID: 224
     script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: -286.84814
+        outSlope: -286.84814
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.13129056
+        outWeight: 0.11784091
+      - serializedVersion: 3
+        time: 0.41666666
+        value: 960
+        inSlope: 3283.6523
+        outSlope: 0
+        tangentMode: 1
+        weightedMode: 0
+        inWeight: 0.11965914
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_AnchoredPosition.x
+    path: Info Button
+    classID: 224
+    script: {fileID: 0}
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
@@ -372,6 +372,13 @@ AnimationClip:
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 1
+    messageOptions: 0
+  - time: 0.016666668
+    functionName: DeselectButtons
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
     messageOptions: 0
   - time: 0.48333332
     functionName: PlayEnterStateAnimation
