@@ -33,7 +33,8 @@ public class PauseScreen : MonoBehaviour
         }
         animator.SetBool("PauseStatus", false);
         Time.timeScale = 1f;
-        MultiplayerManager.Instance.ActivatePlayersInputs();
+        MultiplayerManager.Instance.ActivatePlayersInputs();
+        Debug.Log("Resumed.");
     }
 
     private void Pause()
@@ -46,7 +47,7 @@ public class PauseScreen : MonoBehaviour
         Time.timeScale = 0f;
         MultiplayerManager.Instance.DeactivatePlayersInputs();
 
-        if (!mCamera.GetComponent<PixelPerfectCamera>().enabled)
+        if (mCamera.GetComponent<PixelPerfectCamera>().enabled)
         {
             pCamOn.enabled = true;
             pCamOff.enabled = false;
