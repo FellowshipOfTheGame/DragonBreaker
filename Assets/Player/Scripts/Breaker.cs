@@ -13,7 +13,9 @@ public class Breaker : MonoBehaviour
     [SerializeField] public float thicness = 1f;
     [SerializeField] private float range = 1f;
     [SerializeField] private float attackDelay = 1 / 4f;
-    
+
+    private bool _facingRight = false;
+    private bool _isAttacking = false;
     SFX _sfx;
 
     private void Awake() {
@@ -22,18 +24,35 @@ public class Breaker : MonoBehaviour
 
     public void Attack(Vector2 movementInput, bool facingRight)
     {
-        const float minimum_input = 0.4f;
+        // Don't attack if already in animation
+        if (_isAttacking) return;
 
+        const float minimum_input = 0.4f;
+        bool isSideAttack = Math.Abs(movementInput.y) <= minimum_input || Math.Abs(movementInput.x) > minimum_input;
+
+        Debug.Log($"movementInput {movementInput}, minimum_input {minimum_input}");
         animator.SetFloat("Vertical attack", movementInput.y);
-        animator.SetBool("Side attack", Math.Abs(movementInput.y) <= minimum_input || Math.Abs(movementInput.x) > minimum_input);
+        animator.SetBool("Side attack", isSideAttack);
         animator.SetTrigger("Attack");
+        _facingRight = facingRight;
+        _isAttacking = true;
 
         if (Mathf.Abs(movementInput.y) >= minimum_input)
         {
-            if (movementInput.y > 0)
-                Invoke("UpAttack", attackDelay);
+            if (isSideAttack)
+            {
+                if (movementInput.y > 0)
+                    Invoke("SideUpAttack", attackDelay);
+                else if (movementInput.y < 0)
+                    Invoke("SideDownAttack", attackDelay);
+            }
             else
-                Invoke("DownAttack", attackDelay);
+            {
+                if (movementInput.y > 0)
+                    Invoke("UpAttack", attackDelay);
+                else if (movementInput.y < 0)
+                    Invoke("DownAttack", attackDelay);
+            }
         }
         else
             Invoke("SideAttack", attackDelay);
@@ -70,12 +89,17 @@ public class Breaker : MonoBehaviour
             };
             closestPlayer.GetComponent<IDamagable>()?.hit(energyController.level, callbackFunction);
         }
+
+        // Done attacking
+        _isAttacking = false;
     }
 
     private void PerformAttack(Collider2D[] collisions)
     {
         Collider2D closestPlayer = null;
         Action<int> callbackFunction = null;
+
+        _sfx.Play("attack");
 
         foreach (Collider2D entity in collisions)
         {
@@ -98,6 +122,9 @@ public class Breaker : MonoBehaviour
             };
             closestPlayer.GetComponent<IDamagable>()?.hit(energyController.level, callbackFunction);
         }
+
+        // Done attacking
+        _isAttacking = false;
     }
 
     private void SideAttack()
@@ -107,8 +134,32 @@ public class Breaker : MonoBehaviour
         Vector2 size = new Vector2(Vector2.Distance(attackPoint.position, transform.position), thicness);
         var collisions = Physics2D.OverlapCapsuleAll(center, size, CapsuleDirection2D.Horizontal, 0, _attack_layer);
         PerformAttack(collisions);
-        //DrawCapsule(center, size, CapsuleDirection2D.Horizontal);
-        _sfx.Play("attack");
+        DrawCapsule(center, size, CapsuleDirection2D.Horizontal, 0);
+        //_sfx.Play("attack");
+    }
+
+    private void SideUpAttack()
+    {
+        //PerfomAttack(attackPoint.transform.position);
+        Vector2 center = new Vector2((attackPoint.position.x + transform.position.x) / 2, attackPoint.position.y) + new Vector2(0, Vector2.Distance(attackPoint.position, transform.position)/2);
+        Vector2 size = new Vector2(Vector2.Distance(attackPoint.position, transform.position), thicness);
+        float angle = _facingRight ? -45 : 45;
+        var collisions = Physics2D.OverlapCapsuleAll(center, size, CapsuleDirection2D.Horizontal, angle, _attack_layer);
+        PerformAttack(collisions);
+        DrawCapsule(center, size, CapsuleDirection2D.Horizontal, angle);
+        //_sfx.Play("attack");
+    }
+
+    private void SideDownAttack()
+    {
+        //PerfomAttack(attackPoint.transform.position);
+        Vector2 center = new Vector2((attackPoint.position.x + transform.position.x) / 2, attackPoint.position.y) - new Vector2(0, Vector2.Distance(attackPoint.position, transform.position) / 1.8f);
+        Vector2 size = new Vector2(Vector2.Distance(attackPoint.position, transform.position), thicness);
+        float angle = _facingRight ? 45 : -45;
+        var collisions = Physics2D.OverlapCapsuleAll(center, size, CapsuleDirection2D.Horizontal, angle, _attack_layer);
+        DrawCapsule(center, size, CapsuleDirection2D.Horizontal, angle);
+        PerformAttack(collisions);
+        //_sfx.Play("attack");
     }
 
     private void UpAttack()
@@ -117,23 +168,26 @@ public class Breaker : MonoBehaviour
         Vector2 center = transform.position + new Vector3(0, Vector2.Distance(attackPoint.position, transform.position)/2);
         Vector2 size = new Vector2(thicness, Vector2.Distance(attackPoint.position, transform.position));
         var collisions = Physics2D.OverlapCapsuleAll(center, size, CapsuleDirection2D.Vertical, 0, _attack_layer);
+        DrawCapsule(center, size, CapsuleDirection2D.Vertical, 0);
         PerformAttack(collisions);
-        _sfx.Play("attack");
+        //_sfx.Play("attack");
     }
+
     private void DownAttack()
     {
         //PerformAttack(new Vector2(transform.position.x, transform.position.y) + Vector2.down * attackPoint.position.x);
         Vector2 center = transform.position - new Vector3(0, Vector2.Distance(attackPoint.position, transform.position)/1.8f);
         Vector2 size = new Vector2(thicness, Vector2.Distance(attackPoint.position, transform.position));
         var collisions = Physics2D.OverlapCapsuleAll(center, size, CapsuleDirection2D.Vertical, 0, _attack_layer);
+        DrawCapsule(center, size, CapsuleDirection2D.Vertical, 0);
         PerformAttack(collisions);
-        _sfx.Play("attack");
+        //_sfx.Play("attack");
     }
 
     //For debug purposes
-#if false
+#if true
     private CapsuleCollider2D coll = null;
-    private void DrawCapsule(Vector2 center, Vector2 size, CapsuleDirection2D direction)
+    private void DrawCapsule(Vector2 center, Vector2 size, CapsuleDirection2D direction, float angle = 0)
     {
         if(coll == null)
         {
@@ -144,7 +198,10 @@ public class Breaker : MonoBehaviour
         coll.size = size;
         coll.offset = Vector2.zero;
         coll.direction = direction;
+        coll.transform.localRotation = Quaternion.identity;
+        coll.transform.Rotate(Vector3.forward * angle);
         coll.isTrigger = true;
+        //Debug.Break();
     }
 #endif
     
