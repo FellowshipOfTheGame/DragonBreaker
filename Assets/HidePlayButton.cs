@@ -6,12 +6,12 @@ using UnityEngine.UI;
 
 public class HidePlayButton : MonoBehaviour
 {
-    [SerializeField] private Button _PlayButton;
-    [SerializeField] private Image _playButtonImg;
+    [SerializeField] private Button _PlayButton = null;
+    [SerializeField] private Image _playButtonImg = null;
     [SerializeField] private int minimumToDisplay = 2;
     private AudioSource readyDrum;
 
-    private PlayerInputManager _manager;
+    private PlayerInputManager _manager = null;
 
     private void Awake()
     {
@@ -21,11 +21,9 @@ public class HidePlayButton : MonoBehaviour
 
     public void DisplayCheck()
     {
-        Debug.Log(_manager.playerCount);
         if(_manager.playerCount < minimumToDisplay)
         {
             _playButtonImg.enabled = false;
-            Debug.Log("Play Button disabled.");
         }
         else
         {

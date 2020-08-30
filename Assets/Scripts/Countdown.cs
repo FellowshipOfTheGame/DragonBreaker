@@ -15,8 +15,8 @@ public class Countdown : MonoBehaviour
 
     public void StartCountdown()
     {
-        MultiplayerManager.Instance.DeactivatePlayersInputs();      //input disabled during countdown
         InCountdown = true;
+        MultiplayerManager.Instance.DeactivatePlayersInputs();      //input disabled during countdown
     }
     public void Count()    //play countdown sound
     {
@@ -31,8 +31,8 @@ public class Countdown : MonoBehaviour
     public void EndCountdown()  //input and music re-enabled as countdown ends
     {
         backgroundMusic.Play(); 
-        MultiplayerManager.Instance.ActivatePlayersInputs();
         InCountdown = false;
+        MultiplayerManager.Instance.ActivatePlayersInputs();
     }
 
 }

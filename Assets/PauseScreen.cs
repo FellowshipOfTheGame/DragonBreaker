@@ -8,38 +8,40 @@ using UnityEngine.U2D;
 
 public class PauseScreen : MonoBehaviour
 {
-    private bool paused = false;
-
-    [SerializeField] private InputActionAsset ActionsAsset = null;
     [SerializeField] private Animator animator = null;
     [SerializeField] private GameObject mCamera = null;
     [SerializeField] private Image pCamOn = null;
     [SerializeField] private Image pCamOff = null;
 
-    private void Start()
-    {
-        ActionsAsset["Pause"].started += ChangePausedState;
-        ActionsAsset.Enable();
-    }
+    private bool _paused = false;
 
     public void ChangePausedState(InputAction.CallbackContext obj) => ChangePausedState();
 
     public void ChangePausedState()
     {
-        if (paused) Resume();
+        if (_paused) Resume();
         else Pause();
 
-        paused = !paused;
+        _paused = !_paused;
     }
 
     private void Resume()
     {
+        if (animator == null)
+        {
+            Debug.Log($"Animator is null for {gameObject.name}");
+        }
         animator.SetBool("PauseStatus", false);
         Time.timeScale = 1f;
         MultiplayerManager.Instance.ActivatePlayersInputs();
     }
+
     private void Pause()
     {
+        if(animator == null)
+        {
+            Debug.Log($"Animator is null for {gameObject.name}");
+        }
         animator.SetBool("PauseStatus", true);
         Time.timeScale = 0f;
         MultiplayerManager.Instance.DeactivatePlayersInputs();

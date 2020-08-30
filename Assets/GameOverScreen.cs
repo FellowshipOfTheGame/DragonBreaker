@@ -24,29 +24,17 @@ public class GameOverScreen : MonoBehaviour
         }
         else
         {
-            /*string winner_name = "???";        <= podemos colocar os elementos dos guerreiros ao invés dos números dos players para identificar quem venceu
-
-            switch (winner_id)
-            {
-                case 0:
-                    winner_name = "DO FOGO";
-                    break;
-
-                case 1:
-                    winner_name = "DO GELO";
-                    break;
-
-                case 2:
-                    winner_name = "DO RAIO";
-                    break;
-
-                case 3:
-                    winner_name = "DA FOLHA";
-                    break;
-            }*/
-            _text.text = $"GUERREIRO {winner_id+1} VENCEU!";
+            
             _gameOverScreen.SetActive(true);
-            MultiplayerManager.Instance.DeactivatePlayersInputs();
         }
+        PlayerInfo.PlayerElement element = (PlayerInfo.PlayerElement)winner_id;
+        _text.text = $"GUERREIRO {element.ToString()} VENCEU!";
+        MultiplayerManager.Instance.DeactivatePlayersInputs();
+    }
+
+    private void OnDestroy()
+    {
+        if(MultiplayerManager.Instance != null)
+            MultiplayerManager.Instance.onGameOver -= OnGameOver;
     }
 }

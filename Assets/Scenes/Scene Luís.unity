@@ -7336,8 +7336,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07b5daf40158c0144b2ff26626099249, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionsAsset: {fileID: -944628639613478452, guid: 6f1b4e2208b910a4ea8cc9e6c46dfda5,
-    type: 3}
   animator: {fileID: 1141864196608781988}
   mCamera: {fileID: 814531174}
   pCamOn: {fileID: 355521291}
@@ -10452,7 +10450,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 896b7bf4e78ce6744bbbb2e60d10f33c, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 

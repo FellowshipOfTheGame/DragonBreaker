@@ -109,7 +109,7 @@ public class MultiplayerManager : MonoBehaviour
 
     public void ActivatePlayersInputs()
     {
-
+        if (_countdown.InCountdown) return; //Do not activate inputs if in countdown
         foreach(PlayerInput player in _players)
         {
             player.ActivateInput();
@@ -164,6 +164,10 @@ public class MultiplayerManager : MonoBehaviour
         if (Instance == this)
         {
             Instance = null;
+        }
+        foreach (var p in _players)
+        {
+            p.actions["Pause"].started -= _pauseScreen.ChangePausedState;
         }
     }
 

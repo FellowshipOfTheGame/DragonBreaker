@@ -36,13 +36,13 @@ public class MenuManager : MonoBehaviour
         }
         else
         {
-            Debug.Log($"In transition from state {CurrentState}, cannot change to {state}");
+            //Debug.Log($"In transition from state {CurrentState}, cannot change to {state}");
         }
     }
 
     public void PlayEnterStateAnimation()
     {
-        Debug.Log($"Setting trigger Enter of {CurrentState}");
+        //Debug.Log($"Setting trigger Enter of {CurrentState}");
         animators[(int)CurrentState].SetTrigger("Enter");
     }
 

@@ -79,6 +79,7 @@ public class CharacterSelection : MonoBehaviour
         _availableElements[i] = true;
         players_selection_UI[i].SetupLeftPlayer(no_player_sprite);
         _playerInfo.Remove(_playerInfo.Find((match) => i.Equals((int)match.element)));
+        playerInput.actions["Start"].performed -= StartGame;
         playerInput.actions["Exit"].performed -= OnPlayerExit;                          //não está funcionando quando nenhum jogador foi adicionado já que depende do PlayerInput
         Debug.Log($"Left player{(PlayerInfo.PlayerElement) i}");
         LeaveSound?.Play();
