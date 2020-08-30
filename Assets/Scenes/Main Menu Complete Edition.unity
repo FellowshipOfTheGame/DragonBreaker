@@ -547,9 +547,29 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "> QUEBRE COISAS PARA SUBIR\nDE N\xCDVEL!\n\n> QUANTO MAIOR O SEU N\xCDVEL,\nMAIOR
-    O DANO DOS SEUS ATAQUES!\n\n> SEJA O \xDALTIMO VIVO ENTRE\nSEUS INIMIGOS PARA
-    VENCER!"
+  m_Text: '> QUEBRE COISAS PARA SUBIR
+
+    DE NIVEL!
+
+
+    > QUANTO MAIOR O SEU NIVEL,
+
+    MAIOR
+    O DANO DOS SEUS ATAQUES!
+
+
+    > CAIXAS SAO RESISTENTES, MAS
+
+    QUEBRAM COM
+    DANO DE NIVEL 3+
+
+    E OFERECEM MUITA EXPERIENCIA!
+
+
+    > SEJA O ULTIMO VIVO
+    ENTRE
+
+    SEUS INIMIGOS PARA VENCER!'
 --- !u!222 &92605438
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -828,8 +848,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.6654792, y: 0.24359259}
   m_AnchorMax: {x: 0.94000006, y: 0.753}
-  m_AnchoredPosition: {x: -10.5, y: 0}
-  m_SizeDelta: {x: 20.6, y: 0}
+  m_AnchoredPosition: {x: -10.400024, y: -58}
+  m_SizeDelta: {x: 20.8, y: 116}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &202134279
 MonoBehaviour:
@@ -866,23 +886,26 @@ MonoBehaviour:
 
     (Direcionais): correr / direcionar ataque
 
+    (B): Atacar
+
+    (X):
+    Dash
+
     (A): Pular
-
-    (B):
-    Atacar
-
-    (X): Dash
 
 
 
     [Setas]: correr / direcionar ataque
 
+    [Z]: Atacar
+
+    [X]:
+    Dash
+
     [C]: Pular
 
-    [Z]:
-    Atacar
 
-    [X]: Long dash'
+    [ESC] / (START): PAUSE'
 --- !u!222 &202134280
 CanvasRenderer:
   m_ObjectHideFlags: 0
