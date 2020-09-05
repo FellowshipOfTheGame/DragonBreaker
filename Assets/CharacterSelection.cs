@@ -15,9 +15,18 @@ public struct PlayerInfo
 
 public class CharacterSelection : MonoBehaviour
 {
+    [Header("InputActions for joining setup")]
+    [SerializeField] private InputAction joinAction = null;
+    [SerializeField] private InputAction joinSplit1Action = null;
+    [SerializeField] private InputAction joinSplit2Action = null;
+    [SerializeField] private const string SplitControlSchemeName1 = "SplitKeyboard_1";
+    [SerializeField] private const string SplitControlSchemeName2 = "SplitKeyboard_2";
+
     [Header("Sprites")]
     [SerializeField] private Sprite controller_sprite = null;
     [SerializeField] private Sprite keyboard_sprite = null;
+    [SerializeField] private Sprite splitkeyboard_1_sprite = null;
+    [SerializeField] private Sprite splitkeyboard_2_sprite = null;
     [SerializeField] private Sprite no_player_sprite = null;
 
     [Header("Selection UI")]
@@ -31,20 +40,36 @@ public class CharacterSelection : MonoBehaviour
 
     protected List<PlayerInfo> _playerInfo;
     protected bool[] _availableElements;
+    protected PlayerInputManager _playerInputManager;
+    private bool keyboard_1_joined = false;
+    private bool keyboard_2_joined = false;
 
     [Header("Audio")]
     [SerializeField] AudioSource JoinSound = null;
     [SerializeField] AudioSource LeaveSound = null;
 
-    private void Start()
+    private void Awake()
     {
         _availableElements = new bool[4] { true, true, true, true};
         _playerInfo = new List<PlayerInfo>();
+        _playerInputManager = GetComponent<PlayerInputManager>();
     }
-    
+
     public void OnPlayerJoined(PlayerInput playerInput)
     {
-        Debug.Log("Player joining");
+        if (playerInput.currentControlScheme.Equals(SplitControlSchemeName1))
+        {
+            // If keyboard 1 not joined, set as joined, else switch control scheme to split_2
+            if (!keyboard_1_joined)
+            {
+                keyboard_1_joined = true;
+            }
+            else
+            {
+                playerInput.SwitchCurrentControlScheme(SplitControlSchemeName2, playerInput.devices.ToArray());
+                keyboard_2_joined = true;
+            }
+        }
         for (int i = 0; i < _availableElements.Length; i++)
         {
             if (_availableElements[i])
@@ -59,6 +84,12 @@ public class CharacterSelection : MonoBehaviour
                     case "Keyboard":
                         players_selection_UI[i].SetupJoinedPlayer(keyboard_sprite);
                         break;
+                    case SplitControlSchemeName1:
+                        players_selection_UI[i].SetupJoinedPlayer(splitkeyboard_1_sprite);
+                        break;
+                    case SplitControlSchemeName2:
+                        players_selection_UI[i].SetupJoinedPlayer(splitkeyboard_2_sprite);
+                        break;
                     default:
                         players_selection_UI[i].SetupJoinedPlayer(keyboard_sprite);
                         break;
@@ -72,6 +103,7 @@ public class CharacterSelection : MonoBehaviour
         }
         JoinSound.Play();
     }
+
     public void OnPlayerLeft(PlayerInput playerInput)
     {
         //Convert to int Player_{i}
@@ -81,6 +113,16 @@ public class CharacterSelection : MonoBehaviour
         _playerInfo.Remove(_playerInfo.Find((match) => i.Equals((int)match.element)));
         playerInput.actions["Start"].performed -= StartGame;
         playerInput.actions["Exit"].performed -= OnPlayerExit;                          //não está funcionando quando nenhum jogador foi adicionado já que depende do PlayerInput
+
+        // Set player_keyboard_1 as false if he is leaving
+        if (playerInput.currentControlScheme.Equals(SplitControlSchemeName1))
+        {
+            keyboard_1_joined = false;
+        }
+        else if (playerInput.currentControlScheme.Equals(SplitControlSchemeName2))
+        {
+            keyboard_2_joined = false;
+        }
         Debug.Log($"Left player{(PlayerInfo.PlayerElement) i}");
         LeaveSound?.Play();
     }
@@ -114,7 +156,7 @@ public class CharacterSelection : MonoBehaviour
 
     private void OnEnable()
     {
-        FindObjectOfType<PlayerInputManager>().EnableJoining();
+        _playerInputManager.EnableJoining();
     }
 
     void OnDisable()
@@ -127,4 +169,5 @@ public class CharacterSelection : MonoBehaviour
             Destroy(p.gameObject);
         }
     }
+
 }
