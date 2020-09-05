@@ -8,6 +8,9 @@ public class PauseAnimatorFunctions : MonoBehaviour
 {
     public Button firstButtonToSelect;
 
+    public GameObject canvas;
+    PauseScreen pauseScript;
+
     public void SelectFirstButton() //selects the first chosen button
     {
         firstButtonToSelect.Select();
@@ -17,5 +20,11 @@ public class PauseAnimatorFunctions : MonoBehaviour
     {
         GameObject EventSystem = GameObject.Find("EventSystem");
         EventSystem.GetComponent<EventSystem>().SetSelectedGameObject(null);
+    }
+
+    public void LookPixelCamera()
+    {
+        pauseScript = canvas.GetComponent<PauseScreen>();
+        pauseScript.CheckPixelCamera();
     }
 }
