@@ -4366,6 +4366,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1565620973}
+    - target: {fileID: 90942830840885120, guid: 9dc90f5340006fd41ba35357f60397c7,
+        type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1425156336}
     - target: {fileID: 1052627808199220812, guid: 9dc90f5340006fd41ba35357f60397c7,
         type: 3}
       propertyPath: m_LocalPosition.x
