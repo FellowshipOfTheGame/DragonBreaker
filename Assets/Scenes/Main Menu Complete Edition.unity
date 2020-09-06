@@ -2825,7 +2825,7 @@ MonoBehaviour:
   m_ChildControlWidth: 0
   m_ChildControlHeight: 0
   m_ChildScaleWidth: 0
-  m_ChildScaleHeight: 0
+  m_ChildScaleHeight: 1
 --- !u!114 &920463199
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2838,8 +2838,68 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03d18c9b611cb4b4f9c6f07a193eafbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  joinAction:
+    m_Name: Join
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: e9848804-b537-4ff6-a6a0-b2a8666370b3
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: ba5498fc-5f4c-4cb1-84ea-26d9869dc9ba
+      m_Path: <Keyboard>/z
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Join
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 56d173c5-db64-475b-8f1f-68b3aac858c7
+      m_Path: <Gamepad>/buttonSouth
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Join
+      m_Flags: 0
+  joinSplit1Action:
+    m_Name: Join Split 1
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 043bbaf7-4316-42e7-9e27-ef8b67ccd237
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: dcc01d3b-a23e-46ad-a8f5-120cbd075447
+      m_Path: <Keyboard>/b
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Join Split 1
+      m_Flags: 0
+  joinSplit2Action:
+    m_Name: Join Split 2
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: d385e337-bb20-4f89-8985-57c52f54c1ec
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: fe89ee05-5f19-4fb3-af62-7965db5eda12
+      m_Path: <Keyboard>/t
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Join Split 2
+      m_Flags: 0
   controller_sprite: {fileID: 21300000, guid: a0283a833ea28314e9ef634688f8a520, type: 3}
   keyboard_sprite: {fileID: 21300000, guid: 3737f1e1a458fce4fa6b090fc7f591dc, type: 3}
+  splitkeyboard_1_sprite: {fileID: 21300000, guid: 1ee5888c98f18fc4da5985f233bab462,
+    type: 3}
+  splitkeyboard_2_sprite: {fileID: 21300000, guid: 1ee5888c98f18fc4da5985f233bab462,
+    type: 3}
   no_player_sprite: {fileID: 21300000, guid: e660c18d254611548bdfc6db85ef18a8, type: 3}
   players_selection_UI:
   - {fileID: 2353981217774267772}
@@ -2924,7 +2984,7 @@ MonoBehaviour:
   m_NotificationBehavior: 0
   m_MaxPlayerCount: 4
   m_AllowJoining: 1
-  m_JoinBehavior: 1
+  m_JoinBehavior: 2
   m_PlayerJoinedEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -2935,8 +2995,8 @@ MonoBehaviour:
     m_UseReference: 0
     m_Action:
       m_Name: Join
-      m_Type: 0
-      m_ExpectedControlType: 
+      m_Type: 1
+      m_ExpectedControlType: Button
       m_Id: 5df3b97a-aed0-441f-8997-690fa8c8763b
       m_Processors: 
       m_Interactions: 
@@ -2957,7 +3017,23 @@ MonoBehaviour:
         m_Groups: 
         m_Action: Join
         m_Flags: 0
-    m_Reference: {fileID: -2834580438571245455, guid: bf15ac95d1445e749b5d18e5203bf1fd,
+      - m_Name: 
+        m_Id: 959d56e4-1e8c-467f-87f4-6f8f0ec6a127
+        m_Path: <Keyboard>/b
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Join
+        m_Flags: 0
+      - m_Name: 
+        m_Id: 046b044a-3a74-4e71-9836-1bc2b6c528c1
+        m_Path: <Keyboard>/t
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Join
+        m_Flags: 0
+    m_Reference: {fileID: -3670508557925037996, guid: bf15ac95d1445e749b5d18e5203bf1fd,
       type: 3}
   m_PlayerPrefab: {fileID: 1291919885164470463, guid: e86abab9f00134043b0e48578df8cad4,
     type: 3}

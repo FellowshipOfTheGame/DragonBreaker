@@ -11,6 +11,7 @@ public struct PlayerInfo
     public enum PlayerElement { Fire, Ice, Lightning, Leaf};
     public PlayerElement element;
     public string devicePath;
+    public string controlScheme;
 };
 
 public class CharacterSelection : MonoBehaviour
@@ -53,28 +54,44 @@ public class CharacterSelection : MonoBehaviour
         _availableElements = new bool[4] { true, true, true, true};
         _playerInfo = new List<PlayerInfo>();
         _playerInputManager = GetComponent<PlayerInputManager>();
+        _playerInputManager.joinBehavior = PlayerJoinBehavior.JoinPlayersManually;
+    }
+
+    private void NormalPlayerJoin(InputAction.CallbackContext obj)
+    {
+        if (obj.control.device.name.Equals("Keyboard"))
+        {
+            SplitPlayerJoin1(obj);
+        }
+        else
+        {
+            _playerInputManager.JoinPlayerFromActionIfNotAlreadyJoined(obj);
+        }
+    }
+
+    private void SplitPlayerJoin1(InputAction.CallbackContext obj)
+    {
+        if (keyboard_1_joined)
+            return;
+
+        _playerInputManager.JoinPlayer(controlScheme: SplitControlSchemeName1, pairWithDevice: obj.control.device);
+    }
+
+    private void SplitPlayerJoin2(InputAction.CallbackContext obj)
+    {
+        if (keyboard_2_joined)
+            return;
+
+        _playerInputManager.JoinPlayer(controlScheme: SplitControlSchemeName2, pairWithDevice: obj.control.device);
     }
 
     public void OnPlayerJoined(PlayerInput playerInput)
     {
-        if (playerInput.currentControlScheme.Equals(SplitControlSchemeName1))
-        {
-            // If keyboard 1 not joined, set as joined, else switch control scheme to split_2
-            if (!keyboard_1_joined)
-            {
-                keyboard_1_joined = true;
-            }
-            else
-            {
-                playerInput.SwitchCurrentControlScheme(SplitControlSchemeName2, playerInput.devices.ToArray());
-                keyboard_2_joined = true;
-            }
-        }
         for (int i = 0; i < _availableElements.Length; i++)
         {
             if (_availableElements[i])
             {
-                _playerInfo.Add(new PlayerInfo { element = (PlayerInfo.PlayerElement)i, devicePath = playerInput.devices[0].layout });
+                _playerInfo.Add(new PlayerInfo { element = (PlayerInfo.PlayerElement)i, devicePath = playerInput.devices[0].layout, controlScheme = playerInput.currentControlScheme});
                 Debug.Log($"Joined player {_playerInfo[_playerInfo.Count - 1]}");
                 switch (playerInput.currentControlScheme)
                 {
@@ -82,12 +99,15 @@ public class CharacterSelection : MonoBehaviour
                         players_selection_UI[i].SetupJoinedPlayer(controller_sprite);
                         break;
                     case "Keyboard":
+                        keyboard_1_joined = true;
                         players_selection_UI[i].SetupJoinedPlayer(keyboard_sprite);
                         break;
                     case SplitControlSchemeName1:
+                        keyboard_1_joined = true;
                         players_selection_UI[i].SetupJoinedPlayer(splitkeyboard_1_sprite);
                         break;
                     case SplitControlSchemeName2:
+                        keyboard_2_joined = true;
                         players_selection_UI[i].SetupJoinedPlayer(splitkeyboard_2_sprite);
                         break;
                     default:
@@ -148,6 +168,7 @@ public class CharacterSelection : MonoBehaviour
         for (int i = 0; i < _playerInfo.Count; i++)
         {
             PlayerPrefs.SetString($"Player_{i}_device", _playerInfo[i].devicePath);
+            PlayerPrefs.SetString($"Player_{i}_controlScheme", _playerInfo[i].controlScheme);
             PlayerPrefs.SetInt($"Player_{i}_element", (int)_playerInfo[i].element);
             Debug.Log(_playerInfo[i].devicePath);
             Debug.Log((int)_playerInfo[i].element);
@@ -156,11 +177,32 @@ public class CharacterSelection : MonoBehaviour
 
     private void OnEnable()
     {
+        // Enable joining at player input manager
         _playerInputManager.EnableJoining();
+
+        // Enable join actions
+        joinAction.Enable();
+        joinSplit1Action.Enable();
+        joinSplit2Action.Enable();
+
+        // Subscribe to events
+        joinAction.started += NormalPlayerJoin;
+        joinSplit1Action.started += SplitPlayerJoin1;
+        joinSplit2Action.started += SplitPlayerJoin2;
     }
 
     void OnDisable()
     {
+        // Disable join actions
+        joinAction.Disable();
+        joinSplit1Action.Disable();
+        joinSplit2Action.Disable();
+        
+        // Unsubscribe to events
+        joinAction.started -= NormalPlayerJoin;
+        joinSplit1Action.started -= SplitPlayerJoin1;
+        joinSplit2Action.started -= SplitPlayerJoin2;
+
         var players = FindObjectsOfType<PlayerInput>();
 
         foreach (var p in players)
@@ -168,6 +210,8 @@ public class CharacterSelection : MonoBehaviour
             OnPlayerLeft(p);
             Destroy(p.gameObject);
         }
+
+
     }
 
 }

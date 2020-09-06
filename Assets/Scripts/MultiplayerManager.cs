@@ -62,13 +62,14 @@ public class MultiplayerManager : MonoBehaviour
         NumberOfPlayers = PlayerPrefs.GetInt("Number of Players");
         PlayerInputManager manager = GetComponent<PlayerInputManager>();
         string devicePath = null; 
+        string controlScheme = null; 
         for (int i = 0; i < NumberOfPlayers; i++)
         {
-            if((devicePath = PlayerPrefs.GetString($"Player_{i}_device", null)) != null)
+            if((devicePath = PlayerPrefs.GetString($"Player_{i}_device", null)) != null && (controlScheme = PlayerPrefs.GetString($"Player_{i}_controlScheme", null)) != null)
             {
                 int element = PlayerPrefs.GetInt($"Player_{i}_element", 0);
                 manager.playerPrefab = PlayerPrefabs[element];
-                _players.Add(manager.JoinPlayer(element, pairWithDevice: InputSystem.GetDevice(devicePath)));
+                _players.Add(manager.JoinPlayer(element, pairWithDevice: InputSystem.GetDevice(devicePath), controlScheme: controlScheme));
             }
         }
 
