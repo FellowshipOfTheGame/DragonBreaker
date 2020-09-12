@@ -102,7 +102,7 @@ MonoBehaviour:
     m_ActionId: efb5919d-83f1-49ce-96f3-564b6a023d0b
     m_ActionName: UI/Pause[/Keyboard/escape,/DualShock4GamepadHID/start]
   m_NeverAutoSwitchControlSchemes: 1
-  m_DefaultControlScheme: SplitKeyboard_1
+  m_DefaultControlScheme: Keyboard
   m_DefaultActionMap: UI
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}

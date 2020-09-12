@@ -43,6 +43,7 @@ public class CharacterSelection : MonoBehaviour
     protected List<PlayerInfo> _playerInfo;
     protected bool[] _availableElements;
     protected PlayerInputManager _playerInputManager;
+    private bool keyboard_joined = false;
     private bool keyboard_1_joined = false;
     private bool keyboard_2_joined = false;
 
@@ -60,19 +61,12 @@ public class CharacterSelection : MonoBehaviour
 
     private void NormalPlayerJoin(InputAction.CallbackContext obj)
     {
-        if (obj.control.device.name.Equals("Keyboard"))
-        {
-            SplitPlayerJoin1(obj);
-        }
-        else
-        {
-            _playerInputManager.JoinPlayerFromActionIfNotAlreadyJoined(obj);
-        }
+        _playerInputManager.JoinPlayerFromActionIfNotAlreadyJoined(obj);
     }
 
     private void SplitPlayerJoin1(InputAction.CallbackContext obj)
     {
-        if (keyboard_1_joined)
+        if (keyboard_1_joined || keyboard_joined)
             return;
 
         _playerInputManager.JoinPlayer(controlScheme: SplitControlSchemeName1, pairWithDevice: obj.control.device);
@@ -80,7 +74,7 @@ public class CharacterSelection : MonoBehaviour
 
     private void SplitPlayerJoin2(InputAction.CallbackContext obj)
     {
-        if (keyboard_2_joined)
+        if (keyboard_2_joined || keyboard_joined)
             return;
 
         _playerInputManager.JoinPlayer(controlScheme: SplitControlSchemeName2, pairWithDevice: obj.control.device);
@@ -99,8 +93,8 @@ public class CharacterSelection : MonoBehaviour
                     case "Gamepad":
                         players_selection_UI[i].SetupJoinedPlayer(controller_sprite);
                         break;
-                    case "Keyboard":
-                        keyboard_1_joined = true;
+                    case KeyboardControlSchemeName:
+                        keyboard_joined = true;
                         players_selection_UI[i].SetupJoinedPlayer(keyboard_sprite);
                         break;
                     case SplitControlSchemeName1:
@@ -135,8 +129,12 @@ public class CharacterSelection : MonoBehaviour
         playerInput.actions["Start"].performed -= StartGame;
         playerInput.actions["Exit"].performed -= OnPlayerExit;                          //não está funcionando quando nenhum jogador foi adicionado já que depende do PlayerInput
 
-        // Set player_keyboard_1 as false if he is leaving
-        if (playerInput.currentControlScheme.Equals(SplitControlSchemeName1))
+        // Set player_joined as false if he is leaving
+        if (playerInput.currentControlScheme.Equals(KeyboardControlSchemeName))
+        {
+            keyboard_joined = false;
+        }
+        else if (playerInput.currentControlScheme.Equals(SplitControlSchemeName1))
         {
             keyboard_1_joined = false;
         }
@@ -211,8 +209,6 @@ public class CharacterSelection : MonoBehaviour
             OnPlayerLeft(p);
             Destroy(p.gameObject);
         }
-
-
     }
 
 }
