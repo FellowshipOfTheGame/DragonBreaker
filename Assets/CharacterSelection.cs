@@ -20,6 +20,7 @@ public class CharacterSelection : MonoBehaviour
     [SerializeField] private InputAction joinAction = null;
     [SerializeField] private InputAction joinSplit1Action = null;
     [SerializeField] private InputAction joinSplit2Action = null;
+    [SerializeField] private const string KeyboardControlSchemeName = "Keyboard";
     [SerializeField] private const string SplitControlSchemeName1 = "SplitKeyboard_1";
     [SerializeField] private const string SplitControlSchemeName2 = "SplitKeyboard_2";
 

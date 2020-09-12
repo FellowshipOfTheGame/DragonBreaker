@@ -2881,7 +2881,7 @@ MonoBehaviour:
     m_SingletonActionBindings:
     - m_Name: 
       m_Id: dcc01d3b-a23e-46ad-a8f5-120cbd075447
-      m_Path: <Keyboard>/b
+      m_Path: <Keyboard>/q
       m_Interactions: 
       m_Processors: 
       m_Groups: 
@@ -2897,7 +2897,7 @@ MonoBehaviour:
     m_SingletonActionBindings:
     - m_Name: 
       m_Id: fe89ee05-5f19-4fb3-af62-7965db5eda12
-      m_Path: <Keyboard>/t
+      m_Path: <Keyboard>/comma
       m_Interactions: 
       m_Processors: 
       m_Groups: 

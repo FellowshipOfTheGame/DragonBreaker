@@ -110,7 +110,7 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                     ""path"": ""<Keyboard>/x"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""SplitKeyboard_1"",
+                    ""groups"": ""Keyboard"",
                     ""action"": ""Dash"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -118,18 +118,7 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""e9f43b5c-b785-4c34-8cb4-a1a370dfe5fa"",
-                    ""path"": ""<Keyboard>/comma"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""SplitKeyboard_1"",
-                    ""action"": ""Dash"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""cedc22bb-72c0-4df6-bf95-e78f6c8c7766"",
-                    ""path"": ""<Keyboard>/y"",
+                    ""path"": ""<Keyboard>/period"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""SplitKeyboard_2"",
@@ -138,7 +127,18 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                     ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": ""WASD"",
+                    ""name"": """",
+                    ""id"": ""cedc22bb-72c0-4df6-bf95-e78f6c8c7766"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""SplitKeyboard_1"",
+                    ""action"": ""Dash"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""TFGH"",
                     ""id"": ""aa07d704-17c6-426e-99b5-184b5f42a269"",
                     ""path"": ""2DVector"",
                     ""interactions"": """",
@@ -151,10 +151,10 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                 {
                     ""name"": ""up"",
                     ""id"": ""f3bc8452-055c-4823-ab43-145cb1d7fb7b"",
-                    ""path"": ""<Keyboard>/w"",
+                    ""path"": ""<Keyboard>/t"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""SplitKeyboard_2"",
+                    ""groups"": ""SplitKeyboard_1"",
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -162,10 +162,10 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                 {
                     ""name"": ""down"",
                     ""id"": ""0cf9b050-93c5-46a5-9c92-09a3cd184193"",
-                    ""path"": ""<Keyboard>/s"",
+                    ""path"": ""<Keyboard>/g"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""SplitKeyboard_2"",
+                    ""groups"": ""SplitKeyboard_1"",
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -173,10 +173,10 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                 {
                     ""name"": ""left"",
                     ""id"": ""fcdc545a-7623-4cfe-88bd-0bcb40e8f89d"",
-                    ""path"": ""<Keyboard>/a"",
+                    ""path"": ""<Keyboard>/f"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""SplitKeyboard_2"",
+                    ""groups"": ""SplitKeyboard_1"",
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -184,10 +184,10 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                 {
                     ""name"": ""right"",
                     ""id"": ""1528ba01-d66d-428d-a860-ec68d36cac99"",
-                    ""path"": ""<Keyboard>/d"",
+                    ""path"": ""<Keyboard>/h"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""SplitKeyboard_2"",
+                    ""groups"": ""SplitKeyboard_1"",
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -209,7 +209,7 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                     ""path"": ""<Keyboard>/upArrow"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""SplitKeyboard_1"",
+                    ""groups"": ""Keyboard;SplitKeyboard_2"",
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -220,7 +220,7 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                     ""path"": ""<Keyboard>/downArrow"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""SplitKeyboard_1"",
+                    ""groups"": ""Keyboard;SplitKeyboard_2"",
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -231,7 +231,7 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                     ""path"": ""<Keyboard>/leftArrow"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""SplitKeyboard_1"",
+                    ""groups"": ""Keyboard;SplitKeyboard_2"",
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -242,7 +242,7 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                     ""path"": ""<Keyboard>/rightArrow"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""SplitKeyboard_1"",
+                    ""groups"": ""Keyboard;SplitKeyboard_2"",
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -319,7 +319,7 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                     ""path"": ""<Keyboard>/c"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""SplitKeyboard_1"",
+                    ""groups"": ""Keyboard"",
                     ""action"": ""Jump"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -327,10 +327,21 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""f7cc2d52-aebc-4c6f-9b80-22590cdd7f61"",
-                    ""path"": ""<Keyboard>/period"",
+                    ""path"": ""<Keyboard>/semicolon"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""SplitKeyboard_1"",
+                    ""groups"": ""SplitKeyboard_2"",
+                    ""action"": ""Jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ed869225-2a16-45f2-9aa9-fce937d8277f"",
+                    ""path"": ""<Keyboard>/slash"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""SplitKeyboard_2"",
                     ""action"": ""Jump"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -338,10 +349,10 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""4a17e8ef-cc71-41c8-a31f-6916ccd85332"",
-                    ""path"": ""<Keyboard>/u"",
+                    ""path"": ""<Keyboard>/e"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""SplitKeyboard_2"",
+                    ""groups"": ""SplitKeyboard_1"",
                     ""action"": ""Jump"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -352,7 +363,7 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                     ""path"": ""<Keyboard>/z"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""SplitKeyboard_1"",
+                    ""groups"": ""Keyboard"",
                     ""action"": ""Attack"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -360,10 +371,10 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""0078581b-49c1-4989-8daf-36d008b9686b"",
-                    ""path"": ""<Keyboard>/m"",
+                    ""path"": ""<Keyboard>/comma"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""SplitKeyboard_1"",
+                    ""groups"": ""SplitKeyboard_2"",
                     ""action"": ""Attack"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -371,10 +382,10 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""def2726e-7f80-40fb-84d6-2a2ef4be0151"",
-                    ""path"": ""<Keyboard>/t"",
+                    ""path"": ""<Keyboard>/q"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""SplitKeyboard_2"",
+                    ""groups"": ""SplitKeyboard_1"",
                     ""action"": ""Attack"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -396,7 +407,7 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                     ""path"": ""<Keyboard>/escape"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""SplitKeyboard_1;SplitKeyboard_2"",
+                    ""groups"": ""SplitKeyboard_1;SplitKeyboard_2;Keyboard"",
                     ""action"": ""Pause"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -477,15 +488,15 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                     ""path"": ""<Keyboard>/x"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""SplitKeyboard_1"",
+                    ""groups"": ""Keyboard"",
                     ""action"": ""Leave"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""6f1bece0-cde1-4ec0-860f-7cec672364a4"",
-                    ""path"": ""<Keyboard>/n"",
+                    ""id"": ""ce417270-d4cb-46b7-933e-f23d019fe625"",
+                    ""path"": ""<Keyboard>/w"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""SplitKeyboard_1"",
@@ -495,8 +506,8 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""ce417270-d4cb-46b7-933e-f23d019fe625"",
-                    ""path"": ""<Keyboard>/y"",
+                    ""id"": ""6f1bece0-cde1-4ec0-860f-7cec672364a4"",
+                    ""path"": ""<Keyboard>/period"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""SplitKeyboard_2"",
@@ -521,15 +532,15 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                     ""path"": ""<Keyboard>/z"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""SplitKeyboard_1"",
+                    ""groups"": ""Keyboard"",
                     ""action"": ""Join"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""53c11e41-c510-42ba-bb3e-46f4ac3c0002"",
-                    ""path"": ""<Keyboard>/b"",
+                    ""id"": ""17659447-c311-4318-83b4-b6dbbbacf677"",
+                    ""path"": ""<Keyboard>/q"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""SplitKeyboard_1"",
@@ -539,8 +550,8 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""17659447-c311-4318-83b4-b6dbbbacf677"",
-                    ""path"": ""<Keyboard>/t"",
+                    ""id"": ""53c11e41-c510-42ba-bb3e-46f4ac3c0002"",
+                    ""path"": ""<Keyboard>/comma"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""SplitKeyboard_2"",
@@ -554,7 +565,7 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                     ""path"": ""<Keyboard>/escape"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""SplitKeyboard_1;SplitKeyboard_2"",
+                    ""groups"": ""SplitKeyboard_1;SplitKeyboard_2;Keyboard"",
                     ""action"": ""Pause"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -587,7 +598,7 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                     ""path"": ""<Keyboard>/x"",
                     ""interactions"": ""Hold(duration=1)"",
                     ""processors"": """",
-                    ""groups"": ""SplitKeyboard_1"",
+                    ""groups"": ""Keyboard"",
                     ""action"": ""Exit"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -595,7 +606,7 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""55aaf205-a0e2-4948-af8a-c9392e44ab07"",
-                    ""path"": ""<Keyboard>/n"",
+                    ""path"": ""<Keyboard>/w"",
                     ""interactions"": ""Hold(duration=1)"",
                     ""processors"": """",
                     ""groups"": ""SplitKeyboard_1"",
@@ -606,7 +617,7 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""8bad8d35-b673-406a-9cd5-e428bfd847dc"",
-                    ""path"": ""<Keyboard>/y"",
+                    ""path"": ""<Keyboard>/period"",
                     ""interactions"": ""Hold(duration=1)"",
                     ""processors"": """",
                     ""groups"": ""SplitKeyboard_2"",
@@ -620,7 +631,7 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                     ""path"": ""<Keyboard>/enter"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""SplitKeyboard_1;SplitKeyboard_2"",
+                    ""groups"": ""SplitKeyboard_1;SplitKeyboard_2;Keyboard"",
                     ""action"": ""Start"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -665,6 +676,17 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
         {
             ""name"": ""SplitKeyboard_2"",
             ""bindingGroup"": ""SplitKeyboard_2"",
+            ""devices"": [
+                {
+                    ""devicePath"": ""<Keyboard>"",
+                    ""isOptional"": false,
+                    ""isOR"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""Keyboard"",
+            ""bindingGroup"": ""Keyboard"",
             ""devices"": [
                 {
                     ""devicePath"": ""<Keyboard>"",
@@ -889,6 +911,15 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
         {
             if (m_SplitKeyboard_2SchemeIndex == -1) m_SplitKeyboard_2SchemeIndex = asset.FindControlSchemeIndex("SplitKeyboard_2");
             return asset.controlSchemes[m_SplitKeyboard_2SchemeIndex];
+        }
+    }
+    private int m_KeyboardSchemeIndex = -1;
+    public InputControlScheme KeyboardScheme
+    {
+        get
+        {
+            if (m_KeyboardSchemeIndex == -1) m_KeyboardSchemeIndex = asset.FindControlSchemeIndex("Keyboard");
+            return asset.controlSchemes[m_KeyboardSchemeIndex];
         }
     }
     public interface IPlayerControlsActions
