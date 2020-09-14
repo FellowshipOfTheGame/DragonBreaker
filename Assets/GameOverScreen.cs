@@ -24,11 +24,10 @@ public class GameOverScreen : MonoBehaviour
         }
         else
         {
-            
             _gameOverScreen.SetActive(true);
         }
         PlayerInfo.PlayerElement element = (PlayerInfo.PlayerElement)winner_id;
-        _text.text = $"GUERREIRO {element.ToString()} VENCEU!";
+        _text.text = $"GUERREIRO DE {element.ToString()} VENCEU!";
         MultiplayerManager.Instance.DeactivatePlayersInputs();
     }
 

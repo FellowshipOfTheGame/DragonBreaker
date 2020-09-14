@@ -20,8 +20,7 @@ public class MultiplayerManager : MonoBehaviour
     [SerializeField] private PlayerUI[] _playerUIs = { };
     [SerializeField] private int _playerCount = 0;
     [SerializeField] private PauseScreen _pauseScreen = null;
-
-    private Dictionary<ReadOnlyArray<InputDevice>, int> _indexUI;
+    
     private List<PlayerInput> _players = null;
     private Countdown _countdown = null;
 
@@ -38,7 +37,6 @@ public class MultiplayerManager : MonoBehaviour
         }
         _playerCount = 0;
         _players = new List<PlayerInput>();
-        _indexUI = new Dictionary<ReadOnlyArray<InputDevice>, int>();
         
         //InstantiatePlayers();
         InstantiatePlayersWithSetDevices();
@@ -86,13 +84,10 @@ public class MultiplayerManager : MonoBehaviour
     public void OnPlayerJoined(PlayerInput player)
     {
         player.transform.SetParent(this.transform);
-        if (!_indexUI.ContainsKey(player.devices))
-        {
-            _indexUI.Add(player.devices, player.playerIndex);
-            _playerCount++;
-        }
+        
+        _playerCount++;
 
-        int index = _indexUI[player.devices];
+        int index = player.playerIndex;
         _playerUIs[index].gameObject.SetActive(true);
         _playerUIs[index].Setup(player.gameObject);
 
@@ -102,7 +97,7 @@ public class MultiplayerManager : MonoBehaviour
 
     public void OnPlayerLeft(PlayerInput player)
     {
-        int index = _indexUI[player.devices];
+        int index = player.playerIndex;
         _playerUIs[index].gameObject.SetActive(false);
         _players.Remove(player);
         player.actions["Pause"].started -= _pauseScreen.ChangePausedState;

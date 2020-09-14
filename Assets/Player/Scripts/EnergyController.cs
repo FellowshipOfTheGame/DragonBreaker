@@ -45,5 +45,6 @@ public class EnergyController : MonoBehaviour
         level = 0;
         _currentExperience = 0;
         onLevelChange?.Invoke(level);
+        onExperienceChange?.Invoke(_currentExperience / (float)xpTable.levels[level + 1]);
     }
 }

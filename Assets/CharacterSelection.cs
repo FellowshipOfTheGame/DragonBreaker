@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 
 public struct PlayerInfo
 {
-    public enum PlayerElement { Fire, Ice, Lightning, Leaf};
+    public enum PlayerElement { FOGO, GELO, RAIO, FOLHA};
     public PlayerElement element;
     public string devicePath;
     public string controlScheme;
@@ -143,7 +143,8 @@ public class CharacterSelection : MonoBehaviour
             keyboard_2_joined = false;
         }
         Debug.Log($"Left player{(PlayerInfo.PlayerElement) i}");
-        LeaveSound?.Play();
+        if(LeaveSound != null && LeaveSound.gameObject.activeInHierarchy)
+            LeaveSound?.Play();
     }
 
     private void OnPlayerExit(InputAction.CallbackContext obj) => OnPlayerExitCharacterSelectionEvent?.Invoke();
