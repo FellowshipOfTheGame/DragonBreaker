@@ -6039,7 +6039,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '[Z] / (A) = ENTRAR     [X] / (B) = SAIR     [X] / (B) <SEGURAR> = VOLTAR'
+  m_Text: '[Z] / [Q] / [ , ] / (A) = ENTRAR     [X] / [W] / [ . ] / (B) = SAIR  
+    <SEGURAR> = VOLTAR'
 --- !u!222 &2050378033
 CanvasRenderer:
   m_ObjectHideFlags: 0
