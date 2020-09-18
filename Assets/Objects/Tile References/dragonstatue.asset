@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c65d3d397ac0dc44918f4cbef3f8a23, type: 3}
+  m_Name: dragonstatue
+  m_EditorClassIdentifier: 
+  title: Dragon Statue
+  objPrefab: {fileID: 2125253717175999365, guid: d202aa96ba2cc64468fa15f81c6a9523,
+    type: 3}
+  refTiles:
+  - {fileID: 11400000, guid: 7ba79404eb80ad74ca6ce93a963fb3c4, type: 2}
+  - {fileID: 11400000, guid: 18fa91bdc0624a340b144b4f271d02cf, type: 2}
