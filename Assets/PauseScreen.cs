@@ -12,8 +12,9 @@ public class PauseScreen : MonoBehaviour
     [SerializeField] private GameObject mCamera = null;
     [SerializeField] private Image pCamOn = null;
     [SerializeField] private Image pCamOff = null;
+    [SerializeField] private AudioSource pauseSound = null;
 
-    private bool _paused = false;
+private bool _paused = false;
 
     public void ChangePausedState(InputAction.CallbackContext obj) => ChangePausedState();
 
@@ -46,6 +47,8 @@ public class PauseScreen : MonoBehaviour
         animator.SetBool("PauseStatus", true);
         Time.timeScale = 0f;
         MultiplayerManager.Instance.DeactivatePlayersInputs();
+        pauseSound.Play();
+
     }
 
     public void CheckPixelCamera()
