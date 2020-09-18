@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class PlayerUI : MonoBehaviour
 {
-    [SerializeField] private Text textUI = null;
+    [SerializeField] private Image levelNum = null;
     [SerializeField] private Image healthBar = null;
     [SerializeField] private Image expBar = null;
 
@@ -14,6 +14,8 @@ public class PlayerUI : MonoBehaviour
 
     private HealthSystem _playerHealth;
     private EnergyController _playerEnergy;
+
+    public Sprite[] numbers;
 
     /// <summary>
     /// Enable callbacks for player's UI
@@ -78,7 +80,7 @@ public class PlayerUI : MonoBehaviour
      */
     private void LevelChange(int level)
     {
-        textUI.text = level.ToString();
+        levelNum.sprite = numbers[level];
     }
 
     private void ExperienceChange(float expPercent)

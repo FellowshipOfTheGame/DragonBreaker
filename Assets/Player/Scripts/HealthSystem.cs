@@ -13,6 +13,8 @@ public class HealthSystem : MonoBehaviour, IDamagable
     public float HealthPercent => health / MaxHealth;
     public bool Invulnerable = false;
 
+    public ParticleSystem particles;
+
     [Header("Health Properties")]
     [SerializeField] private float MaxHealth = 5f;
     [SerializeField] private float health = 0f;
@@ -23,6 +25,8 @@ public class HealthSystem : MonoBehaviour, IDamagable
         health = MaxHealth;
         _sfx = GetComponent<SFX>();
         animator = GetComponent<Animator>();
+        particles.transform.SetParent(this.transform);
+        particles.transform.position = this.transform.position;
 
     }
 
@@ -57,6 +61,12 @@ public class HealthSystem : MonoBehaviour, IDamagable
         callback?.Invoke(0);
     }
 
-    private void die() => gameObject.SetActive(false);
+    private void die() {
+        AudioSource source = particles.GetComponent<AudioSource>();
+        source.Play();
+        particles.Play();
+        particles.transform.SetParent(null);
+        gameObject.SetActive(false);
+    }
     private void MakeVulnerable() => Invulnerable = false;
 }
