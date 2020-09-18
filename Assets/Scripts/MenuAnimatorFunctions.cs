@@ -8,7 +8,7 @@ public class MenuAnimatorFunctions : MonoBehaviour
 {
     public MenuManager MenuStateMachine = null;
     public Button firstButtonToSelect;
-
+    
     private void Awake()
     {
         MenuStateMachine = FindObjectOfType<MenuManager>();
