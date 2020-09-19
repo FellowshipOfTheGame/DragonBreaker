@@ -460,7 +460,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.26
+      scalar: 0.1
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -5080,7 +5080,7 @@ SpriteRenderer:
   m_SortingOrder: 1
   m_Sprite: {fileID: 8660018047190439917, guid: 5b282b64a8ea32c4eb2a097664eaa63d,
     type: 3}
-  m_Color: {r: 0.9433962, g: 0.78438354, b: 0.6452474, a: 1}
+  m_Color: {r: 0.64705884, g: 0.94509804, b: 0.7539842, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
