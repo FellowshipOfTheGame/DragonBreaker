@@ -30,19 +30,19 @@ private bool _paused = false;
     {
         if (animator == null)
         {
-            Debug.Log($"Animator is null for {gameObject.name}");
+            //Debug.Log($"Animator is null for {gameObject.name}");
         }
         animator.SetBool("PauseStatus", false);
         Time.timeScale = 1f;
         MultiplayerManager.Instance.ActivatePlayersInputs();
-        Debug.Log("Resumed.");
+       // Debug.Log("Resumed.");
     }
 
     private void Pause()
     {
         if(animator == null)
         {
-            Debug.Log($"Animator is null for {gameObject.name}");
+            //Debug.Log($"Animator is null for {gameObject.name}");
         }
         animator.SetBool("PauseStatus", true);
         Time.timeScale = 0f;
@@ -79,14 +79,14 @@ private bool _paused = false;
             mCamera.GetComponent<PixelPerfectCamera>().enabled = true;
             pCamOn.enabled = true;
             pCamOff.enabled = false;
-            Debug.Log("Toggled Pixel Camera ON");
+            //Debug.Log("Toggled Pixel Camera ON");
         }
         else
         {
             mCamera.GetComponent<PixelPerfectCamera>().enabled = false;
             pCamOn.enabled = false;
             pCamOff.enabled = true;
-            Debug.Log("Toggled Pixel Camera OFF");
+            //Debug.Log("Toggled Pixel Camera OFF");
         }
     }
 }

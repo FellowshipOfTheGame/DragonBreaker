@@ -87,7 +87,7 @@ public class CharacterSelection : MonoBehaviour
             if (_availableElements[i])
             {
                 _playerInfo.Add(new PlayerInfo { element = (PlayerInfo.PlayerElement)i, devicePath = playerInput.devices[0].layout, controlScheme = playerInput.currentControlScheme});
-                Debug.Log($"Joined player {_playerInfo[_playerInfo.Count - 1]}");
+                //Debug.Log($"Joined player {_playerInfo[_playerInfo.Count - 1]}");
                 switch (playerInput.currentControlScheme)
                 {
                     case "Gamepad":
@@ -142,7 +142,7 @@ public class CharacterSelection : MonoBehaviour
         {
             keyboard_2_joined = false;
         }
-        Debug.Log($"Left player{(PlayerInfo.PlayerElement) i}");
+        //Debug.Log($"Left player{(PlayerInfo.PlayerElement) i}");
         if(LeaveSound != null && LeaveSound.gameObject.activeInHierarchy)
             LeaveSound?.Play();
     }
@@ -164,14 +164,14 @@ public class CharacterSelection : MonoBehaviour
     public void SetPlayerPrefs()
     {
         PlayerPrefs.SetInt("Number of Players", _playerInfo.Count);
-        Debug.Log(_playerInfo.Count);
+        //Debug.Log(_playerInfo.Count);
         for (int i = 0; i < _playerInfo.Count; i++)
         {
             PlayerPrefs.SetString($"Player_{i}_device", _playerInfo[i].devicePath);
             PlayerPrefs.SetString($"Player_{i}_controlScheme", _playerInfo[i].controlScheme);
             PlayerPrefs.SetInt($"Player_{i}_element", (int)_playerInfo[i].element);
-            Debug.Log(_playerInfo[i].devicePath);
-            Debug.Log((int)_playerInfo[i].element);
+            //Debug.Log(_playerInfo[i].devicePath);
+            //Debug.Log((int)_playerInfo[i].element);
         }
     }
 

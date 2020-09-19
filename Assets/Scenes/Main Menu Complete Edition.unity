@@ -3125,7 +3125,7 @@ MonoBehaviour:
   m_ChildControlWidth: 0
   m_ChildControlHeight: 0
   m_ChildScaleWidth: 0
-  m_ChildScaleHeight: 1
+  m_ChildScaleHeight: 0
 --- !u!114 &920463199
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3142,12 +3142,12 @@ MonoBehaviour:
     m_Name: Join
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: e9848804-b537-4ff6-a6a0-b2a8666370b3
+    m_Id: 09f5f2e1-8fb3-4222-9aa4-529e6a9d8699
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings:
     - m_Name: 
-      m_Id: ba5498fc-5f4c-4cb1-84ea-26d9869dc9ba
+      m_Id: 65921c9b-d08d-4fe8-8835-77f3ad658786
       m_Path: <Keyboard>/z
       m_Interactions: 
       m_Processors: 
@@ -3155,7 +3155,7 @@ MonoBehaviour:
       m_Action: Join
       m_Flags: 0
     - m_Name: 
-      m_Id: 56d173c5-db64-475b-8f1f-68b3aac858c7
+      m_Id: 25a2d1c0-24b0-4fbd-91e9-ecaa6e621a98
       m_Path: <Gamepad>/buttonSouth
       m_Interactions: 
       m_Processors: 
@@ -3166,13 +3166,13 @@ MonoBehaviour:
     m_Name: Join Split 1
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: 043bbaf7-4316-42e7-9e27-ef8b67ccd237
+    m_Id: b905b439-8f44-41a0-bd17-8dbb1443ab7e
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings:
     - m_Name: 
-      m_Id: dcc01d3b-a23e-46ad-a8f5-120cbd075447
-      m_Path: <Keyboard>/q
+      m_Id: 6edfab82-7378-4489-8fd2-1c230007ec74
+      m_Path: <Keyboard>/comma
       m_Interactions: 
       m_Processors: 
       m_Groups: 
@@ -3182,13 +3182,13 @@ MonoBehaviour:
     m_Name: Join Split 2
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: d385e337-bb20-4f89-8985-57c52f54c1ec
+    m_Id: 77a2fdfd-ddb2-4438-a890-1fdc4e8a7e29
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings:
     - m_Name: 
-      m_Id: fe89ee05-5f19-4fb3-af62-7965db5eda12
-      m_Path: <Keyboard>/comma
+      m_Id: 7866892a-6418-4aac-afd6-8967365611f7
+      m_Path: <Keyboard>/q
       m_Interactions: 
       m_Processors: 
       m_Groups: 
