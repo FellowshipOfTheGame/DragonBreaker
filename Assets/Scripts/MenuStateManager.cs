@@ -23,12 +23,12 @@ public abstract class MenuStateManager : MonoBehaviour
         {
             //Invoke Exit State Event
             _actualState.OnExitState?.Invoke();
-            Debug.Log($"Exited: {_actualState.StateName}");
+            //Debug.Log($"Exited: {_actualState.StateName}");
             //Change actual state
             _actualState = states[stateName];
             //Invoke Enter State Event
             _actualState.OnEnterState?.Invoke();
-            Debug.Log($"Entered: {_actualState.StateName}");
+            //Debug.Log($"Entered: {_actualState.StateName}");
         }
         else
         {
@@ -44,12 +44,12 @@ public abstract class MenuStateManager : MonoBehaviour
         {
             //Invoke Exit State Event
             _actualState.OnExitState?.Invoke();
-            Debug.Log($"Exited: {_actualState.StateName}");
+            //Debug.Log($"Exited: {_actualState.StateName}");
             //Change actual state
             _actualState = state;
             //Invoke Enter State Event
             _actualState.OnEnterState?.Invoke();
-            Debug.Log($"Entered: {_actualState.StateName}");
+            //Debug.Log($"Entered: {_actualState.StateName}");
         }
         else
         {

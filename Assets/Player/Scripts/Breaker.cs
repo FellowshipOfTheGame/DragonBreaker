@@ -30,7 +30,7 @@ public class Breaker : MonoBehaviour
         const float minimum_input = 0.4f;
         bool isSideAttack = Math.Abs(movementInput.y) <= minimum_input || Math.Abs(movementInput.x) > minimum_input;
 
-        Debug.Log($"movementInput {movementInput}, minimum_input {minimum_input}");
+        //Debug.Log($"movementInput {movementInput}, minimum_input {minimum_input}");
         animator.SetFloat("Vertical attack", movementInput.y);
         animator.SetBool("Side attack", isSideAttack);
         animator.SetTrigger("Attack");
