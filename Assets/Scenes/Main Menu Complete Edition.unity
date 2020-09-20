@@ -3172,11 +3172,35 @@ MonoBehaviour:
     m_SingletonActionBindings:
     - m_Name: 
       m_Id: 6edfab82-7378-4489-8fd2-1c230007ec74
-      m_Path: <Keyboard>/comma
+      m_Path: <Keyboard>/q
       m_Interactions: 
       m_Processors: 
       m_Groups: 
       m_Action: Join Split 1
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 4db6a52d-fefd-4f53-93e5-f57c7a21a08e
+      m_Path: <Keyboard>/q
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Join Split 2
+      m_Flags: 0
+    - m_Name: 
+      m_Id: f1c4dcf8-3fe5-4fa7-a527-ae8f2a19f8fa
+      m_Path: <Keyboard>/q
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Join Split 2
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 9672d907-1bff-4af4-9bbf-be76920a0171
+      m_Path: <Keyboard>/q
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Join Split 2
       m_Flags: 0
   joinSplit2Action:
     m_Name: Join Split 2
@@ -3188,7 +3212,7 @@ MonoBehaviour:
     m_SingletonActionBindings:
     - m_Name: 
       m_Id: 7866892a-6418-4aac-afd6-8967365611f7
-      m_Path: <Keyboard>/q
+      m_Path: <Keyboard>/comma
       m_Interactions: 
       m_Processors: 
       m_Groups: 
